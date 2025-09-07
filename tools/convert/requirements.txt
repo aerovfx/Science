@@ -1,0 +1,28 @@
+# Requirements for PDF Math Scanner & LaTeX Converter
+# Core PDF processing libraries
+PyPDF2==3.0.1
+pdfplumber==0.10.3
+PyMuPDF==1.23.26
+
+# Mathematical expression processing
+sympy==1.12
+numpy==1.25.2
+matplotlib==3.7.2
+
+# OCR capabilities (optional, for scanned PDFs)
+pytesseract==0.3.10
+Pillow==10.0.1
+
+# Additional utilities
+regex==2023.8.8
+python-dateutil==2.8.2
+
+# Optional: Enhanced text processing
+nltk==3.8.1
+scipy==1.11.3
+
+# Optional: Image processing for mathematical diagrams
+opencv-python==4.8.1.78
+
+# Optional: Better LaTeX rendering
+antlr4-python3-runtime==4.13.1
