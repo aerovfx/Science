@@ -1,3 +1,4 @@
+```mermaid
 mindmap
   root((Dao động điều hoà 🌊))
 
@@ -47,3 +48,4 @@ mindmap
         Thang máy chuyển động lên xuống 🛗
         Dòng nước dao động trong ống chứa 💧
         Sóng cơ học trên dây 🎸
+```
