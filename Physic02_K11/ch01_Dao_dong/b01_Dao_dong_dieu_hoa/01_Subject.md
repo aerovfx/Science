@@ -16,17 +16,17 @@ mindmap
       Pha dao động: φ
 
     Công thức
-      Li độ: x(t) = A * cos(ωt + φ)
-      Vận tốc: v(t) = dx/dt = -A * ω * sin(ωt + φ)
-      Gia tốc: a(t) = dv/dt = -ω² * x(t)
-      Chu kỳ: T = 2π/ω
-      Tần số: f = 1/T
-      Tần số góc: ω = 2πf
+      Li độ: x(t) cos(ωt + φ)
+      Vận tốc: dx/dt -A ω sin(ωt + φ)
+      Gia tốc: dv/dt -ω² x(t)
+      Chu kỳ: T 2π/ω
+      Tần số: f 1/T
+      Tần số góc: ω 2π f
 
     Đồ thị
       Li độ theo thời gian: hình sin/cos
-      Vận tốc và gia tốc lệch pha 90° so với li độ
-      Li độ cực đại → vận tốc = 0, gia tốc cực đại
+      Vận tốc và gia tốc lệch pha 90 so với li độ
+      Li độ cực đại → vận tốc bằng 0, gia tốc cực đại
 
     Ứng dụng
       Đồng hồ quả lắc
@@ -48,4 +48,5 @@ mindmap
         Thang máy chuyển động lên xuống
         Dòng nước dao động trong ống chứa
         Sóng cơ học trên dây
+
 ```
