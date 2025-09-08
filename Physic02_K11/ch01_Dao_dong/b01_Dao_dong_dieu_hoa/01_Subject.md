@@ -1,51 +1,49 @@
-```mermaid
 mindmap
-  root((Humans on Earth))
+  root((Dao động điều hoà 🌊))
 
-    Population
-      7.5 billion people
-      Live all over the Earth
-        Icy poles
-        Tropical rainforests
-        High mountains
-        Sea bed
-        Moon
+    Khái niệm 📘
+      Là dao động mà lực hồi phục tỉ lệ thuận với li độ
+      Dao động lặp đi lặp lại quanh vị trí cân bằng
 
-    Humans vs. Animals
-      Humans
-        Most numerous species
-        Most powerful species
-      Animals
-        Dogs: better smell and hearing
-        Cats: see in the dark
-        Birds: long-distance flight, return yearly
+    Đặc điểm 📏
+      Biên độ: A
+      Tần số: f
+      Chu kỳ: T
+      Li độ: x(t)
+      Vận tốc: v(t)
+      Gia tốc: a(t)
+      Pha dao động: φ
 
-    Human Uniqueness
-      Activities animals don't do
-        Build churches
-        Play football
-        Tell jokes
-        Get married
-        Create prisons and bands
-        Hold elections
-        Walk on the Moon
+    Công thức 🧮
+      Li độ: x(t) = A * cos(ωt + φ)
+      Vận tốc: v(t) = dx/dt = -A * ω * sin(ωt + φ)
+      Gia tốc: a(t) = dv/dt = -ω² * x(t)
+      Chu kỳ: T = 2π/ω
+      Tần số: f = 1/T
+      Tần số góc: ω = 2πf
 
-    Communication
-      Master communicators
-      Use:
-        Facial expressions
-        Hands
-        Body language
-        Voice
-      Abilities:
-        Record speech
-        Write thoughts
-        Communicate across time and space
-        Understand past, present, and future
+    Đồ thị 📈
+      Li độ theo thời gian: hình sin/cos
+      Vận tốc và gia tốc lệch pha 90° so với li độ
+      Li độ cực đại → vận tốc = 0, gia tốc cực đại
 
-    Human Impact
-      Capable of changing the world
-      Can choose to:
-        Take care of the Earth
-        Destroy the Earth
-```
+    Ứng dụng ⚙️
+      Đồng hồ quả lắc ⏰
+      Con lắc lò xo 🪝
+      Dao động điện từ mạch LC ⚡
+      Âm nhạc: dây đàn, loa 🎵
+      Dao động cơ học và kỹ thuật 🏗️
+
+    Ví dụ 🌟
+      Dao động điều hoà 🔵
+        Con lắc đơn
+        Lò xo treo vật nặng
+        Mạch LC điện từ
+        Dây đàn
+        Dao động piston trong động cơ
+      Dao động cơ 🔴
+        Xe lò xo giảm xóc 🚗
+        Cầu treo bị gió làm rung 🌉
+        Thang máy chuyển động lên xuống 🛗
+        Dòng nước dao động trong ống chứa 💧
+        Sóng cơ học trên dây 🎸
