@@ -10,18 +10,12 @@ mindmap
       Biên độ: A
       Tần số: f
       Chu kỳ: T
-      Li độ: x(t)
-      Vận tốc: v(t)
-      Gia tốc: a(t)
+      Li độ: x
+      Vận tốc: v
+      Gia tốc: a
       Pha dao động: φ
 
-    Công thức
-      Li độ: x(t) = A cos(ωt + φ)
-      Vận tốc: dx/dt = -A ω sin(ωt + φ)
-      Gia tốc: dv/dt =  -ω² x(t)
-      Chu kỳ: T = 2π/ω
-      Tần số: f = 1/T
-      Tần số góc: ω = 2π/f
+   
 
     Đồ thị
       Li độ theo thời gian: hình sin/cos
