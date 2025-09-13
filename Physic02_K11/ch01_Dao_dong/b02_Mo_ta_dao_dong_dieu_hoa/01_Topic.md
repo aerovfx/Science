@@ -1,29 +1,41 @@
 ```mermaid
-flowchart TD
-    A((Dao dong dieu hoa)) --> B[Khai niem]
-    B --> B1[La dao dong tuan hoan quanh VTCB]
-    B --> B2[Co dang hinh sin hoac cos]
+mindmap
+  root((Dao động điều hoà))
 
-    A --> C[Phuong trinh]
-    C --> C1["x(t) = A cos(omega t + phi)"]
-    C --> C2["A: Bien do"]
-    C --> C3["omega: Tan so goc"]
-    C --> C4["phi: Pha ban dau"]
+    Khái niệm
+      Lực hồi phục tỉ lệ thuận với li độ
+      Lặp lại quanh vị trí cân bằng
 
-    A --> D[Dai luong dac trung]
-    D --> D1["Chu ky T = 2pi/omega"]
-    D --> D2["Tan so f = 1/T"]
-    D --> D3["Van toc v(t)"]
-    D --> D4["Gia toc a(t)"]
+    Đặc điểm
+      Biên độ: A
+      Tần số: f
+      Chu kỳ: T
+      Li độ: x
+      Vận tốc: v
+      Gia tốc: a
+      Pha dao động: φ
 
-    A --> E[Vi du]
-    E --> E1[Con lac lo xo]
-    E --> E2[Con lac don]
-    E --> E3[Dao dong dien tu]
+    Đồ thị
+      Li độ theo thời gian: hình sin/cos
+      Vận tốc và gia tốc lệch pha 90°
+      Li độ cực đại thì vận tốc = 0, gia tốc cực đại
 
-    A --> F[Ung dung thuc te]
-    F --> F1[Do thoi gian (dong ho qua lac)]
-    F --> F2[Nhac cu day, song am]
-    F --> F3[Ky thuat: thiet ke cong trinh tranh cong huong]
-    F --> F4[Sinh hoc: nhip tim, nhip sinh hoc]
+    Ứng dụng
+      Đồng hồ quả lắc
+      Con lắc lò xo
+      Dao động điện từ (mạch LC)
+      Âm nhạc: dây đàn, loa
+      Dao động trong kỹ thuật
+
+    Ví dụ
+      Con lắc đơn
+      Lò xo treo vật nặng
+      Mạch LC
+      Dây đàn
+      Piston trong động cơ
+      Xe giảm xóc
+      Cầu treo rung do gió
+      Thang máy lên xuống
+      Nước dao động trong ống
+      Sóng cơ trên dây
 ```
