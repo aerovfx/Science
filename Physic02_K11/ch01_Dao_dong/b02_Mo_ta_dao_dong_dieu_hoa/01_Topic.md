@@ -1,38 +1,31 @@
 ```mermaid
-mindmap
-  root((Dao động điều hòa))
+flowchart TD
+    A((Dao động điều hoà)) --> B[Khái niệm]
+    B --> B1[Là dao động tuần hoàn quanh VTCB]
+    B --> B2[Có dạng hình sin hoặc cos]
 
-    Phương trình dao động
-      Dạng chuẩn: x(t) = A cos(ωt + φ)
-      Đại lượng
-        x(t): li độ
-        A: biên độ
-        ω: tần số góc = 2πf = 2π/T
-        φ: pha ban đầu
-        ωt+φ: pha dao động
+    A --> C[Phương trình]
+    C --> C1["x(t) = A·cos(ωt + φ)"]
+    C --> C2[A: Biên độ]
+    C --> C3[ω: Tần số góc]
+    C --> C4[φ: Pha ban đầu]
 
-    Đại lượng đặc trưng
-      Biên độ (A): li độ cực đại
-      Chu kỳ (T): thời gian 1 dao động toàn phần
-      Tần số (f): số dao động trong 1 giây
-      Tần số góc (ω): tốc độ biến thiên pha
-      Pha ban đầu (φ): trạng thái tại t=0
+    A --> D[Đại lượng đặc trưng]
+    D --> D1[Chu kỳ T = 2π/ω]
+    D --> D2[Tần số f = 1/T]
+    D --> D3[Vận tốc v(t)]
+    D --> D4[Gia tốc a(t)]
 
-    Vận tốc & Gia tốc
-      Vận tốc v(t) = -Aω sin(ωt + φ)
-      Gia tốc a(t) = -ω²x(t)
-      Đặc điểm: gia tốc hướng về VTCB, ∝ li độ
+    A --> E[Ví dụ]
+    E --> E1[Con lắc lò xo]
+    E --> E2[Con lắc đơn]
+    E --> E3[Dao động điện từ]
 
-    Năng lượng
-      Động năng Wđ = 1/2 m v²
-      Thế năng Wt = 1/2 k x²
-      Cơ năng W = 1/2 kA² = 1/2 mω²A²
-        Bảo toàn nếu bỏ qua ma sát
+    A --> F[Ứng dụng thực tế]
+    F --> F1[Đo thời gian (đồng hồ quả lắc)]
+    F --> F2[Nhạc cụ dây, sóng âm]
+    F --> F3[Kỹ thuật: thiết kế công trình tránh cộng hưởng]
+    F --> F4[Sinh học: nhịp tim, nhịp sinh học]
 
-    Đồ thị đặc trưng
-      x–t: hình sin/cos
-      v–t: lệch pha π/2 so với x
-      a–t: ngược pha với x (lệch π)
-      Quỹ đạo: dao động 1 chiều quanh VTCB
 
 ```
