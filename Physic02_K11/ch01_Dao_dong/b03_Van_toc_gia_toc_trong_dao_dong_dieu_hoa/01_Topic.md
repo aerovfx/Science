@@ -2,7 +2,7 @@
 mindmap
   root((Vận tốc & Gia tốc trong Dao động điều hoà))
 
-    Vận tốc v(t)
+    Vận tốc
       Định nghĩa
         Vận tốc là tốc độ thay đổi li độ theo thời gian
       Biểu thức
@@ -14,7 +14,7 @@ mindmap
       Hướng
         Ngược chiều với lực hồi phục khi đi ra khỏi vị trí cân bằng
 
-    Gia tốc a(t)
+    Gia tốc
       Định nghĩa
         Gia tốc là tốc độ thay đổi vận tốc theo thời gian
       Biểu thức
