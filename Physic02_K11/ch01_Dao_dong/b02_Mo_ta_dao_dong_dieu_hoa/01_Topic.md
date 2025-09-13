@@ -1,31 +1,29 @@
 ```mermaid
 flowchart TD
-    A((Dao động điều hoà)) --> B[Khái niệm]
-    B --> B1[Là dao động tuần hoàn quanh VTCB]
-    B --> B2[Có dạng hình sin hoặc cos]
+    A((Dao dong dieu hoa)) --> B[Khai niem]
+    B --> B1[La dao dong tuan hoan quanh VTCB]
+    B --> B2[Co dang hinh sin hoac cos]
 
-    A --> C[Phương trình]
-    C --> C1["x(t) = A·cos(ωt + φ)"]
-    C --> C2[A: Biên độ]
-    C --> C3[ω: Tần số góc]
-    C --> C4[φ: Pha ban đầu]
+    A --> C[Phuong trinh]
+    C --> C1["x(t) = A cos(omega t + phi)"]
+    C --> C2["A: Bien do"]
+    C --> C3["omega: Tan so goc"]
+    C --> C4["phi: Pha ban dau"]
 
-    A --> D[Đại lượng đặc trưng]
-    D --> D1[Chu kỳ T = 2π/ω]
-    D --> D2[Tần số f = 1/T]
-    D --> D3[Vận tốc v(t)]
-    D --> D4[Gia tốc a(t)]
+    A --> D[Dai luong dac trung]
+    D --> D1["Chu ky T = 2pi/omega"]
+    D --> D2["Tan so f = 1/T"]
+    D --> D3["Van toc v(t)"]
+    D --> D4["Gia toc a(t)"]
 
-    A --> E[Ví dụ]
-    E --> E1[Con lắc lò xo]
-    E --> E2[Con lắc đơn]
-    E --> E3[Dao động điện từ]
+    A --> E[Vi du]
+    E --> E1[Con lac lo xo]
+    E --> E2[Con lac don]
+    E --> E3[Dao dong dien tu]
 
-    A --> F[Ứng dụng thực tế]
-    F --> F1[Đo thời gian (đồng hồ quả lắc)]
-    F --> F2[Nhạc cụ dây, sóng âm]
-    F --> F3[Kỹ thuật: thiết kế công trình tránh cộng hưởng]
-    F --> F4[Sinh học: nhịp tim, nhịp sinh học]
-
-
+    A --> F[Ung dung thuc te]
+    F --> F1[Do thoi gian (dong ho qua lac)]
+    F --> F2[Nhac cu day, song am]
+    F --> F3[Ky thuat: thiet ke cong trinh tranh cong huong]
+    F --> F4[Sinh hoc: nhip tim, nhip sinh hoc]
 ```
