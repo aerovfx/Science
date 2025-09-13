@@ -1,51 +1,29 @@
 ```mermaid
 mindmap
-  root((Humans on Earth))
+  root((Vận tốc & Gia tốc trong Dao động điều hoà))
 
-    Population
-      7.5 billion people
-      Live all over the Earth
-        Icy poles
-        Tropical rainforests
-        High mountains
-        Sea bed
-        Moon
+    Vận tốc v(t)
+      Định nghĩa
+        Vận tốc là tốc độ thay đổi li độ theo thời gian
+      Biểu thức
+        v = dx/dt
+      Đặc điểm
+        Vận tốc cực đại tại li độ bằng 0
+        Vận tốc bằng 0 tại li độ cực đại
+        Lệch pha 90° so với li độ
+      Hướng
+        Ngược chiều với lực hồi phục khi đi ra khỏi vị trí cân bằng
 
-    Humans vs. Animals
-      Humans
-        Most numerous species
-        Most powerful species
-      Animals
-        Dogs: better smell and hearing
-        Cats: see in the dark
-        Birds: long-distance flight, return yearly
+    Gia tốc a(t)
+      Định nghĩa
+        Gia tốc là tốc độ thay đổi vận tốc theo thời gian
+      Biểu thức
+        a = dv/dt = d²x/dt²
+      Đặc điểm
+        Gia tốc cực đại tại li độ cực đại
+        Gia tốc bằng 0 tại li độ bằng 0
+        Cùng chiều với lực hồi phục
+      Hướng
+        Luôn hướng về vị trí cân bằng
 
-    Human Uniqueness
-      Activities animals don't do
-        Build churches
-        Play football
-        Tell jokes
-        Get married
-        Create prisons and bands
-        Hold elections
-        Walk on the Moon
-
-    Communication
-      Master communicators
-      Use:
-        Facial expressions
-        Hands
-        Body language
-        Voice
-      Abilities:
-        Record speech
-        Write thoughts
-        Communicate across time and space
-        Understand past, present, and future
-
-    Human Impact
-      Capable of changing the world
-      Can choose to:
-        Take care of the Earth
-        Destroy the Earth
 ```
