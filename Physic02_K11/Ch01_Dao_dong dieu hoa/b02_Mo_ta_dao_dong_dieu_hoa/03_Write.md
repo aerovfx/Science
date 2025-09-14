@@ -1,4 +1,4 @@
-Bài viết
+Bài viết về chủ đề dao động điều hoà
 
 “Cuộc đời là một dao động điều hoà to bự”
 
