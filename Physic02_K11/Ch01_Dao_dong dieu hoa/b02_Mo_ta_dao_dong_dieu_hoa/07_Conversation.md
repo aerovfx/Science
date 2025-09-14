@@ -1,4 +1,4 @@
-🎓 Professional Discussion: Harmonic Oscillation
+# 🎓 Professional Discussion: Harmonic Oscillation
 Alex: Good afternoon, Dr. Linh. I’ve been reading about harmonic oscillations, but I’m still a bit confused about their real-world importance. Aren’t they just abstract physics concepts?
 Dr. Linh: That’s a great question, Alex. Actually, harmonic oscillations are everywhere. They describe any system where a restoring force pulls an object back toward equilibrium. Think of a pendulum, a spring-mass system, or even the vibration of a guitar string.
 Alex: So it’s basically when something keeps moving back and forth?
