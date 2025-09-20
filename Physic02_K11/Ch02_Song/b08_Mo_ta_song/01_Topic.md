@@ -1,51 +1,39 @@
 ```mermaid
 mindmap
-  root((Humans on Earth))
+  root((Mô tả sóng - Vật lí 11))
 
-    Population
-      7.5 billion people
-      Live all over the Earth
-        Icy poles
-        Tropical rainforests
-        High mountains
-        Sea bed
-        Moon
+    Khái niệm sóng
+      Sóng là sự lan truyền dao động
+      Truyền năng lượng, không truyền vật chất
+      Gồm:
+        Sóng cơ học
+        Sóng điện từ
 
-    Humans vs. Animals
-      Humans
-        Most numerous species
-        Most powerful species
-      Animals
-        Dogs: better smell and hearing
-        Cats: see in the dark
-        Birds: long-distance flight, return yearly
+    Đại lượng đặc trưng
+      Bước sóng λ
+      Chu kì T và tần số f
+      Vận tốc truyền sóng v = λ/T = λf
+      Biên độ A
 
-    Human Uniqueness
-      Activities animals don't do
-        Build churches
-        Play football
-        Tell jokes
-        Get married
-        Create prisons and bands
-        Hold elections
-        Walk on the Moon
+    Phân loại
+      Sóng ngang
+        Phương dao động ⟂ phương truyền
+      Sóng dọc
+        Phương dao động ∥ phương truyền
 
-    Communication
-      Master communicators
-      Use:
-        Facial expressions
-        Hands
-        Body language
-        Voice
-      Abilities:
-        Record speech
-        Write thoughts
-        Communicate across time and space
-        Understand past, present, and future
+    Mặt sóng và tia sóng
+      Mặt sóng: tập hợp điểm cùng pha
+      Tia sóng: đường chỉ phương truyền, ⟂ mặt sóng
 
-    Human Impact
-      Capable of changing the world
-      Can choose to:
-        Take care of the Earth
-        Destroy the Earth
+    Nguyên tắc chồng chất sóng
+      Dao động tổng = tổng dao động sóng thành phần
+      Hệ quả:
+        Giao thoa
+        Sóng dừng
+        Cộng hưởng
+
+    Ứng dụng
+      Truyền âm thanh
+      Truyền thông tin (radio, wifi)
+      Địa chấn học, sóng thần
 ```

@@ -1,27 +1,26 @@
-#  Humans and Communication – Vocabulary
 
-| Vietnamese Term                        | English Term                          | Pronunciation (IPA)           | Notes / Meaning                                                                 |
-|----------------------------------------|---------------------------------------|-------------------------------|----------------------------------------------------------------------------------|
-| Dân số thế giới                        | world population                      | /wɜːrld ˌpɑː.pjəˈleɪ.ʃən/     | Tổng số người sống trên Trái Đất                                                |
-| Vùng cực                               | poles                                 | /poʊlz/                        | Khu vực Bắc Cực và Nam Cực                                                       |
-| Rừng mưa nhiệt đới                     | tropical rainforests                  | /ˈtrɑː.pɪ.kəl ˈreɪn.fɔːr.ɪst/  | Khu rừng ẩm ướt, có khí hậu nóng, ẩm                                             |
-| Dãy núi cao                            | high mountains                        | /haɪ ˈmaʊn.tənz/               | Những ngọn núi cao                                                               |
-| Đáy biển                               | sea bed                               | /siː bɛd/                      | Bề mặt dưới của đại dương                                                        |
-| Mặt Trăng                              | the Moon                              | /ðə muːn/                      | Vệ tinh tự nhiên của Trái Đất                                                    |
-| Loài người                             | humans                                | /ˈhjuː.mənz/                   | Homo sapiens, loài người hiện đại                                               |
-| Loài động vật                          | species                               | /ˈspiː.ʃiːz/                   | Loài sinh học                                                                    |
-| Khứu giác                              | sense of smell                        | /sɛns əv smɛl/                 | Khả năng ngửi                                                                   |
-| Thính giác                             | sense of hearing                      | /sɛns əv ˈhɪə.rɪŋ/             | Khả năng nghe                                                                   |
-| Thị lực trong bóng tối                 | see in the dark                       | /siː ɪn ðə dɑːrk/              | Nhìn thấy trong bóng tối                                                        |
-| Di cư theo mùa                        | migrate (long distances)              | /ˈmaɪ.ɡreɪt/                   | Di chuyển xa theo mùa, như chim di cư                                            |
-| Giao tiếp                              | communication                         | /kəˌmjuː.nəˈkeɪ.ʃən/          | Trao đổi thông tin, suy nghĩ, cảm xúc                                           |
-| Người truyền đạt giỏi                  | master communicators                  | /ˈmæs.tɚ kəˈmjuː.nə.keɪ.t̬ɚz/  | Người giỏi truyền đạt, giao tiếp                                                |
-| Ngôn ngữ cơ thể                        | body language                         | /ˈbɑː.di ˌlæŋ.ɡwɪdʒ/           | Giao tiếp bằng cử chỉ và hành động                                              |
-| Nét mặt                                | facial expressions                    | /ˈfeɪ.ʃəl ɪkˈspreʃ.ənz/        | Biểu cảm khuôn mặt                                                              |
-| Ghi lại lời nói                        | record speech                         | /rɪˈkɔːrd spiːtʃ/              | Lưu trữ hoặc ghi âm những gì được nói                                           |
-| Viết ra suy nghĩ                      | write down thoughts                   | /raɪt daʊn θɔːts/              | Diễn đạt suy nghĩ thành văn bản                                                  |
-| Thời gian và không gian               | space and time                        | /speɪs ənd taɪm/                | Hai khái niệm con người có thể vượt qua nhờ ngôn ngữ và trí tuệ                 |
-| Quá khứ – hiện tại – tương lai        | past – present – future               | /pæst/, /ˈprez.ənt/, /ˈfjuː.tʃɚ/| Ba chiều thời gian mà con người có ý thức rõ ràng                               |
-| Phá hủy hành tinh                      | destroy the world                     | /dɪˈstrɔɪ ðə wɝːld/            | Làm hư hại hoặc tiêu diệt Trái Đất                                               |
-| Bảo vệ Trái Đất                        | take care of the world                | /teɪk ker əv ðə wɝːld/         | Hành động giữ gìn, bảo vệ môi trường sống chung                                 |
+🌊 Waves – Vocabulary (Mô tả sóng)
+
+Vietnamese Term	English Term	Pronunciation (IPA)	Notes / Meaning
+Sóng	wave	/weɪv/	Sự lan truyền dao động trong không gian và thời gian
+Sóng cơ học	mechanical wave	/məˈkæn.ɪ.kəl weɪv/	Sóng truyền nhờ dao động của các phần tử vật chất
+Sóng điện từ	electromagnetic wave	/ɪˌlɛk.trəʊˌmæɡˈnɛt.ɪk weɪv/	Sóng tạo bởi dao động điện trường và từ trường
+Dao động	oscillation	/ˌɒs.ɪˈleɪ.ʃən/	Chuyển động lặp đi lặp lại quanh vị trí cân bằng
+Năng lượng	energy	/ˈen.ər.dʒi/	Đại lượng vật lí được truyền đi bởi sóng
+Bước sóng (λ)	wavelength	/ˈweɪv.leŋkθ/	Khoảng cách giữa hai điểm dao động cùng pha
+Chu kì (T)	period	/ˈpɪə.ri.əd/	Thời gian để sóng hoàn thành một dao động
+Tần số (f)	frequency	/ˈfriː.kwən.si/	Số dao động trong một giây, f = 1/T
+Vận tốc sóng (v)	wave velocity	/weɪv vəˈlɒs.ɪ.ti/	Tốc độ truyền lan của sóng, v = λ/T = λf
+Biên độ (A)	amplitude	/ˈæm.plɪ.tjuːd/	Độ lớn dao động, đặc trưng độ mạnh của sóng
+Sóng ngang	transverse wave	/ˈtræns.vɜːs weɪv/	Dao động vuông góc với phương truyền sóng
+Sóng dọc	longitudinal wave	/ˌlɒn.dʒɪˈtuː.dɪn.əl weɪv/	Dao động song song với phương truyền sóng
+Mặt sóng	wavefront	/ˈweɪv.frʌnt/	Tập hợp các điểm dao động cùng pha
+Tia sóng	ray of wave	/reɪ əv weɪv/	Đường chỉ phương truyền sóng, vuông góc với mặt sóng
+Nguyên tắc chồng chất sóng	superposition principle	/ˌsuː.pə.pəˈzɪʃ.ən ˈprɪn.sə.pəl/	Dao động tổng tại 1 điểm bằng tổng các dao động thành phần
+Giao thoa sóng	wave interference	/ˌɪn.t̬ɚˈfɪr.əns/	Hiện tượng sóng chồng chất tạo vùng cực đại và cực tiểu
+Sóng dừng	standing wave	/ˈstæn.dɪŋ weɪv/	Sóng tạo thành do giao thoa sóng tới và sóng phản xạ
+Cộng hưởng	resonance	/ˈrez.ən.əns/	Hiện tượng biên độ dao động tăng mạnh khi tần số trùng với tần số riêng
+Truyền âm thanh	sound transmission	/saʊnd trænzˈmɪʃ.ən/	Ứng dụng sóng cơ học trong truyền thông
+Sóng thần	tsunami	/tsuːˈnɑː.mi/	Sóng lớn bất thường do động đất, núi lửa dưới đáy biển
+Sóng địa chấn	seismic wave	/ˈsaɪz.mɪk weɪv/	Sóng cơ học truyền qua lòng đất, dùng trong nghiên cứu địa chấn
 
