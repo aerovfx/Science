@@ -1,0 +1,389 @@
+import os
+import json
+import time
+import random
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse, urljoin
+import cloudscraper
+import re
+
+# --- tải HTML chống chặn ---
+def fetch_html(url):
+    headers = {
+        "User-Agent": random.choice([
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/121.0 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+        ])
+    }
+    try:
+        resp = requests.get(url, headers=headers, timeout=15)
+        if resp.status_code == 200 and len(resp.text) > 1000:
+            return resp.text
+        else:
+            print(f"⚠️ Requests trả về {resp.status_code}, thử cloudscraper...")
+            scraper = cloudscraper.create_scraper()
+            return scraper.get(url, headers=headers).text
+    except Exception as e:
+        print(f"❌ Lỗi khi tải {url}: {e}")
+        return None
+
+# --- tìm link con ---
+def get_sub_links(url):
+    html = fetch_html(url)
+    if not html:
+        return []
+    
+    soup = BeautifulSoup(html, "html.parser")
+    links = []
+    
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        full_url = urljoin(url, href)
+        
+        # Chấp nhận cả trac-nghiem và các link khác trong tech12h
+        if full_url.startswith("https://tech12h.com") and full_url != url:
+            # Loại bỏ các link không cần thiết
+            skip_patterns = ['#', 'javascript:', 'mailto:', '.jpg', '.png', '.gif', '.pdf']
+            if not any(pattern in full_url.lower() for pattern in skip_patterns):
+                links.append(full_url)
+    
+    return sorted(set(links))
+
+# --- phát hiện quiz và extract câu hỏi/đáp án ---
+def extract_quiz_questions(soup):
+    """Trích xuất câu hỏi quiz với đáp án"""
+    questions = []
+    
+    # Kiểm tra xem có phải trang trắc nghiệm không
+    page_title = soup.select_one("h1, title")
+    is_quiz_page = False
+    
+    if page_title:
+        title_text = page_title.get_text(strip=True).lower()
+        if any(keyword in title_text for keyword in ['trắc nghiệm', 'quiz', 'test', 'câu hỏi', 'đáp án']):
+            is_quiz_page = True
+            print(f"   🎯 Phát hiện trang trắc nghiệm: {title_text}")
+    
+    if not is_quiz_page:
+        return questions, False
+    
+    # Các selector phổ biến cho quiz
+    quiz_selectors = [
+        ".quiz-block", ".quiz_question", ".question", ".quiz-item",
+        ".mcq-question", ".multiple-choice", "[class*='quiz']", 
+        "[class*='question']", ".wp-quiz", ".qsm_quiz", ".quiz-container",
+        "form .question", ".test-question", "ol li", "ul li"
+    ]
+    
+    quiz_found = False
+    
+    for selector in quiz_selectors:
+        quiz_blocks = soup.select(selector)
+        if quiz_blocks and len(quiz_blocks) > 2:  # Phải có ít nhất 3 câu hỏi
+            quiz_found = True
+            print(f"   🎯 Tìm thấy {len(quiz_blocks)} câu hỏi với selector: {selector}")
+            
+            for i, block in enumerate(quiz_blocks[:20]):  # Giới hạn 20 câu
+                question_text = ""
+                answer = None
+                options = []
+                
+                # Tìm câu hỏi
+                question_elem = block.select_one("h3, h4, h5, .question-text, .quiz-question, strong, b")
+                if question_elem:
+                    question_text = question_elem.get_text(strip=True)
+                else:
+                    # Fallback: lấy text đầu tiên
+                    full_text = block.get_text(" ", strip=True)
+                    # Tách câu hỏi (thường kết thúc bằng dấu ?)
+                    if '?' in full_text:
+                        question_text = full_text.split('?')[0] + '?'
+                    else:
+                        question_text = full_text[:150] + "..."
+                
+                # Tìm các lựa chọn
+                choice_selectors = [
+                    "input[type='radio'] + label", "input[type='checkbox'] + label",
+                    ".option", ".choice", ".answer-option", "li", ".wp-quiz-answer",
+                    "label", "span"
+                ]
+                
+                for choice_sel in choice_selectors:
+                    choices = block.select(choice_sel)
+                    if choices:
+                        for choice in choices:
+                            opt_text = choice.get_text(strip=True)
+                            if (opt_text and 
+                                len(opt_text) > 1 and 
+                                len(opt_text) < 200 and
+                                opt_text not in options):
+                                options.append(opt_text)
+                        if options:
+                            break
+                
+                # Tìm đáp án đúng
+                correct_selectors = [
+                    "input[checked] + label", ".correct", ".answer", "[data-answer]",
+                    ".wp-quiz-answer.correct", ".right-answer", ".correct-answer",
+                    ".selected", ".active"
+                ]
+                
+                for correct_sel in correct_selectors:
+                    correct_elem = block.select_one(correct_sel)
+                    if correct_elem:
+                        answer = correct_elem.get_text(strip=True)
+                        break
+                
+                # Nếu không tìm được đáp án, thử tìm trong thuộc tính
+                if not answer:
+                    for elem in block.select("*"):
+                        if elem.get("data-correct") or elem.get("data-answer") or elem.get("value"):
+                            answer = elem.get("data-correct") or elem.get("data-answer") or elem.get("value")
+                            if answer:
+                                break
+                
+                if question_text and len(question_text) > 10:
+                    questions.append({
+                        "question": question_text,
+                        "options": options if len(options) > 1 else None,
+                        "answer": answer,
+                        "type": "quiz"
+                    })
+            
+            break  # Đã tìm thấy quiz, không cần thử selector khác
+    
+    return questions, quiz_found
+
+# --- tạo Q&A tự luận từ văn bản ---
+def create_text_qa(soup):
+    """Tạo Q&A tự luận từ nội dung văn bản"""
+    questions = []
+    
+    # 1. Tìm nội dung chính với nhiều selector
+    main_selectors = [
+        ".entry-content", ".post-content", ".content", "main", "article",
+        ".main-content", ".page-content", ".single-content", ".post-body",
+        "#main", "#content", ".container .content"
+    ]
+    
+    main_content = None
+    for selector in main_selectors:
+        main_content = soup.select_one(selector)
+        if main_content:
+            print(f"   📍 Tìm thấy nội dung với selector: {selector}")
+            break
+    
+    if not main_content:
+        main_content = soup
+    
+    # 2. Loại bỏ các phần không cần thiết
+    unwanted_selectors = [
+        ".menu", ".nav", ".navigation", ".sidebar", ".footer", ".header",
+        ".breadcrumb", ".tags", ".category", ".share", ".related", ".comment",
+        ".advertisement", ".ads", ".widget", "[class*='menu']", "[id*='menu']"
+    ]
+    
+    for selector in unwanted_selectors:
+        for element in main_content.select(selector):
+            element.decompose()
+    
+    # 3. Tìm các đoạn văn có ý nghĩa
+    content_blocks = []
+    
+    # Thử lấy từ các thẻ h2, h3, p
+    content_elements = main_content.select("h2, h3, h4, p, div.text, .description")
+    
+    seen_texts = set()  # Để tránh trùng lặp
+    
+    for element in content_elements:
+        text = element.get_text(strip=True)
+        
+        # Lọc nội dung có ý nghĩa
+        if (len(text) > 30 and 
+            text not in seen_texts and
+            not re.match(r'^(Mục lục|Tags|Từ khóa|Nguồn|Chia sẻ|Trang chủ|Lớp|Home)', text, re.IGNORECASE) and
+            not re.search(r'(facebook|twitter|share|like|comment|ads)', text.lower()) and
+            len(text.split()) > 5):  # Ít nhất 5 từ
+            
+            content_blocks.append(text)
+            seen_texts.add(text)
+    
+    print(f"   📝 Tìm thấy {len(content_blocks)} đoạn nội dung unique")
+    
+    # 4. Tạo Q&A từ nội dung
+    if content_blocks:
+        # Nếu có ít nội dung, gộp lại
+        if len(content_blocks) <= 2:
+            combined_content = "\n\n".join(content_blocks)
+            questions.append({
+                "question": "Nội dung chính của bài viết này là gì?",
+                "answer": combined_content,
+                "type": "text_qa"
+            })
+        else:
+            # Tạo câu hỏi cho từng đoạn (tối đa 5 đoạn)
+            for i, block in enumerate(content_blocks[:5]):
+                # Tạo câu hỏi đa dạng
+                question_templates = [
+                    "Hãy giải thích về nội dung: ",
+                    "Thông tin này đề cập đến vấn đề gì? ",
+                    "Phân tích nội dung sau: ",
+                    "Nội dung này muốn truyền tải điều gì? ",
+                    "Tóm tắt ý chính của đoạn: "
+                ]
+                
+                question_type = question_templates[i % len(question_templates)]
+                
+                # Lấy 80 ký tự đầu làm câu hỏi preview
+                preview = block[:80] + "..." if len(block) > 80 else block
+                
+                questions.append({
+                    "question": question_type + preview,
+                    "answer": block,
+                    "type": "text_qa"
+                })
+    
+    # 5. Nếu vẫn không có nội dung, thử cách khác
+    if not questions:
+        # Lấy toàn bộ text và chia nhỏ
+        all_text = main_content.get_text(separator="\n", strip=True)
+        paragraphs = [p.strip() for p in all_text.split('\n') if len(p.strip()) > 50]
+        
+        # Loại bỏ trùng lặp
+        unique_paragraphs = []
+        for p in paragraphs[:3]:  # Chỉ lấy 3 đoạn đầu
+            if p not in unique_paragraphs:
+                unique_paragraphs.append(p)
+        
+        for para in unique_paragraphs:
+            questions.append({
+                "question": f"Giải thích nội dung: {para[:50]}...",
+                "answer": para,
+                "type": "text_qa"
+            })
+    
+    return questions
+
+# --- scrape trang với phân loại tự động ---
+def scrape_page(url):
+    html = fetch_html(url)
+    if not html:
+        return None
+    
+    soup = BeautifulSoup(html, "html.parser")
+    
+    # Lấy tiêu đề
+    title_elem = soup.select_one("h1, .entry-title, .post-title, title")
+    title = title_elem.get_text(strip=True) if title_elem else "untitled"
+    
+    print(f"   📖 Đang xử lý: {title}")
+    
+    # Bước 1: Thử tìm quiz trước
+    questions, has_quiz = extract_quiz_questions(soup)
+    
+    if has_quiz and questions:
+        print(f"   ✅ Tìm thấy {len(questions)} câu hỏi quiz")
+        content_type = "quiz"
+    else:
+        # Bước 2: Tạo Q&A tự luận từ văn bản
+        print(f"   📝 Không có quiz, tạo Q&A tự luận...")
+        questions = create_text_qa(soup)
+        content_type = "text_qa"
+        print(f"   ✅ Tạo được {len(questions)} câu Q&A tự luận")
+    
+    return {
+        "title": title,
+        "url": url,
+        "content_type": content_type,
+        "questions": questions,
+        "total_questions": len(questions)
+    }
+
+# --- tạo cấu trúc thư mục theo URL ---
+def save_to_file(data, url):
+    parsed = urlparse(url)
+    path_parts = [p for p in parsed.path.strip("/").split("/") if p]
+    
+    # Tạo thư mục theo cấu trúc URL
+    if len(path_parts) > 1:
+        folder_path = os.path.join("output", *path_parts[:-1])
+        file_name = path_parts[-1]
+    else:
+        folder_path = "output"
+        file_name = path_parts[0] if path_parts else "index"
+    
+    # Tạo thư mục
+    os.makedirs(folder_path, exist_ok=True)
+    
+    # Tạo tên file JSON
+    clean_filename = re.sub(r'[^\w\-_.]', '_', file_name)
+    if not clean_filename.endswith('.json'):
+        clean_filename += '.json'
+    
+    full_path = os.path.join(folder_path, clean_filename)
+    
+    # Lưu file
+    with open(full_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    print(f"   💾 Đã lưu: {full_path}")
+    return full_path
+
+# --- thống kê kết quả ---
+def print_summary(results):
+    print("\n" + "="*60)
+    print("📊 THỐNG KÊ KẾT QUả")
+    print("="*60)
+    
+    total_pages = len(results)
+    quiz_pages = len([r for r in results if r.get('content_type') == 'quiz'])
+    text_pages = len([r for r in results if r.get('content_type') == 'text_qa'])
+    total_questions = sum(r.get('total_questions', 0) for r in results)
+    
+    print(f"📄 Tổng số trang đã scrape: {total_pages}")
+    print(f"🎯 Trang có quiz: {quiz_pages}")
+    print(f"📝 Trang Q&A tự luận: {text_pages}")
+    print(f"❓ Tổng số câu hỏi: {total_questions}")
+    print("="*60)
+
+# --- MAIN ---
+if __name__ == "__main__":
+    print("🚀 Tech12h Enhanced Scraper - Quiz & Q&A Detection")
+    print("-" * 50)
+    
+    parent_url = input("Nhập URL thư mục cha: ").strip()
+    
+    print(f"🔍 Đang tìm link con từ: {parent_url}")
+    sub_links = get_sub_links(parent_url)
+    
+    if not sub_links:
+        print("⚠️ Không tìm thấy link con nào.")
+    else:
+        print(f"👉 Tìm thấy {len(sub_links)} link con. Bắt đầu scrape...")
+        print("-" * 50)
+        
+        results = []
+        
+        for i, link in enumerate(sub_links, 1):
+            print(f"\n[{i}/{len(sub_links)}] 🔎 {link}")
+            
+            data = scrape_page(link)
+            if data:
+                file_path = save_to_file(data, link)
+                results.append(data)
+            else:
+                print(f"   ❌ Không thể scrape được")
+            
+            # Nghỉ ngẫu nhiên tránh bị chặn
+            sleep_time = random.uniform(1.5, 3.5)
+            print(f"   ⏰ Nghỉ {sleep_time:.1f}s...")
+            time.sleep(sleep_time)
+        
+        # In thống kê cuối
+        print_summary(results)
+        print("✨ Hoàn thành!")

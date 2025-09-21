@@ -1,51 +1,51 @@
 ```mermaid
 mindmap
-  root((Humans on Earth))
+  root((Giải bài tập Dao động điều hòa))
 
-    Population
-      7.5 billion people
-      Live all over the Earth
-        Icy poles
-        Tropical rainforests
-        High mountains
-        Sea bed
-        Moon
+    Nhận diện dữ liệu
+      Phương trình dao động
+        x = A cos(ωt + φ)
+      Hoặc đồ thị li độ-thời gian
+      Biết:
+        Biên độ A
+        Chu kỳ T hoặc tần số f
+        Pha ban đầu φ
 
-    Humans vs. Animals
-      Humans
-        Most numerous species
-        Most powerful species
-      Animals
-        Dogs: better smell and hearing
-        Cats: see in the dark
-        Birds: long-distance flight, return yearly
+    Xác định đại lượng cơ bản
+      Biên độ
+        Lấy từ x_max
+      Tần số góc ω
+        ω = 2π / T
+      Chu kỳ T
+        T = 2π / ω
+      Tần số f
+        f = 1 / T
+      Pha ban đầu φ
+        Dựa vào vị trí và hướng chuyển động lúc t = 0
 
-    Human Uniqueness
-      Activities animals don't do
-        Build churches
-        Play football
-        Tell jokes
-        Get married
-        Create prisons and bands
-        Hold elections
-        Walk on the Moon
+    Phương pháp tính toán
+      Từ phương trình
+        Thay t vào để tìm x hoặc φ(t)
+      Từ đồ thị
+        Quan sát cực đại, cực tiểu, vị trí cân bằng
+        Xác định chu kỳ, pha ban đầu
+      Sử dụng chuyển động tròn đều
+        Chiếu lên trục Ox
+        Tính góc quét Δφ = ωt
+        Xác định pha và thời điểm
 
-    Communication
-      Master communicators
-      Use:
-        Facial expressions
-        Hands
-        Body language
-        Voice
-      Abilities:
-        Record speech
-        Write thoughts
-        Communicate across time and space
-        Understand past, present, and future
+    Tìm thời điểm đặc biệt
+      Vật đi qua vị trí cho trước
+        Giải phương trình x = x0
+        Xác định t theo cos(ωt + φ) = x0/A
+      Chọn nghiệm phù hợp
+        Dựa vào chiều chuyển động và vị trí ban đầu
 
-    Human Impact
-      Capable of changing the world
-      Can choose to:
-        Take care of the Earth
-        Destroy the Earth
+    Viết phương trình hoàn chỉnh
+      x = A cos(ωt + φ)
+      Hoặc x = A sin(ωt + φ)
+      Kiểm tra:
+        Biên độ đúng
+        Pha ban đầu đúng
+        Chu kỳ/tần số đúng
 ```

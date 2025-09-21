@@ -26,3 +26,9 @@ opencv-python==4.8.1.78
 
 # Optional: Better LaTeX rendering
 antlr4-python3-runtime==4.13.1
+
+pdfplumber
+
+openpyx1
+
+pandas

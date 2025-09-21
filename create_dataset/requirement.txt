@@ -1,0 +1,5 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+cloudscraper>=1.2.71
+datasets>=3.0.1
+huggingface_hub>=0.25.2
