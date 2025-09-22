@@ -1,27 +1,21 @@
-#  Humans and Communication – Vocabulary
-
-| Vietnamese Term                        | English Term                          | Pronunciation (IPA)           | Notes / Meaning                                                                 |
-|----------------------------------------|---------------------------------------|-------------------------------|----------------------------------------------------------------------------------|
-| Dân số thế giới                        | world population                      | /wɜːrld ˌpɑː.pjəˈleɪ.ʃən/     | Tổng số người sống trên Trái Đất                                                |
-| Vùng cực                               | poles                                 | /poʊlz/                        | Khu vực Bắc Cực và Nam Cực                                                       |
-| Rừng mưa nhiệt đới                     | tropical rainforests                  | /ˈtrɑː.pɪ.kəl ˈreɪn.fɔːr.ɪst/  | Khu rừng ẩm ướt, có khí hậu nóng, ẩm                                             |
-| Dãy núi cao                            | high mountains                        | /haɪ ˈmaʊn.tənz/               | Những ngọn núi cao                                                               |
-| Đáy biển                               | sea bed                               | /siː bɛd/                      | Bề mặt dưới của đại dương                                                        |
-| Mặt Trăng                              | the Moon                              | /ðə muːn/                      | Vệ tinh tự nhiên của Trái Đất                                                    |
-| Loài người                             | humans                                | /ˈhjuː.mənz/                   | Homo sapiens, loài người hiện đại                                               |
-| Loài động vật                          | species                               | /ˈspiː.ʃiːz/                   | Loài sinh học                                                                    |
-| Khứu giác                              | sense of smell                        | /sɛns əv smɛl/                 | Khả năng ngửi                                                                   |
-| Thính giác                             | sense of hearing                      | /sɛns əv ˈhɪə.rɪŋ/             | Khả năng nghe                                                                   |
-| Thị lực trong bóng tối                 | see in the dark                       | /siː ɪn ðə dɑːrk/              | Nhìn thấy trong bóng tối                                                        |
-| Di cư theo mùa                        | migrate (long distances)              | /ˈmaɪ.ɡreɪt/                   | Di chuyển xa theo mùa, như chim di cư                                            |
-| Giao tiếp                              | communication                         | /kəˌmjuː.nəˈkeɪ.ʃən/          | Trao đổi thông tin, suy nghĩ, cảm xúc                                           |
-| Người truyền đạt giỏi                  | master communicators                  | /ˈmæs.tɚ kəˈmjuː.nə.keɪ.t̬ɚz/  | Người giỏi truyền đạt, giao tiếp                                                |
-| Ngôn ngữ cơ thể                        | body language                         | /ˈbɑː.di ˌlæŋ.ɡwɪdʒ/           | Giao tiếp bằng cử chỉ và hành động                                              |
-| Nét mặt                                | facial expressions                    | /ˈfeɪ.ʃəl ɪkˈspreʃ.ənz/        | Biểu cảm khuôn mặt                                                              |
-| Ghi lại lời nói                        | record speech                         | /rɪˈkɔːrd spiːtʃ/              | Lưu trữ hoặc ghi âm những gì được nói                                           |
-| Viết ra suy nghĩ                      | write down thoughts                   | /raɪt daʊn θɔːts/              | Diễn đạt suy nghĩ thành văn bản                                                  |
-| Thời gian và không gian               | space and time                        | /speɪs ənd taɪm/                | Hai khái niệm con người có thể vượt qua nhờ ngôn ngữ và trí tuệ                 |
-| Quá khứ – hiện tại – tương lai        | past – present – future               | /pæst/, /ˈprez.ənt/, /ˈfjuː.tʃɚ/| Ba chiều thời gian mà con người có ý thức rõ ràng                               |
-| Phá hủy hành tinh                      | destroy the world                     | /dɪˈstrɔɪ ðə wɝːld/            | Làm hư hại hoặc tiêu diệt Trái Đất                                               |
-| Bảo vệ Trái Đất                        | take care of the world                | /teɪk ker əv ðə wɝːld/         | Hành động giữ gìn, bảo vệ môi trường sống chung                                 |
+Speed and Velocity
+-----------------
+Vietnamese Term	English Term	Pronunciation (IPA)	Notes / Meaning
+Tốc độ	speed	/spiːd/	Đại lượng vô hướng, cho biết mức độ nhanh/chậm của chuyển động (v = s/t).
+Vận tốc	velocity	/vəˈlɑː.sə.t̬i/	Đại lượng véc tơ, cho biết cả độ lớn và hướng của chuyển động (v = Δx/Δt).
+Quãng đường	distance	/ˈdɪs.təns/	Độ dài đường đi vật đã trải qua.
+Độ dời	displacement	/dɪsˈpleɪs.mənt/	Vectơ nối vị trí đầu đến vị trí cuối của vật.
+Thời gian	time	/taɪm/	Đại lượng đo khoảng tiến triển của chuyển động.
+Vectơ	vector	/ˈvek.tɚ/	Đại lượng có độ lớn và hướng, ví dụ: vận tốc, lực.
+Đại lượng vô hướng	scalar quantity	/ˈskeɪ.lɚ ˈkwɑːn.tə.ti/	Đại lượng chỉ có độ lớn, không có hướng (ví dụ: tốc độ).
+Đại lượng véc tơ	vector quantity	/ˈvek.tɚ ˈkwɑːn.tə.ti/	Đại lượng có cả độ lớn và hướng (ví dụ: vận tốc, lực).
+Đơn vị mét trên giây	meter per second (m/s)	/ˈmiː.t̬ɚ pɚ ˈsek.ənd/	Đơn vị SI của tốc độ và vận tốc.
+Đơn vị kilômét trên giờ	kilometer per hour (km/h)	/kɪˈlɑː.mɪ.t̬ɚ pɚ ˈaʊ.ɚ/	Đơn vị thường dùng trong giao thông.
+Nhanh, chậm	fast / slow	/fæst/ – /sloʊ/	Tính chất mô tả tốc độ của chuyển động.
+Chiều chuyển động	direction of motion	/dəˈrek.ʃən əv ˈmoʊ.ʃən/	Chiều của vectơ vận tốc.
+Giá trị dương của tốc độ	positive speed	/ˈpɑː.zə.t̬ɪv spiːd/	Vì tốc độ là vô hướng, luôn ≥ 0.
+Vận tốc dương	positive velocity	/ˈpɑː.zə.t̬ɪv vəˈlɑː.sə.t̬i/	Chuyển động theo chiều dương của trục tọa độ.
+Vận tốc âm	negative velocity	/ˈneɡ.ə.tɪv vəˈlɑː.sə.t̬i/	Chuyển động theo chiều âm của trục tọa độ.
+Vận tốc trung bình	average velocity	/ˈæv.ɚ.ɪdʒ vəˈlɑː.sə.t̬i/	Độ dời chia cho thời gian chuyển động.
+Tốc độ trung bình	average speed	/ˈæv.ɚ.ɪdʒ spiːd/	Tổng quãng đường chia cho thời gian chuyển động.
 
