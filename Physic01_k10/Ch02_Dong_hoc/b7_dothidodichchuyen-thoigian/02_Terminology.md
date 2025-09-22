@@ -1,27 +1,18 @@
-#  Humans and Communication – Vocabulary
-
-| Vietnamese Term                        | English Term                          | Pronunciation (IPA)           | Notes / Meaning                                                                 |
-|----------------------------------------|---------------------------------------|-------------------------------|----------------------------------------------------------------------------------|
-| Dân số thế giới                        | world population                      | /wɜːrld ˌpɑː.pjəˈleɪ.ʃən/     | Tổng số người sống trên Trái Đất                                                |
-| Vùng cực                               | poles                                 | /poʊlz/                        | Khu vực Bắc Cực và Nam Cực                                                       |
-| Rừng mưa nhiệt đới                     | tropical rainforests                  | /ˈtrɑː.pɪ.kəl ˈreɪn.fɔːr.ɪst/  | Khu rừng ẩm ướt, có khí hậu nóng, ẩm                                             |
-| Dãy núi cao                            | high mountains                        | /haɪ ˈmaʊn.tənz/               | Những ngọn núi cao                                                               |
-| Đáy biển                               | sea bed                               | /siː bɛd/                      | Bề mặt dưới của đại dương                                                        |
-| Mặt Trăng                              | the Moon                              | /ðə muːn/                      | Vệ tinh tự nhiên của Trái Đất                                                    |
-| Loài người                             | humans                                | /ˈhjuː.mənz/                   | Homo sapiens, loài người hiện đại                                               |
-| Loài động vật                          | species                               | /ˈspiː.ʃiːz/                   | Loài sinh học                                                                    |
-| Khứu giác                              | sense of smell                        | /sɛns əv smɛl/                 | Khả năng ngửi                                                                   |
-| Thính giác                             | sense of hearing                      | /sɛns əv ˈhɪə.rɪŋ/             | Khả năng nghe                                                                   |
-| Thị lực trong bóng tối                 | see in the dark                       | /siː ɪn ðə dɑːrk/              | Nhìn thấy trong bóng tối                                                        |
-| Di cư theo mùa                        | migrate (long distances)              | /ˈmaɪ.ɡreɪt/                   | Di chuyển xa theo mùa, như chim di cư                                            |
-| Giao tiếp                              | communication                         | /kəˌmjuː.nəˈkeɪ.ʃən/          | Trao đổi thông tin, suy nghĩ, cảm xúc                                           |
-| Người truyền đạt giỏi                  | master communicators                  | /ˈmæs.tɚ kəˈmjuː.nə.keɪ.t̬ɚz/  | Người giỏi truyền đạt, giao tiếp                                                |
-| Ngôn ngữ cơ thể                        | body language                         | /ˈbɑː.di ˌlæŋ.ɡwɪdʒ/           | Giao tiếp bằng cử chỉ và hành động                                              |
-| Nét mặt                                | facial expressions                    | /ˈfeɪ.ʃəl ɪkˈspreʃ.ənz/        | Biểu cảm khuôn mặt                                                              |
-| Ghi lại lời nói                        | record speech                         | /rɪˈkɔːrd spiːtʃ/              | Lưu trữ hoặc ghi âm những gì được nói                                           |
-| Viết ra suy nghĩ                      | write down thoughts                   | /raɪt daʊn θɔːts/              | Diễn đạt suy nghĩ thành văn bản                                                  |
-| Thời gian và không gian               | space and time                        | /speɪs ənd taɪm/                | Hai khái niệm con người có thể vượt qua nhờ ngôn ngữ và trí tuệ                 |
-| Quá khứ – hiện tại – tương lai        | past – present – future               | /pæst/, /ˈprez.ənt/, /ˈfjuː.tʃɚ/| Ba chiều thời gian mà con người có ý thức rõ ràng                               |
-| Phá hủy hành tinh                      | destroy the world                     | /dɪˈstrɔɪ ðə wɝːld/            | Làm hư hại hoặc tiêu diệt Trái Đất                                               |
-| Bảo vệ Trái Đất                        | take care of the world                | /teɪk ker əv ðə wɝːld/         | Hành động giữ gìn, bảo vệ môi trường sống chung                                 |
-
+# Displacement – Time Graph
+| Vietnamese Term                     | English Term                       | Pronunciation (IPA)                | Notes / Meaning                                                                 |
+|-------------------------------------|------------------------------------|------------------------------------|---------------------------------------------------------------------------------|
+| **Đồ thị dịch chuyển – thời gian**  | displacement – time graph          | /dɪsˈpleɪs.mənt taɪm ɡræf/        | Đồ thị biểu diễn sự thay đổi dịch chuyển (x) theo thời gian (t).                 |
+| **Dịch chuyển**                     | displacement                       | /dɪsˈpleɪs.mənt/                   | Vectơ nối từ vị trí đầu đến vị trí cuối, có thể dương hoặc âm.                   |
+| **Thời gian**                       | time                               | /taɪm/                             | Đại lượng đo tiến trình chuyển động, biểu diễn trên trục hoành.                  |
+| **Trục hoành**                      | horizontal axis (x-axis)           | /ˌhɔːr.ɪˈzɒn.t̬əl ˈæk.sɪs/        | Trục nằm ngang, thường biểu diễn thời gian.                                      |
+| **Trục tung**                       | vertical axis (y-axis)             | /ˈvɝː.t̬ɪ.kəl ˈæk.sɪs/            | Trục thẳng đứng, thường biểu diễn dịch chuyển.                                   |
+| **Đường thẳng**                     | straight line                      | /streɪt laɪn/                      | Đồ thị của chuyển động thẳng đều (vận tốc không đổi).                            |
+| **Đường cong**                      | curve                              | /kɝːv/                             | Đồ thị của chuyển động không đều (vận tốc thay đổi).                             |
+| **Độ dốc của đồ thị**               | slope of the graph                 | /sloʊp əv ðə ɡræf/                 | Biểu thị vận tốc của vật: độ dốc càng lớn → vận tốc càng lớn.                     |
+| **Vận tốc tức thời**                | instantaneous velocity             | /ˌɪn.stənˈteɪ.ni.əs vəˈlɑː.sə.t̬i/ | Vận tốc của vật tại một thời điểm xác định (ứng với độ dốc tiếp tuyến tại điểm). |
+| **Vận tốc trung bình**              | average velocity                   | /ˈæv.ɚ.ɪdʒ vəˈlɑː.sə.t̬i/          | Dịch chuyển chia cho thời gian chuyển động.                                      |
+| **Độ dốc dương**                    | positive slope                     | /ˈpɑː.zə.t̬ɪv sloʊp/               | Vật chuyển động theo chiều dương.                                                |
+| **Độ dốc âm**                       | negative slope                     | /ˈneɡ.ə.tɪv sloʊp/                 | Vật chuyển động theo chiều âm.                                                   |
+| **Giao điểm với trục thời gian**    | intersection with time axis        | /ˌɪn.t̬ɚˈsek.ʃən wɪð taɪm ˈæk.sɪs/ | Cho biết thời điểm vật đi qua gốc tọa độ.                                        |
+| **Chuyển động thẳng đều**           | uniform linear motion              | /ˈjuː.nɪ.fɔːrm ˈlɪn.i.ɚ ˈmoʊ.ʃən/ | Chuyển động có vận tốc không đổi, đồ thị là đường thẳng.                         |
+| **Chuyển động biến đổi đều**        | uniformly accelerated motion       | /ˈjuː.nɪ.fɔːrm.li ˈæk.sə.leɪ.t̬ɪd ˈmoʊ.ʃən/ | Chuyển động có gia tốc không đổi, đồ thị là đường cong bậc hai.   |

@@ -1,51 +1,47 @@
 ```mermaid
 mindmap
-  root((Humans on Earth))
+  root((Đồ thị dịch chuyển - thời gian))
 
-    Population
-      7.5 billion people
-      Live all over the Earth
-        Icy poles
-        Tropical rainforests
-        High mountains
-        Sea bed
-        Moon
+    Khái niệm
+      Đồ thị
+        Biểu diễn sự phụ thuộc của dịch chuyển (x) theo thời gian (t)
+        Trục hoành: thời gian (t)
+        Trục tung: dịch chuyển (x)
+      Dịch chuyển
+        Độ dời của vật so với gốc toạ độ
+        Có thể dương hoặc âm
 
-    Humans vs. Animals
-      Humans
-        Most numerous species
-        Most powerful species
-      Animals
-        Dogs: better smell and hearing
-        Cats: see in the dark
-        Birds: long-distance flight, return yearly
+    Đặc điểm
+      Đồ thị đường thẳng
+        Chuyển động thẳng đều
+        Độ dốc biểu thị vận tốc
+      Đồ thị cong
+        Chuyển động không đều
+        Độ dốc tại từng điểm là vận tốc tức thời
 
-    Human Uniqueness
-      Activities animals don't do
-        Build churches
-        Play football
-        Tell jokes
-        Get married
-        Create prisons and bands
-        Hold elections
-        Walk on the Moon
+    Ý nghĩa
+      Độ dốc
+        Độ dốc càng lớn → vận tốc càng lớn
+        Độ dốc dương → vật đi theo chiều dương
+        Độ dốc âm → vật đi theo chiều âm
+      Giao điểm với trục thời gian
+        Cho biết thời điểm vật ở gốc toạ độ
 
-    Communication
-      Master communicators
-      Use:
-        Facial expressions
-        Hands
-        Body language
-        Voice
-      Abilities:
-        Record speech
-        Write thoughts
-        Communicate across time and space
-        Understand past, present, and future
+    Ví dụ minh hoạ
+      Chuyển động thẳng đều
+        Ô tô đi 10 m/s
+        Đồ thị: đường thẳng đi lên, dốc không đổi
+      Chuyển động chậm dần đều
+        Xe phanh lại
+        Đồ thị: đường cong lõm xuống, độ dốc giảm dần
+      Vật đổi chiều
+        Đồ thị: từ dương sang âm qua gốc toạ độ
 
-    Human Impact
-      Capable of changing the world
-      Can choose to:
-        Take care of the Earth
-        Destroy the Earth
+    So sánh với đồ thị quãng đường - thời gian
+      Dịch chuyển - thời gian
+        Có thể dương hoặc âm
+        Cho biết chiều chuyển động
+      Quãng đường - thời gian
+        Luôn dương
+        Chỉ cho biết độ dài đường đi
 ```
