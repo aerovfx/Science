@@ -1,3 +1,7 @@
+# Science — Cổng học liệu
+
+> Để tìm và triển khai học liệu theo mục đích dạy học, bắt đầu tại [HOC_LIEU](HOC_LIEU/README.md). Học liệu Vật lí được tổ chức trực tiếp trong cổng này; STEM và chuyên đề vẫn được liên kết từ kho chuyên môn tương ứng.
+
 <p align="center">
   <img src="physic.jpg">
 </p>

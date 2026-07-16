@@ -1,2 +1,22 @@
 .DS_Store
 .pptx
+# macOS
+.DS_Store
+
+# Rust build
+target
+**/*.rs.bk
+
+# Large binary assets not tracked in git
+crates/abrush/assets/*.ply
+
+# Tools output
+tools/*.png
+tools/dist
+
+# Editor / misc
+.idea/*
+*.sublime-workspace
+*~
+*.log
+dist/
