@@ -183,12 +183,56 @@ function makeScrew(primitive: ScenePrimitive) {
   return group;
 }
 
+function wingGeometry(size: [number, number, number], profile?: Array<[number, number]>) {
+  // size = [span, thickness, chord]. Builds a tapered membrane/wing planform in the
+  // span(X)-chord(Z) plane, extruded by thickness along Y. Reads as an insect/ornithopter
+  // wing at low thickness and as a UAV wing panel at higher thickness.
+  const [span, thickness, chord] = size;
+  const shape = new THREE.Shape();
+  if (profile && profile.length >= 3) {
+    shape.moveTo(profile[0][0], profile[0][1]);
+    for (let i = 1; i < profile.length; i += 1) shape.lineTo(profile[i][0], profile[i][1]);
+    shape.closePath();
+  } else {
+    // Leading edge sweeps out then tapers to a rounded tip; trailing edge curves back.
+    shape.moveTo(0, -chord * 0.5);
+    shape.bezierCurveTo(span * 0.25, -chord * 0.62, span * 0.7, -chord * 0.5, span, -chord * 0.12);
+    shape.bezierCurveTo(span * 1.02, -chord * 0.02, span * 1.02, chord * 0.06, span, chord * 0.16);
+    shape.bezierCurveTo(span * 0.68, chord * 0.42, span * 0.28, chord * 0.5, 0, chord * 0.5);
+    shape.closePath();
+  }
+  const geometry = new THREE.ExtrudeGeometry(shape, { depth: Math.max(thickness, 0.3), bevelEnabled: true, bevelSize: Math.min(thickness * 0.4, 0.5), bevelThickness: Math.min(thickness * 0.4, 0.4), bevelSegments: 1, curveSegments: 20 });
+  geometry.rotateX(Math.PI / 2);
+  geometry.translate(0, thickness / 2, 0);
+  return geometry;
+}
+
+function latheGeometry(size: [number, number, number], profile?: Array<[number, number]>) {
+  // Revolve a [radius, height] profile around the Y axis. Great for nozzles, domes,
+  // canisters, bottles, wheels and rounded pods.
+  const [radius, height] = size;
+  const pts = (profile && profile.length >= 2 ? profile : [[0.05, 0], [1, 0.05], [0.9, 0.5], [1, 0.95], [0.05, 1]])
+    .map(([r, h]) => new THREE.Vector2(Math.max(r * radius, 0.01), (h - 0.5) * height));
+  return new THREE.LatheGeometry(pts, 40);
+}
+
+function makeTube(primitive: ScenePrimitive) {
+  // Hollow cylinder: outer radius size[0], height size[1], inner radius size[2].
+  const [outer, height, inner] = primitive.size;
+  const inR = Math.min(inner > 0 ? inner : outer * 0.6, outer * 0.95);
+  const profile: Array<[number, number]> = [[inR / outer, 0], [1, 0], [1, 1], [inR / outer, 1], [inR / outer, 0]];
+  const mesh = new THREE.Mesh(latheGeometry([outer, height, 0], profile), material(primitive.color, primitive.opacity ?? 1, primitive.role === "mount" ? 0.72 : 0.3, 0.42));
+  mesh.castShadow = true;
+  return mesh;
+}
+
 function makePrimitive(primitive: ScenePrimitive, carbon?: THREE.Texture) {
   if (primitive.kind === "motor") return makeMotor(primitive);
   if (primitive.kind === "propeller") return makePropeller(primitive);
   if (primitive.kind === "pcb") return makePcb(primitive);
   if (primitive.kind === "battery") return makeBattery(primitive);
   if (primitive.kind === "screw") return makeScrew(primitive);
+  if (primitive.kind === "tube") return makeTube(primitive);
   if (primitive.kind === "wire" && primitive.points) {
     const curve = new THREE.CatmullRomCurve3(primitive.points.map((point) => new THREE.Vector3(...point)));
     const wire = new THREE.Mesh(new THREE.TubeGeometry(curve, 32, primitive.size[0], 8, false), material(primitive.color, 1, 0.05, 0.62));
@@ -197,9 +241,17 @@ function makePrimitive(primitive: ScenePrimitive, carbon?: THREE.Texture) {
   }
   const geometry = primitive.kind === "plate"
     ? plateGeometry(primitive.size)
-    : primitive.kind === "box"
-      ? roundedBox(primitive.size, primitive.role === "enclosure" ? 1.1 : 0.8)
-      : new THREE.CylinderGeometry(primitive.size[0], primitive.size[2], primitive.size[1], 32);
+    : primitive.kind === "wing"
+      ? wingGeometry(primitive.size, primitive.profile)
+      : primitive.kind === "lathe"
+        ? latheGeometry(primitive.size, primitive.profile)
+        : primitive.kind === "sphere"
+          ? new THREE.SphereGeometry(primitive.size[0], 32, 24)
+          : primitive.kind === "cone"
+            ? new THREE.ConeGeometry(primitive.size[0], primitive.size[1], 32)
+            : primitive.kind === "box"
+              ? roundedBox(primitive.size, primitive.role === "enclosure" ? 1.1 : 0.8)
+              : new THREE.CylinderGeometry(primitive.size[0], primitive.size[2], primitive.size[1], 32);
   const mesh = new THREE.Mesh(geometry, material(primitive.color, primitive.opacity ?? 1, primitive.role === "mount" ? 0.72 : 0.18, primitive.role === "enclosure" ? 0.34 : 0.5, primitive.role === "enclosure" ? carbon : undefined));
   mesh.castShadow = true;
   mesh.receiveShadow = true;

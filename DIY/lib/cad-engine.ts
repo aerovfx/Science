@@ -31,11 +31,30 @@ export type ValidationIssue = {
 export type ScenePrimitive = {
   id: string;
   label: string;
-  kind: "box" | "cylinder" | "plate" | "motor" | "propeller" | "pcb" | "battery" | "wire" | "screw";
+  kind:
+    | "box"
+    | "cylinder"
+    | "plate"
+    | "motor"
+    | "propeller"
+    | "pcb"
+    | "battery"
+    | "wire"
+    | "screw"
+    // Richer mesh kinds (parametric, rendered as real geometry):
+    | "sphere"
+    | "cone"
+    | "tube"
+    | "lathe"
+    | "wing";
   size: [number, number, number];
   position: [number, number, number];
   rotation?: [number, number, number];
+  // 3D polyline path for kind:"wire".
   points?: Array<[number, number, number]>;
+  // 2D cross-section for kind:"lathe" ([radius, height]) revolved around Y,
+  // or for kind:"wing" an optional custom planform outline.
+  profile?: Array<[number, number]>;
   color: string;
   opacity?: number;
   role: "enclosure" | "component" | "mount" | "cutout";

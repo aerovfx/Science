@@ -21,6 +21,12 @@ Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Th
 | <img src="DIY/public/mini-submarine-visual.png" width="260"><br>**Mini Submarine Drone**<br><sub>ROV · 6 thruster · thân acrylic kín nước</sub> | <img src="DIY/public/fpv-racing-drone-visual.png" width="260"><br>**FPV Racing Drone**<br><sub>5-inch 6S carbon · FC H7 · FPV analog</sub> | <img src="DIY/public/scara-arm-robot-visual.png" width="260"><br>**SCARA Arm Robot**<br><sub>cánh tay 4 trục · gripper 2 ngón</sub> |
 | <img src="DIY/public/modular-wind-harvester-visual.png" width="260"><br>**Modular Wind Harvester**<br><sub>turbine gió · MPPT + siêu tụ</sub> | <img src="DIY/public/long-range-uav-visual.png" width="260"><br>**Long Range UAV**<br><sub>fixed-wing · Pixhawk · tầm xa</sub> | <img src="DIY/public/rc-boat-visual.png" width="260"><br>**RC Submersible Boat**<br><sub>thuyền RC · camera thả bằng tời</sub> |
 
+### ✨ Sinh sản phẩm mới từ prompt
+
+Ngoài các template có sẵn, ứng dụng có **cửa sổ chat sinh sản phẩm mới**: gõ mô tả tự do (ví dụ *"robotic dragonfly with flapping wings, FPV camera and microphone streamed to VR goggles"*) rồi bấm **✨ TẠO** — engine phân loại **archetype** (ornithopter · multirotor · fixed-wing · rover · marine · robotic arm · gadget) và **tính năng** (camera, mic, VR/FPV stream, GPS, LiDAR, gimbal, thermal), rồi dựng đầy đủ **BOM · sơ đồ nối dây · hướng dẫn · mô hình CAD 3D chi tiết**. Chạy hoàn toàn offline (không cần API key); cùng entry point có thể cắm LLM sau này. Cùng lõi engine được MCP CAD server dùng lại cho `cad.generate_feature_tree` / `cad.render_preview`.
+
+Bộ dựng mesh được bổ sung các **primitive tham số chi tiết hơn**: `wing` (cánh/airfoil thon), `lathe` (revolve biên dạng — thân, bánh xe, vòi phun), `sphere` · `cone` · `tube` — cho hình khối sát thực tế hơn thay vì chỉ hộp/trụ.
+
 ### Xem trước mô hình CAD 3D
 
 Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D tương tác** ngay trong ứng dụng (orbit · zoom · exploded view):
