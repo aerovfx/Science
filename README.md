@@ -13,7 +13,7 @@ Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Th
 
 ## 🎨 Thư viện mẫu thiết kế
 
-Ứng dụng đi kèm **24 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
+Ứng dụng đi kèm **27 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
 
 | | | |
 |---|---|---|
@@ -34,7 +34,7 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 
 ---
 
-## 📦 Danh mục template (24)
+## 📦 Danh mục template (27)
 
 | Nhóm | Template |
 |---|---|
@@ -42,7 +42,8 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 | **Robot mặt đất** | Smart Mobile Robot · Humanoid Robot · Robodog · Autonomous Wall-E Robot · SCARA Arm Robot |
 | **Dưới nước / mặt nước** | Autonomous Survey USV · Mini Submarine Drone · RC Submersible Boat |
 | **IoT / năng lượng / thiết bị** | Modular Wind Harvester · Smart Garden Irrigation · Desktop Companion Bot · AR Smart Glasses · 3D Printer Budget |
-| **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* |
+| **Máy công cụ / chế tạo** | Desktop CNC Mill · Large 3D Printer |
+| **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* · Cyber Multi-tool *(công cụ nghiên cứu bảo mật, chỉ dùng hợp pháp trên thiết bị của bạn)* |
 
 ---
 
@@ -74,6 +75,8 @@ Toàn bộ template là **bản dân sự, không vũ khí hoá**. Trong quá tr
 - ⛔ **Laser Mosquito Zapper** — không dựng (hệ laser tự động ngắm-bắn theo thị giác).
 - ⛔ **VTOL Jamming Drone** và **phần lén/tàng hình của Stealth Autonomous Boat** — không clone bản gốc; chỉ có bản dân sự (VTOL Survey Drone, USV khảo sát) đã bỏ phần gây nhiễu/do thám.
 - ⚠️ **Pulsed Plasma Thruster** — chỉ đưa vào dạng tham chiếu nghiên cứu, kèm cảnh báo điện áp cao / cryogenic, ghi rõ *không phải đồ tự chế tại nhà*.
+- ⚠️ **Cyber Multi-tool** — công cụ nghiên cứu bảo mật (sub-GHz/NFC/RFID/IR) chỉ dành cho **mục đích hợp pháp, được phép**, thao tác trên thiết bị/thẻ/điều khiển **của chính bạn** và tuân thủ quy định RF địa phương. Không kèm bất kỳ hướng dẫn tấn công/truy cập trái phép nào.
+- ⛔ **Automated Targeting Turret** — không dựng (hệ tự động ngắm-bắn theo thị giác).
 
 ---
 
