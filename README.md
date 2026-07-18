@@ -13,7 +13,7 @@ Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Th
 
 ## 🎨 Thư viện mẫu thiết kế
 
-Ứng dụng đi kèm **27 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
+Ứng dụng đi kèm **29 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
 
 | | | |
 |---|---|---|
@@ -34,7 +34,7 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 
 ---
 
-## 📦 Danh mục template (27)
+## 📦 Danh mục template (29)
 
 | Nhóm | Template |
 |---|---|
@@ -43,7 +43,8 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 | **Dưới nước / mặt nước** | Autonomous Survey USV · Mini Submarine Drone · RC Submersible Boat |
 | **IoT / năng lượng / thiết bị** | Modular Wind Harvester · Smart Garden Irrigation · Desktop Companion Bot · AR Smart Glasses · 3D Printer Budget |
 | **Máy công cụ / chế tạo** | Desktop CNC Mill · Large 3D Printer |
-| **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* · Cyber Multi-tool *(công cụ nghiên cứu bảo mật, chỉ dùng hợp pháp trên thiết bị của bạn)* |
+| **Xe / phương tiện** | Electric Motocross Bike *(xe điện off-road, HV 72V)* |
+| **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* · Cyber Multi-tool *(công cụ nghiên cứu bảo mật, chỉ dùng hợp pháp trên thiết bị của bạn)* · Automated Biodiesel Reactor *(rig tự động hoá quá trình, cảnh báo methanol/lye)* |
 
 ---
 
@@ -76,6 +77,8 @@ Toàn bộ template là **bản dân sự, không vũ khí hoá**. Trong quá tr
 - ⛔ **VTOL Jamming Drone** và **phần lén/tàng hình của Stealth Autonomous Boat** — không clone bản gốc; chỉ có bản dân sự (VTOL Survey Drone, USV khảo sát) đã bỏ phần gây nhiễu/do thám.
 - ⚠️ **Pulsed Plasma Thruster** — chỉ đưa vào dạng tham chiếu nghiên cứu, kèm cảnh báo điện áp cao / cryogenic, ghi rõ *không phải đồ tự chế tại nhà*.
 - ⚠️ **Cyber Multi-tool** — công cụ nghiên cứu bảo mật (sub-GHz/NFC/RFID/IR) chỉ dành cho **mục đích hợp pháp, được phép**, thao tác trên thiết bị/thẻ/điều khiển **của chính bạn** và tuân thủ quy định RF địa phương. Không kèm bất kỳ hướng dẫn tấn công/truy cập trái phép nào.
+- ⚠️ **Automated Biodiesel Reactor** — chỉ đưa vào dạng **tham chiếu tự động hoá quá trình** (phần điều khiển/cơ khí), kèm cảnh báo mạnh: methanol dễ cháy/độc và lye ăn mòn, bắt buộc PPE + thông gió + không nguồn lửa, tuân thủ quy định địa phương; **không phải hướng dẫn sản xuất nhiên liệu trọn gói**.
+- ⚠️ **Electric Motocross Bike** — build EV cao áp 72V; thao tác HV bởi người có chuyên môn, dùng off-road/sân kín, mặc đồ bảo hộ.
 - ⛔ **Automated Targeting Turret** — không dựng (hệ tự động ngắm-bắn theo thị giác).
 
 ---
