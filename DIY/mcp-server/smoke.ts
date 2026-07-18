@@ -12,7 +12,7 @@ await client.connect(transport);
 const tools = await client.listTools();
 assert.deepEqual(
   tools.tools.map((tool) => tool.name).sort(),
-  ["cad.generate_feature_tree", "cad.render_preview", "cad.validate_design"],
+  ["cad.build_native_artifacts", "cad.generate_feature_tree", "cad.open_in_plasticity", "cad.render_preview", "cad.validate_design"],
 );
 
 const generated = await client.callTool({
@@ -30,4 +30,4 @@ assert.equal(validated.isError, undefined);
 assert.equal((validated.structuredContent as { passed: boolean }).passed, true);
 
 await client.close();
-console.log("MCP smoke test passed: 3 tools discovered, generation and validation succeeded.");
+console.log("MCP smoke test passed: 5 tools discovered, generation and validation succeeded.");

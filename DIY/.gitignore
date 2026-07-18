@@ -25,6 +25,8 @@
 /.wrangler/
 /outputs/
 /work/
+/cad-runtime/artifacts/
+__pycache__/
 
 # Generated project exports
 /exports/

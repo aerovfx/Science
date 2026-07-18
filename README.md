@@ -13,7 +13,7 @@ Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Th
 
 ## 🎨 Thư viện mẫu thiết kế
 
-Ứng dụng đi kèm **32 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
+Ứng dụng đi kèm **34 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
 
 | | | |
 |---|---|---|
@@ -40,7 +40,7 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 
 ---
 
-## 📦 Danh mục template (32)
+## 📦 Danh mục template (34)
 
 | Nhóm | Template |
 |---|---|
@@ -50,6 +50,7 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 | **IoT / năng lượng / thiết bị** | Modular Wind Harvester · Smart Garden Irrigation · Desktop Companion Bot · AR Smart Glasses · 3D Printer Budget · Smart Home Blueprint |
 | **Máy công cụ / chế tạo** | Desktop CNC Mill · Large 3D Printer |
 | **Xe / phương tiện** | Electric Motocross Bike *(xe điện off-road, HV 72V)* |
+| **Thiết bị đeo (wearable)** | Powered Exoskeleton *(khung trợ lực dân sự — đã lược hệ vũ khí)* · Hydraulic Lift Boot *(giày nâng thuỷ lực, cảnh báo kẹp/áp lực)* |
 | **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* · Cyber Multi-tool *(công cụ nghiên cứu bảo mật, chỉ dùng hợp pháp trên thiết bị của bạn)* · Automated Biodiesel Reactor *(rig tự động hoá quá trình, cảnh báo methanol/lye)* |
 
 ---
@@ -85,6 +86,8 @@ Toàn bộ template là **bản dân sự, không vũ khí hoá**. Trong quá tr
 - ⚠️ **Cyber Multi-tool** — công cụ nghiên cứu bảo mật (sub-GHz/NFC/RFID/IR) chỉ dành cho **mục đích hợp pháp, được phép**, thao tác trên thiết bị/thẻ/điều khiển **của chính bạn** và tuân thủ quy định RF địa phương. Không kèm bất kỳ hướng dẫn tấn công/truy cập trái phép nào.
 - ⚠️ **Automated Biodiesel Reactor** — chỉ đưa vào dạng **tham chiếu tự động hoá quá trình** (phần điều khiển/cơ khí), kèm cảnh báo mạnh: methanol dễ cháy/độc và lye ăn mòn, bắt buộc PPE + thông gió + không nguồn lửa, tuân thủ quy định địa phương; **không phải hướng dẫn sản xuất nhiên liệu trọn gói**.
 - ⚠️ **Electric Motocross Bike** — build EV cao áp 72V; thao tác HV bởi người có chuyên môn, dùng off-road/sân kín, mặc đồ bảo hộ.
+- ⛔→✅ **Exoskeleton Suit (gốc)** — bản gốc tích hợp **bệ phóng đạn khí nén** ở cẳng tay (nòng thép, van solenoid 1500 PSI, bình CO2, cơ cấu khoá nòng, giáp "ballistic"). **Không clone bản gốc**; chỉ giữ **Powered Exoskeleton** dân sự (khung trợ lực) đã **lược bỏ toàn bộ hệ vũ khí**, kèm cảnh báo actuator mạnh.
+- ⚠️ **Hydraulic Lift Boot** — wearable thực nghiệm; xi-lanh/áp lực thuỷ lực gây nguy cơ **kẹp/nghiền**, phải leak-test và thử full-stroke khi **tháo giày** trước khi đeo.
 - ⛔ **Automated Targeting Turret** — không dựng (hệ tự động ngắm-bắn theo thị giác).
 
 ---

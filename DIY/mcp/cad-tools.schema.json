@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "DIY CAD MCP Contract v1",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "tools": [
     {
       "name": "cad.generate_feature_tree",
@@ -72,6 +72,56 @@
         "type": "object",
         "required": ["jobId", "status"],
         "properties": { "jobId": { "type": "string" }, "status": { "enum": ["queued", "running", "succeeded", "failed"] }, "artifactUris": { "type": "array", "items": { "type": "string", "format": "uri" } } }
+      }
+    },
+    {
+      "name": "cad.build_native_artifacts",
+      "description": "Dùng DIY CAD runtime cục bộ để xuất FCStd, STEP và STL qua FreeCAD/OpenCascade.",
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false },
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["request"],
+        "properties": {
+          "request": { "type": "string", "minLength": 10, "maxLength": 2000 },
+          "baseVersion": { "type": "integer", "minimum": 0 },
+          "runtimeUrl": { "type": "string", "format": "uri", "default": "http://127.0.0.1:44045" }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["accepted", "jobId", "engine", "primitiveCount", "artifacts"],
+        "properties": {
+          "accepted": { "const": true },
+          "jobId": { "type": "string" },
+          "engine": { "const": "FreeCAD/OpenCascade" },
+          "primitiveCount": { "type": "integer", "minimum": 1 },
+          "artifacts": { "type": "array", "items": { "type": "object" } }
+        }
+      }
+    },
+    {
+      "name": "cad.open_in_plasticity",
+      "description": "Gửi scene CAD đã kiểm định tới Plasticity bridge cục bộ để dựng solid B-Rep.",
+      "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": false },
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["request"],
+        "properties": {
+          "request": { "type": "string", "minLength": 10, "maxLength": 2000 },
+          "baseVersion": { "type": "integer", "minimum": 0 },
+          "bridgeUrl": { "type": "string", "format": "uri", "default": "http://127.0.0.1:44044" }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["accepted", "requestId", "primitiveCount"],
+        "properties": {
+          "accepted": { "type": "boolean" },
+          "requestId": { "type": "string" },
+          "primitiveCount": { "type": "integer", "minimum": 1 }
+        }
       }
     }
   ],

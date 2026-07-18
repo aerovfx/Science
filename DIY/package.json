@@ -14,7 +14,8 @@
     "db:generate": "drizzle-kit generate",
     "mcp:build": "tsc -p tsconfig.mcp.json",
     "mcp:start": "node dist-mcp/mcp-server/index.js",
-    "mcp:smoke": "npm run mcp:build && node dist-mcp/mcp-server/smoke.js"
+    "mcp:smoke": "npm run mcp:build && node dist-mcp/mcp-server/smoke.js",
+    "cad:runtime": "node cad-runtime/server.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",

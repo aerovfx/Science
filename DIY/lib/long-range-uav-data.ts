@@ -1,4 +1,4 @@
-import source from "../data/long-range-uav/config.json";
+import source from "../data/long-range-uav/config.json" with { type: "json" };
 import type { CadProjectResult } from "./cad-engine.js";
 import type { InstructionPreamble, InstructionSection, ProjectPart } from "./project-export.js";
 
@@ -39,9 +39,9 @@ export const longRangeParts: ProjectPart[] = source.nodes.map((node, index) => (
   dimensions: node.dimensions || "See supplier drawing",
   purchaseUrl: node.purchaseUrl || "",
   imageUrl: node.imageUrl || undefined,
-  amazonUrl: "amazonUrl" in node ? node.amazonUrl : undefined,
-  aliexpressUrl: "aliexpressUrl" in node ? node.aliexpressUrl : undefined,
-  ebayUrl: "ebayUrl" in node ? node.ebayUrl : undefined,
+  amazonUrl: "amazonUrl" in node ? node.amazonUrl || undefined : undefined,
+  aliexpressUrl: "aliexpressUrl" in node ? node.aliexpressUrl || undefined : undefined,
+  ebayUrl: "ebayUrl" in node ? node.ebayUrl || undefined : undefined,
   sourceName: sourceName(node),
   priceCheckedAt: "Imported 17/07/2026",
   sourceStatus: node.purchaseUrl ? "Supplier or manufacturer reference" : "Fabricate from project files",
