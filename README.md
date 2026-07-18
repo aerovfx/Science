@@ -21,7 +21,16 @@ Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Th
 | <img src="DIY/public/mini-submarine-visual.png" width="260"><br>**Mini Submarine Drone**<br><sub>ROV · 6 thruster · thân acrylic kín nước</sub> | <img src="DIY/public/fpv-racing-drone-visual.png" width="260"><br>**FPV Racing Drone**<br><sub>5-inch 6S carbon · FC H7 · FPV analog</sub> | <img src="DIY/public/scara-arm-robot-visual.png" width="260"><br>**SCARA Arm Robot**<br><sub>cánh tay 4 trục · gripper 2 ngón</sub> |
 | <img src="DIY/public/modular-wind-harvester-visual.png" width="260"><br>**Modular Wind Harvester**<br><sub>turbine gió · MPPT + siêu tụ</sub> | <img src="DIY/public/long-range-uav-visual.png" width="260"><br>**Long Range UAV**<br><sub>fixed-wing · Pixhawk · tầm xa</sub> | <img src="DIY/public/rc-boat-visual.png" width="260"><br>**RC Submersible Boat**<br><sub>thuyền RC · camera thả bằng tời</sub> |
 
-*(Các mẫu chưa có ảnh render dùng mô hình CAD 3D trực tiếp trong ứng dụng.)*
+### Xem trước mô hình CAD 3D
+
+Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D tương tác** ngay trong ứng dụng (orbit · zoom · exploded view):
+
+| | | | |
+|---|---|---|---|
+| <img src="DIY/public/vtol-survey-visual.png" width="200"><br><sub>**VTOL Survey Drone**</sub> | <img src="DIY/public/observation-multirotor-visual.png" width="200"><br><sub>**Observation Multirotor**</sub> | <img src="DIY/public/dragonfly-ornithopter-visual.png" width="200"><br><sub>**Dragonfly Ornithopter**</sub> | <img src="DIY/public/budget-mini-uav-visual.png" width="200"><br><sub>**Budget Mini UAV**</sub> |
+| <img src="DIY/public/filming-drone-visual.png" width="200"><br><sub>**Professional Filming Drone**</sub> | <img src="DIY/public/delivery-drone-visual.png" width="200"><br><sub>**Autonomous Delivery Drone**</sub> | <img src="DIY/public/endurance-drone-visual.png" width="200"><br><sub>**Endurance Drone**</sub> | <img src="DIY/public/walle-robot-visual.png" width="200"><br><sub>**Autonomous Wall-E Robot**</sub> |
+| <img src="DIY/public/garden-irrigation-visual.png" width="200"><br><sub>**Smart Garden Irrigation**</sub> | <img src="DIY/public/companion-bot-visual.png" width="200"><br><sub>**Desktop Companion Bot**</sub> | <img src="DIY/public/ar-glasses-visual.png" width="200"><br><sub>**AR Smart Glasses**</sub> | <img src="DIY/public/printer-3d-visual.png" width="200"><br><sub>**3D Printer Budget**</sub> |
+| <img src="DIY/public/plasma-thruster-visual.png" width="200"><br><sub>**Pulsed Plasma Thruster** *(tham chiếu)*</sub> | | | |
 
 ---
 
