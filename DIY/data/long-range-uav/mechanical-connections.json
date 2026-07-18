@@ -1,0 +1,192 @@
+[
+  {
+    "label": "via wing_attachment_mechanism",
+    "source": "main_wing_structure",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "bolted",
+    "source": "horizontal_stabilizer",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "bolted",
+    "source": "vertical_stabilizer",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "motor_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "flight_controller_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "battery_tray_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "esc_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "long_range_rx_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "gps_module_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "airspeed_sensor_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "power_management_mount_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "latched/hinged",
+    "source": "fuselage_hatch_cover",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "landing_skid_front_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "landing_skid_rear_3d_printed",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "servo_aileron_left",
+    "target": "main_wing_structure"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "servo_aileron_right",
+    "target": "main_wing_structure"
+  },
+  {
+    "label": "screws",
+    "source": "aileron_control_horn_left",
+    "target": "main_wing_structure"
+  },
+  {
+    "label": "screws",
+    "source": "aileron_control_horn_right",
+    "target": "main_wing_structure"
+  },
+  {
+    "label": "servo arm link",
+    "source": "pushrod_aileron_left",
+    "target": "servo_aileron_left"
+  },
+  {
+    "label": "control horn link",
+    "source": "pushrod_aileron_left",
+    "target": "aileron_control_horn_left"
+  },
+  {
+    "label": "servo arm link",
+    "source": "pushrod_aileron_right",
+    "target": "servo_aileron_right"
+  },
+  {
+    "label": "control horn link",
+    "source": "pushrod_aileron_right",
+    "target": "aileron_control_horn_right"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "servo_elevator",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "screws",
+    "source": "elevator_control_horn",
+    "target": "horizontal_stabilizer"
+  },
+  {
+    "label": "servo arm link",
+    "source": "pushrod_elevator",
+    "target": "servo_elevator"
+  },
+  {
+    "label": "control horn link",
+    "source": "pushrod_elevator",
+    "target": "elevator_control_horn"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "servo_rudder",
+    "target": "fuselage_structure"
+  },
+  {
+    "label": "screws",
+    "source": "rudder_control_horn",
+    "target": "vertical_stabilizer"
+  },
+  {
+    "label": "servo arm link",
+    "source": "pushrod_rudder",
+    "target": "servo_rudder"
+  },
+  {
+    "label": "control horn link",
+    "source": "pushrod_rudder",
+    "target": "rudder_control_horn"
+  },
+  {
+    "label": "mount",
+    "source": "motor_mount_3d_printed",
+    "target": "main_bldc_motor"
+  },
+  {
+    "label": "mount",
+    "source": "flight_controller_mount_3d_printed",
+    "target": "flight_controller"
+  },
+  {
+    "label": "mount",
+    "source": "battery_tray_3d_printed",
+    "target": "flight_battery"
+  },
+  {
+    "label": "mount",
+    "source": "esc_mount_3d_printed",
+    "target": "esc_motor"
+  },
+  {
+    "label": "mount",
+    "source": "long_range_rx_mount_3d_printed",
+    "target": "long_range_tx_rx"
+  },
+  {
+    "label": "mount",
+    "source": "gps_module_mount_3d_printed",
+    "target": "gps_module"
+  },
+  {
+    "label": "mount",
+    "source": "airspeed_sensor_mount_3d_printed",
+    "target": "airspeed_sensor"
+  },
+  {
+    "label": "mount",
+    "source": "power_management_mount_3d_printed",
+    "target": "power_management_module"
+  }
+]

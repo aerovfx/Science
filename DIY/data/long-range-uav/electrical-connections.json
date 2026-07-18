@@ -1,0 +1,121 @@
+[
+  {
+    "type": "power",
+    "label": "Main Battery to PDB",
+    "source": "flight_battery",
+    "target": "power_management_module",
+    "current": "50A",
+    "voltage": "14.8V"
+  },
+  {
+    "type": "power",
+    "label": "PDB to ESC",
+    "source": "power_management_module",
+    "target": "esc_motor",
+    "current": "40A",
+    "voltage": "14.8V"
+  },
+  {
+    "type": "power",
+    "label": "PDB to FC Power",
+    "source": "power_management_module",
+    "target": "flight_controller",
+    "current": "2A",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "label": "PDB to TX/RX",
+    "source": "power_management_module",
+    "target": "long_range_tx_rx",
+    "current": "500mA",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "label": "PDB to GPS",
+    "source": "power_management_module",
+    "target": "gps_module",
+    "current": "100mA",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "label": "PDB to Airspeed",
+    "source": "power_management_module",
+    "target": "airspeed_sensor",
+    "current": "50mA",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "label": "ESC to Motor Wires",
+    "source": "esc_motor",
+    "target": "main_bldc_motor",
+    "current": "40A",
+    "voltage": "14.8V"
+  },
+  {
+    "type": "data",
+    "label": "FC to ESC Signal",
+    "source": "flight_controller",
+    "target": "esc_motor",
+    "protocol": "gpio",
+    "sourcePin": "PWM Out",
+    "targetPin": "Signal In"
+  },
+  {
+    "type": "data",
+    "label": "FC to TX/RX Telemetry",
+    "source": "flight_controller",
+    "target": "long_range_tx_rx",
+    "protocol": "uart",
+    "sourcePin": "UART",
+    "targetPin": "UART (TX/RX)"
+  },
+  {
+    "type": "data",
+    "label": "TX/RX to FC RSSI/RC",
+    "source": "long_range_tx_rx",
+    "target": "flight_controller",
+    "protocol": "gpio",
+    "sourcePin": "RSSI Out",
+    "targetPin": "RC In"
+  },
+  {
+    "type": "data",
+    "label": "FC to GPS Data",
+    "source": "flight_controller",
+    "target": "gps_module",
+    "protocol": "uart",
+    "sourcePin": "UART",
+    "targetPin": "UART (TX/RX)"
+  },
+  {
+    "type": "data",
+    "label": "FC to Airspeed Data",
+    "source": "flight_controller",
+    "target": "airspeed_sensor",
+    "protocol": "i2c",
+    "sourcePin": "I2C",
+    "targetPin": "I2C (SDA/SCL)"
+  },
+  {
+    "type": "data",
+    "label": "PDB Current to FC",
+    "source": "power_management_module",
+    "target": "flight_controller",
+    "protocol": "adc",
+    "sourcePin": "Current Sensor Out",
+    "targetPin": "ADC"
+  },
+  {
+    "type": "data",
+    "label": "PDB Voltage to FC",
+    "source": "power_management_module",
+    "target": "flight_controller",
+    "protocol": "adc",
+    "sourcePin": "Voltage Sensor Out",
+    "targetPin": "ADC"
+  }
+]

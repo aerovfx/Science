@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": ".",
+    "outDir": "dist-mcp",
+    "noEmit": false,
+    "incremental": false,
+    "allowJs": false,
+    "isolatedModules": false,
+    "declaration": false,
+    "sourceMap": true
+  },
+  "include": ["mcp-server/**/*.ts", "lib/*.ts"],
+  "exclude": ["node_modules", "dist-mcp"]
+}

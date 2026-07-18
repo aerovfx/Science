@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DIY CAD MCP Contract v1",
+  "version": "0.1.0",
+  "tools": [
+    {
+      "name": "cad.generate_feature_tree",
+      "description": "Chuyển yêu cầu và ràng buộc STEM thành feature tree CAD có thể phát lại.",
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true },
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["projectId", "request", "constraints", "components"],
+        "properties": {
+          "projectId": { "type": "string", "minLength": 1 },
+          "request": { "type": "string", "minLength": 10, "maxLength": 2000 },
+          "components": { "type": "array", "items": { "type": "string" }, "maxItems": 50 },
+          "constraints": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["maxSizeMm", "clearanceMm", "wallThicknessMm"],
+            "properties": {
+              "maxSizeMm": { "type": "array", "prefixItems": [{ "type": "number" }, { "type": "number" }, { "type": "number" }], "minItems": 3, "maxItems": 3 },
+              "clearanceMm": { "type": "number", "minimum": 0.2, "maximum": 10 },
+              "wallThicknessMm": { "type": "number", "minimum": 0.8, "maximum": 12 },
+              "printer": { "enum": ["FDM", "SLA", "NONE"] }
+            }
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["draftId", "baseVersion", "operations"],
+        "properties": {
+          "draftId": { "type": "string" },
+          "baseVersion": { "type": "integer", "minimum": 0 },
+          "operations": { "type": "array", "items": { "$ref": "#/$defs/operation" }, "maxItems": 100 }
+        }
+      }
+    },
+    {
+      "name": "cad.validate_design",
+      "description": "Kiểm tra kích thước, khoảng hở, va chạm, độ dày và khả năng in.",
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true },
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["projectId", "draftId"],
+        "properties": { "projectId": { "type": "string" }, "draftId": { "type": "string" } }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["passed", "score", "issues"],
+        "properties": {
+          "passed": { "type": "boolean" },
+          "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "issues": { "type": "array", "items": { "type": "object", "required": ["severity", "code", "message"], "properties": { "severity": { "enum": ["info", "warning", "error"] }, "code": { "type": "string" }, "message": { "type": "string" } } }
+        }
+      }
+    },
+    {
+      "name": "cad.render_preview",
+      "description": "Kết xuất ảnh và glTF xem trước từ bản nháp đã kiểm định.",
+      "annotations": { "readOnlyHint": true, "destructiveHint": false, "idempotentHint": true },
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["projectId", "draftId"],
+        "properties": { "projectId": { "type": "string" }, "draftId": { "type": "string" }, "camera": { "enum": ["iso", "top", "front", "right"] } }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["jobId", "status"],
+        "properties": { "jobId": { "type": "string" }, "status": { "enum": ["queued", "running", "succeeded", "failed"] }, "artifactUris": { "type": "array", "items": { "type": "string", "format": "uri" } } }
+      }
+    }
+  ],
+  "$defs": {
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "parameters"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "enum": ["create_box", "create_cylinder", "shell", "transform", "boolean_union", "boolean_difference", "add_hole", "add_pcb_mount", "add_cutout", "add_cable_port", "place_component", "fillet"] },
+        "parameters": { "type": "object" }
+      }
+    }
+  }
+}
