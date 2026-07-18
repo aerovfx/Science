@@ -13,7 +13,7 @@ Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Th
 
 ## 🎨 Thư viện mẫu thiết kế
 
-Ứng dụng đi kèm **29 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
+Ứng dụng đi kèm **32 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
 
 | | | |
 |---|---|---|
@@ -34,14 +34,14 @@ Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D
 
 ---
 
-## 📦 Danh mục template (29)
+## 📦 Danh mục template (32)
 
 | Nhóm | Template |
 |---|---|
-| **UAV / bay** | Budget Mini UAV · Long Range UAV · Mother UAV Carrier · VTOL Survey Drone · Aerial Observation Multirotor · Dragonfly Ornithopter · FPV Racing Drone · Professional Filming Drone · Autonomous Delivery Drone · Endurance Drone |
+| **UAV / bay** | Budget Mini UAV · Long Range UAV · Mother UAV Carrier · VTOL Survey Drone · Aerial Observation Multirotor · Dragonfly Ornithopter · FPV Racing Drone · Professional Filming Drone · Autonomous Delivery Drone · Endurance Drone · Autonomous Cargo Drone · Cost-Effective Drone |
 | **Robot mặt đất** | Smart Mobile Robot · Humanoid Robot · Robodog · Autonomous Wall-E Robot · SCARA Arm Robot |
 | **Dưới nước / mặt nước** | Autonomous Survey USV · Mini Submarine Drone · RC Submersible Boat |
-| **IoT / năng lượng / thiết bị** | Modular Wind Harvester · Smart Garden Irrigation · Desktop Companion Bot · AR Smart Glasses · 3D Printer Budget |
+| **IoT / năng lượng / thiết bị** | Modular Wind Harvester · Smart Garden Irrigation · Desktop Companion Bot · AR Smart Glasses · 3D Printer Budget · Smart Home Blueprint |
 | **Máy công cụ / chế tạo** | Desktop CNC Mill · Large 3D Printer |
 | **Xe / phương tiện** | Electric Motocross Bike *(xe điện off-road, HV 72V)* |
 | **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* · Cyber Multi-tool *(công cụ nghiên cứu bảo mật, chỉ dùng hợp pháp trên thiết bị của bạn)* · Automated Biodiesel Reactor *(rig tự động hoá quá trình, cảnh báo methanol/lye)* |
