@@ -13,7 +13,7 @@ button:disabled { cursor:not-allowed; opacity:.4; }
 .brand { display:flex; align-items:center; gap:9px; border:0; background:transparent; width:max-content; font-size:13px; font-weight:800; letter-spacing:.12em; }
 .brand-mark { width:25px; height:25px; display:grid; place-items:center; border-radius:50%; background:#0f766e; color:white; font-size:9px; letter-spacing:0; }
 .brand i { color:#aaa; font-style:normal; font-size:10px; }
-.project-menu { position:absolute; z-index:80; top:49px; left:16px; width:285px; display:grid; gap:6px; padding:11px; border:1px solid #d9d9de; border-radius:8px; background:#fff; box-shadow:0 14px 34px rgba(25,25,30,.14); }
+.project-menu { position:absolute; z-index:80; top:49px; left:16px; width:285px; max-height:calc(100vh - 64px); overflow-y:auto; overscroll-behavior:contain; display:grid; gap:6px; padding:11px; border:1px solid #d9d9de; border-radius:8px; background:#fff; box-shadow:0 14px 34px rgba(25,25,30,.14); }
 .project-menu>span { padding:4px 7px; color:#97979d; font-weight:850; }
 .project-menu button { display:grid; gap:4px; padding:11px 12px; border:1px solid #e2e2e6; border-radius:6px; background:#fff; text-align:left; }
 .project-menu button:hover,.project-menu button.active { border-color:#8d72cf; background:#f8f5ff; }

@@ -20,3 +20,10 @@ tools/dist
 *~
 *.log
 dist/
+
+# Jupyter Notebook & Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+

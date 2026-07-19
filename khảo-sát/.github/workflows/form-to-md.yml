@@ -1,0 +1,86 @@
+name: 📋 Form to Markdown — Survey Results
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Họ tên học viên'
+        required: true
+      grade:
+        description: 'Khối lớp'
+        required: true
+      overall:
+        description: 'Đánh giá (1-5 sao)'
+        required: true
+      sessions:
+        description: 'Số buổi học'
+        required: false
+        default: '0'
+      best:
+        description: 'Điều thích nhất'
+        required: false
+      improve:
+        description: 'Cần cải thiện'
+        required: false
+
+jobs:
+  save-survey-result:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate result markdown
+        run: |
+          TIMESTAMP=$(date '+%d/%m/%Y %H:%M:%S')
+          SLUG=$(echo "${{ github.event.inputs.name || github.event.issue.user.login }}" | tr ' ' '_' | tr -cd '[:alnum:]_')
+          FILE="khảo-sát/results/${SLUG}_$(date +%Y%m%d%H%M%S).md"
+          mkdir -p "khảo-sát/results"
+
+          cat > "$FILE" <<EOF
+          # 📋 Kết quả Khảo sát STEM
+
+          **Họ tên:** ${{ github.event.inputs.name || github.event.issue.title }}
+          **Khối lớp:** ${{ github.event.inputs.grade || 'N/A' }}
+          **Thời gian nộp:** ${TIMESTAMP}
+
+          ## ⭐ Đánh giá
+          - **Tổng thể:** ${{ github.event.inputs.overall || 'N/A' }}/5
+          - **Buổi học hoàn thành:** ${{ github.event.inputs.sessions || '0' }}/36
+
+          ## 💬 Phản hồi
+          **Điều thích nhất:**
+          > ${{ github.event.inputs.best || '—' }}
+
+          **Cần cải thiện:**
+          > ${{ github.event.inputs.improve || '—' }}
+
+          ---
+          *Tạo tự động bởi GitHub Actions · ${TIMESTAMP}*
+          EOF
+
+          echo "FILE=$FILE" >> $GITHUB_ENV
+
+      - name: Update summary table in ket-qua.md
+        run: |
+          TIMESTAMP=$(date '+%d/%m/%Y')
+          NAME="${{ github.event.inputs.name || github.event.issue.user.login }}"
+          GRADE="${{ github.event.inputs.grade || 'N/A' }}"
+          STAR="${{ github.event.inputs.overall || '—' }}"
+          SESS="${{ github.event.inputs.sessions || '—' }}"
+
+          # Append new row to table
+          sed -i "s/| 1 | — | — | — | — | — |/| 1 | ${NAME} | ${GRADE} | ${STAR}\/5 | ${SESS} | ${TIMESTAMP} |/" "khảo-sát/ket-qua.md"
+
+      - name: Commit results
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add khảo-sát/
+          git commit -m "📋 New survey result: ${{ github.event.inputs.name || github.event.issue.user.login }}"
+          git push

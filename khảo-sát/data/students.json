@@ -1,0 +1,86 @@
+{
+  "classes": [
+    {
+      "id": "8A",
+      "name": "Lớp 8A",
+      "teacher": "Nguyễn Thị Lan",
+      "room": "P.201",
+      "schedule": "Thứ 2 & Thứ 4, 15:00–16:30"
+    },
+    {
+      "id": "8B",
+      "name": "Lớp 8B",
+      "teacher": "Trần Văn Minh",
+      "room": "P.202",
+      "schedule": "Thứ 3 & Thứ 5, 15:00–16:30"
+    },
+    {
+      "id": "9A",
+      "name": "Lớp 9A",
+      "teacher": "Lê Thị Hoa",
+      "room": "P.301",
+      "schedule": "Thứ 2 & Thứ 6, 14:00–15:30"
+    },
+    {
+      "id": "10A",
+      "name": "Lớp 10A",
+      "teacher": "Phạm Văn Đức",
+      "room": "P.Lab1",
+      "schedule": "Thứ 4 & Thứ 6, 16:00–17:30"
+    }
+  ],
+  "students": [
+    { "id": "s001", "name": "Nguyễn Văn An",     "classId": "8A", "avatar": "🧑" },
+    { "id": "s002", "name": "Trần Thị Bình",      "classId": "8A", "avatar": "👧" },
+    { "id": "s003", "name": "Lê Hoàng Cường",     "classId": "8A", "avatar": "🧒" },
+    { "id": "s004", "name": "Phạm Thị Dung",      "classId": "8A", "avatar": "👩" },
+    { "id": "s005", "name": "Hoàng Văn Em",       "classId": "8A", "avatar": "👦" },
+    { "id": "s006", "name": "Vũ Thị Phương",      "classId": "8A", "avatar": "👧" },
+    { "id": "s007", "name": "Đặng Minh Quân",     "classId": "8B", "avatar": "🧑" },
+    { "id": "s008", "name": "Bùi Thị Hà",         "classId": "8B", "avatar": "👩" },
+    { "id": "s009", "name": "Ngô Văn Hùng",       "classId": "8B", "avatar": "👦" },
+    { "id": "s010", "name": "Đinh Thị Lan",       "classId": "8B", "avatar": "👧" },
+    { "id": "s011", "name": "Cao Văn Lộc",        "classId": "8B", "avatar": "🧒" },
+    { "id": "s012", "name": "Lý Thị Mai",         "classId": "8B", "avatar": "👩" },
+    { "id": "s013", "name": "Trương Văn Nam",     "classId": "9A", "avatar": "🧑" },
+    { "id": "s014", "name": "Hà Thị Oanh",        "classId": "9A", "avatar": "👧" },
+    { "id": "s015", "name": "Phan Minh Phát",     "classId": "9A", "avatar": "👦" },
+    { "id": "s016", "name": "Tô Thị Quỳnh",       "classId": "9A", "avatar": "👩" },
+    { "id": "s017", "name": "Đỗ Văn Sơn",         "classId": "10A", "avatar": "🧑" },
+    { "id": "s018", "name": "Lưu Thị Tâm",        "classId": "10A", "avatar": "👩" },
+    { "id": "s019", "name": "Nguyễn Hoàng Uy",    "classId": "10A", "avatar": "👦" },
+    { "id": "s020", "name": "Võ Thị Vân",         "classId": "10A", "avatar": "👧" }
+  ],
+  "sessions": [
+    { "id": 1,  "title": "Giới thiệu micro:bit & Crowtail",  "phase": 1 },
+    { "id": 2,  "title": "Điều khiển LED",                   "phase": 1 },
+    { "id": 3,  "title": "Biến & phép toán",                 "phase": 1 },
+    { "id": 4,  "title": "Điều kiện",                        "phase": 1 },
+    { "id": 5,  "title": "Vòng lặp",                         "phase": 1 },
+    { "id": 6,  "title": "Hàm (Function)",                   "phase": 1 },
+    { "id": 7,  "title": "Buzzer – Âm thanh",                "phase": 2 },
+    { "id": 8,  "title": "Servo – Cửa tự động",              "phase": 2 },
+    { "id": 9,  "title": "RGB LED",                          "phase": 2 },
+    { "id": 10, "title": "Motor rung",                       "phase": 2 },
+    { "id": 11, "title": "Nút cảm ứng",                      "phase": 2 },
+    { "id": 12, "title": "Logic Gate",                       "phase": 2 },
+    { "id": 13, "title": "Cảm biến âm thanh",               "phase": 3 },
+    { "id": 14, "title": "Cảm biến từ",                      "phase": 3 },
+    { "id": 15, "title": "Siêu âm",                          "phase": 3 },
+    { "id": 16, "title": "Độ ẩm đất",                        "phase": 3 },
+    { "id": 17, "title": "Nhiệt độ",                         "phase": 3 },
+    { "id": 18, "title": "Gia tốc kế",                       "phase": 3 },
+    { "id": 19, "title": "La bàn",                           "phase": 3 },
+    { "id": 20, "title": "Cảm biến kết hợp",                "phase": 3 },
+    { "id": 35, "title": "Thiết kế sản phẩm",               "phase": 6 },
+    { "id": 36, "title": "Demo & Bảo vệ",                   "phase": 6 }
+  ],
+  "criteria": [
+    { "id": "teamwork",      "label": "Hợp tác nhóm",        "icon": "🤝", "desc": "Phối hợp và hỗ trợ thành viên" },
+    { "id": "creativity",   "label": "Sáng tạo",             "icon": "💡", "desc": "Đề xuất ý tưởng mới" },
+    { "id": "coding",       "label": "Kỹ năng lập trình",   "icon": "💻", "desc": "Viết code chính xác, hiệu quả" },
+    { "id": "problem",      "label": "Giải quyết vấn đề",   "icon": "🧩", "desc": "Xử lý lỗi và tìm giải pháp" },
+    { "id": "presentation", "label": "Thuyết trình",         "icon": "🎤", "desc": "Trình bày rõ ràng, tự tin" },
+    { "id": "attitude",     "label": "Thái độ học tập",     "icon": "⭐", "desc": "Chăm chỉ, tích cực, đúng giờ" }
+  ]
+}
