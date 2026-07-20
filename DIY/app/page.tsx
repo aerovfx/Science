@@ -56,6 +56,45 @@ const tabs: Array<{ id: Tab; icon: string; label: string }> = [
 
 type ProjectMode = "mini" | "long-range" | "mother" | "usv" | "vtol" | "observer" | "ornithopter" | "mobilerobot" | "humanoid" | "robodog" | "submarine" | "rcboat" | "windharvester" | "scara" | "fpvracer" | "plasma" | "walle" | "garden" | "filmingdrone" | "companion" | "arglasses" | "printer3d" | "deliverydrone" | "endurance" | "cncmill" | "largeprinter" | "cybertool" | "emotobike" | "biodiesel" | "smarthome" | "cargodrone" | "microdrone" | "exosuit" | "liftboot" | "generated";
 
+type ProjectTemplate = { mode: ProjectMode; title: string; subtitle: string };
+
+const projectTemplates: ProjectTemplate[] = [
+  { mode: "mini", title: "BUDGET MINI UAV", subtitle: "30 components · quadcopter" },
+  { mode: "long-range", title: "LONG RANGE UAV", subtitle: "39 components · fixed-wing" },
+  { mode: "mother", title: "MOTHER UAV CARRIER", subtitle: "6 micro-UAV docks · civil research" },
+  { mode: "usv", title: "AUTONOMOUS SURVEY USV", subtitle: "hydrography · water quality" },
+  { mode: "vtol", title: "VTOL SURVEY DRONE", subtitle: "26 components · quadplane" },
+  { mode: "observer", title: "AERIAL OBSERVATION MULTIROTOR", subtitle: "camera quad · inspection" },
+  { mode: "ornithopter", title: "DRAGONFLY ORNITHOPTER", subtitle: "flapping-wing MAV · STEM" },
+  { mode: "mobilerobot", title: "SMART MOBILE ROBOT", subtitle: "STM32 + ESP32 · ground" },
+  { mode: "humanoid", title: "HUMANOID ROBOT", subtitle: "170cm · Jetson Orin" },
+  { mode: "robodog", title: "QUADRUPED ROBODOG", subtitle: "12× BLDC · CAN" },
+  { mode: "submarine", title: "UNDERWATER ROV", subtitle: "6 thrusters · sealed hull" },
+  { mode: "rcboat", title: "RC BOAT", subtitle: "tethered camera" },
+  { mode: "windharvester", title: "WIND HARVESTER", subtitle: "MPPT + supercap" },
+  { mode: "scara", title: "SCARA ARM", subtitle: "4-axis · ESP32" },
+  { mode: "fpvracer", title: "FPV RACER", subtitle: "5-inch · KAKUTE H7" },
+  { mode: "plasma", title: "PLASMA THRUSTER", subtitle: "space propulsion · concept" },
+  { mode: "walle", title: "WALL-E ROBOT", subtitle: "tracked · RPi 5 + ESP32" },
+  { mode: "garden", title: "GARDEN IRRIGATION", subtitle: "6 zones · ESP32 IoT" },
+  { mode: "filmingdrone", title: "FILMING DRONE", subtitle: "7-inch cine · KAKUTE H7" },
+  { mode: "companion", title: "COMPANION BOT", subtitle: "desk gadget · ESP32-S3" },
+  { mode: "arglasses", title: "AR SMART GLASSES", subtitle: "ESP32-S3 · OLED" },
+  { mode: "printer3d", title: "3D PRINTER", subtitle: "RAMPS 1.4 · MK8" },
+  { mode: "deliverydrone", title: "DELIVERY DRONE", subtitle: "Pixhawk · drop mech" },
+  { mode: "endurance", title: "ENDURANCE DRONE", subtitle: "blended wing · 8S" },
+  { mode: "cncmill", title: "DESKTOP CNC MILL", subtitle: "GRBL · 3-axis" },
+  { mode: "largeprinter", title: "LARGE 3D PRINTER", subtitle: "SKR 2 · TMC2209" },
+  { mode: "cybertool", title: "CYBER MULTITOOL", subtitle: "STM32WB55 · security" },
+  { mode: "emotobike", title: "ELECTRIC MX BIKE", subtitle: "72V · Sevcon" },
+  { mode: "biodiesel", title: "BIODIESEL REACTOR", subtitle: "Arduino Mega · rig" },
+  { mode: "smarthome", title: "SMART HOME", subtitle: "Pi 4 · Zigbee" },
+  { mode: "cargodrone", title: "CARGO DRONE", subtitle: "Pixhawk 6S · 4 motor" },
+  { mode: "microdrone", title: "MICRO DRONE", subtitle: "ESP32-C3 · ~$30" },
+  { mode: "exosuit", title: "POWERED EXOSKELETON", subtitle: "civil assist · PA-14" },
+  { mode: "liftboot", title: "HYDRAULIC LIFT BOOT", subtitle: "4 cylinders · ESP32" },
+];
+
 const miniProject = {
   key: "mini" as const,
   projectId: "20efe778-7a96-4260-89d3-ed1c57b45a98",
@@ -292,7 +331,22 @@ export default function Home() {
         <button className="brand" aria-label="Chọn dự án DIY STEM" onClick={() => setProjectMenuOpen((value) => !value)}>
           <span className="brand-mark">D↗</span><span>{project.name}</span><i>⌄</i>
         </button>
-        {projectMenuOpen && <div className="project-menu"><span>TẠO SẢN PHẨM MỚI</span><button className={projectMode === "generated" ? "active" : ""} onClick={() => { setProjectMenuOpen(false); setChatCollapsed(false); if (!prompt.trim()) setPrompt("This remote-controlled robotic dragonfly leverages micro-motors and flapping wings for flight. It captures real-time FPV video and audio, streamed for VR equipment, via an integrated camera and microphone, all managed by a compact flight controller."); }}><b>✨ GENERATE FROM PROMPT</b><small>mô tả bất kỳ → BOM + mesh 3D</small></button><span>PROJECT TEMPLATES</span><button className={projectMode === "mini" ? "active" : ""} onClick={() => selectProject("mini")}><b>BUDGET MINI UAV</b><small>30 components · quadcopter</small></button><button className={projectMode === "long-range" ? "active" : ""} onClick={() => selectProject("long-range")}><b>LONG RANGE UAV</b><small>39 components · fixed-wing</small></button><button className={projectMode === "mother" ? "active" : ""} onClick={() => selectProject("mother")}><b>MOTHER UAV CARRIER</b><small>6 micro-UAV docks · civil research</small></button><button className={projectMode === "usv" ? "active" : ""} onClick={() => selectProject("usv")}><b>AUTONOMOUS SURVEY USV</b><small>hydrography · water quality</small></button><button className={projectMode === "vtol" ? "active" : ""} onClick={() => selectProject("vtol")}><b>VTOL SURVEY DRONE</b><small>26 components · quadplane</small></button><button className={projectMode === "observer" ? "active" : ""} onClick={() => selectProject("observer")}><b>AERIAL OBSERVATION MULTIROTOR</b><small>camera quad · inspection</small></button><button className={projectMode === "ornithopter" ? "active" : ""} onClick={() => selectProject("ornithopter")}><b>DRAGONFLY ORNITHOPTER</b><small>flapping-wing MAV · STEM</small></button><button className={projectMode === "mobilerobot" ? "active" : ""} onClick={() => selectProject("mobilerobot")}><b>SMART MOBILE ROBOT</b><small>STM32 + ESP32-CAM · ground</small></button><button className={projectMode === "humanoid" ? "active" : ""} onClick={() => selectProject("humanoid")}><b>HUMANOID ROBOT</b><small>Jetson Orin · Dynamixel</small></button><button className={projectMode === "robodog" ? "active" : ""} onClick={() => selectProject("robodog")}><b>ROBODOG PROJECT</b><small>quadruped · 12× BLDC</small></button><button className={projectMode === "submarine" ? "active" : ""} onClick={() => selectProject("submarine")}><b>MINI SUBMARINE DRONE</b><small>underwater ROV · 6 thrusters</small></button><button className={projectMode === "rcboat" ? "active" : ""} onClick={() => selectProject("rcboat")}><b>RC SUBMERSIBLE BOAT</b><small>RC boat · tethered camera</small></button><button className={projectMode === "windharvester" ? "active" : ""} onClick={() => selectProject("windharvester")}><b>MODULAR WIND HARVESTER</b><small>wind energy · MPPT + supercap</small></button><button className={projectMode === "scara" ? "active" : ""} onClick={() => selectProject("scara")}><b>SCARA ARM ROBOT</b><small>4-axis arm · gripper</small></button><button className={projectMode === "fpvracer" ? "active" : ""} onClick={() => selectProject("fpvracer")}><b>FPV RACING DRONE</b><small>5-inch 6S · carbon</small></button><button className={projectMode === "walle" ? "active" : ""} onClick={() => selectProject("walle")}><b>AUTONOMOUS WALL-E ROBOT</b><small>tracked · vision + voice</small></button><button className={projectMode === "garden" ? "active" : ""} onClick={() => selectProject("garden")}><b>SMART GARDEN IRRIGATION</b><small>6 zones · ESP32</small></button><button className={projectMode === "plasma" ? "active" : ""} onClick={() => selectProject("plasma")}><b>PULSED PLASMA THRUSTER</b><small>space propulsion · reference</small></button><button className={projectMode === "filmingdrone" ? "active" : ""} onClick={() => selectProject("filmingdrone")}><b>PROFESSIONAL FILMING DRONE</b><small>7-inch · GoPro payload</small></button><button className={projectMode === "companion" ? "active" : ""} onClick={() => selectProject("companion")}><b>DESKTOP COMPANION BOT</b><small>ESP32-S3 · TFT</small></button><button className={projectMode === "arglasses" ? "active" : ""} onClick={() => selectProject("arglasses")}><b>AR SMART GLASSES</b><small>ESP32-S3 · OLED overlay</small></button><button className={projectMode === "printer3d" ? "active" : ""} onClick={() => selectProject("printer3d")}><b>3D PRINTER BUDGET</b><small>2020 frame · RAMPS</small></button><button className={projectMode === "deliverydrone" ? "active" : ""} onClick={() => selectProject("deliverydrone")}><b>AUTONOMOUS DELIVERY DRONE</b><small>Pixhawk · supervised drop</small></button><button className={projectMode === "endurance" ? "active" : ""} onClick={() => selectProject("endurance")}><b>ENDURANCE DRONE</b><small>blended wing · 8S</small></button><button className={projectMode === "cncmill" ? "active" : ""} onClick={() => selectProject("cncmill")}><b>DESKTOP CNC MILL</b><small>GRBL · 3-axis · spindle</small></button><button className={projectMode === "largeprinter" ? "active" : ""} onClick={() => selectProject("largeprinter")}><b>LARGE 3D PRINTER</b><small>SKR 2 · TMC2209 · 300mm</small></button><button className={projectMode === "cybertool" ? "active" : ""} onClick={() => selectProject("cybertool")}><b>CYBER MULTI-TOOL</b><small>security research · legal use</small></button><button className={projectMode === "emotobike" ? "active" : ""} onClick={() => selectProject("emotobike")}><b>ELECTRIC MOTOCROSS BIKE</b><small>72V EV · Sevcon Gen4</small></button><button className={projectMode === "biodiesel" ? "active" : ""} onClick={() => selectProject("biodiesel")}><b>AUTOMATED BIODIESEL REACTOR</b><small>process rig · chemical safety</small></button><button className={projectMode === "smarthome" ? "active" : ""} onClick={() => selectProject("smarthome")}><b>SMART HOME BLUEPRINT</b><small>Pi hub · Zigbee + ESP32</small></button><button className={projectMode === "cargodrone" ? "active" : ""} onClick={() => selectProject("cargodrone")}><b>AUTONOMOUS CARGO DRONE</b><small>Pixhawk · LiDAR ring</small></button><button className={projectMode === "microdrone" ? "active" : ""} onClick={() => selectProject("microdrone")}><b>COST-EFFECTIVE DRONE</b><small>ESP32-C3 micro · ~$30</small></button><button className={projectMode === "exosuit" ? "active" : ""} onClick={() => selectProject("exosuit")}><b>POWERED EXOSKELETON</b><small>assist suit · civilian</small></button><button className={projectMode === "liftboot" ? "active" : ""} onClick={() => selectProject("liftboot")}><b>HYDRAULIC LIFT BOOT</b><small>wearable · 4 cylinders</small></button></div>}
+        {projectMenuOpen && (
+          <div className="project-menu">
+            <span>TẠO SẢN PHẨM MỚI</span>
+            <button className={projectMode === "generated" ? "active" : ""} onClick={() => { setProjectMenuOpen(false); setChatCollapsed(false); if (!prompt.trim()) setPrompt("This remote-controlled robotic dragonfly leverages micro-motors and flapping wings for flight. It captures real-time FPV video and audio, streamed for VR equipment, via an integrated camera and microphone, all managed by a compact flight controller."); }}>
+              <b>✨ GENERATE FROM PROMPT</b><small>mô tả bất kỳ → BOM + mesh 3D</small>
+            </button>
+            <span>PROJECT TEMPLATES ({projectTemplates.length})</span>
+            <div className="project-menu-list">
+              {projectTemplates.map((item) => (
+                <button key={item.mode} className={projectMode === item.mode ? "active" : ""} onClick={() => selectProject(item.mode)}>
+                  <b>{item.title}</b><small>{item.subtitle}</small>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
         <nav className="top-tabs" aria-label="Các phần của dự án">
           {tabs.map((tab) => <button key={tab.id} className={activeTab === tab.id ? "active" : ""} onClick={() => { setActiveTab(tab.id); if (tab.id !== "PARTS") setPartDetailOpen(false); }}><span>{tab.icon}</span>{tab.label}</button>)}
         </nav>
