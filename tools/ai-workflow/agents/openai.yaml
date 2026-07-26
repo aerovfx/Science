@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Dev Workflow"
+  short_description: "Quy trình đáng tin cậy cho mọi tính năng mới"
+  default_prompt: "Use $ai-dev-workflow to plan, implement, validate, and review this new feature end to end."
