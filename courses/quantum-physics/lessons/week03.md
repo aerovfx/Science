@@ -1,176 +1,485 @@
-# Tuần 3: Phương Trình Schrödinger / Week 3: The Schrödinger Equation
+# Tuần 3: Thế 1 Chiều & Hiệu Ứng Đường Hầm
+# Week 3: 1D Potentials & Quantum Tunneling
 
-## Mục Tiêu / Learning Objectives
-- **Vietnamese:**
-  1. Nắm bắt Phương trình Schrödinger Phụ thuộc Thời gian (TDSE) và Độc lập Thời gian (TISE).
-  2. Hiểu và áp dụng phương pháp tách biến (Separation of variables).
-  3. Khảo sát nghiệm của hạt tự do (Free particle) và tốc độ nhóm / tốc độ pha.
-  4. Phân tích hiện tượng xuyên hầm lượng tử (Quantum tunneling) và các ứng dụng.
-  5. Phát biểu được đầy đủ các tiên đề của Cơ học Lượng tử.
+## 1. Hạt trong giếng thế 1 chiều vô hạn (Particle in a 1D box)
+Năng lượng bị lượng tử hóa (Quantization of energy):
+$$ E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2} $$
+Hàm sóng (Wavefunctions):
+$$ \psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n \pi x}{L}\right) $$
 
-- **English:**
-  1. Grasp the Time-Dependent (TDSE) and Time-Independent Schrödinger Equations (TISE).
-  2. Understand and apply the separation of variables method.
-  3. Investigate free particle solutions, phase velocity, and group velocity.
-  4. Analyze quantum tunneling and its real-world applications.
-  5. State the fundamental postulates of Quantum Mechanics.
+## 2. Giếng thế hữu hạn (Finite potential well)
+Trạng thái liên kết (Bound states). Có sự thâm nhập của hàm sóng vào vùng cấm cổ điển. (Wave penetration into classically forbidden regions.)
 
-## Bối Cảnh Lịch Sử / Historical Context
-Vào năm 1926, lấy cảm hứng từ ý tưởng của de Broglie về sóng vật chất, nhà vật lý người Áo Erwin Schrödinger đã xây dựng một phương trình vi phân chi phối sự tiến hóa theo thời gian của hàm sóng.
-Khác với cơ học cổ điển nơi ta dùng định luật Newton để theo dõi quỹ đạo, trong thế giới lượng tử, ta dùng phương trình Schrödinger để theo dõi sự lan truyền của xác suất. Phương trình này là một Tiên đề, không được chứng minh từ các nguyên lý khác, nhưng độ chính xác của nó đã được kiểm chứng qua vô số thực nghiệm, từ nguyên tử hydro đến công nghệ bán dẫn hiện đại.
+## 3. Bậc thang thế (Potential step)
+Hệ số phản xạ (Reflection $R$) và truyền qua (Transmission $T$).
+$R + T = 1$
 
-## Lý Thuyết / Theory
+## 4. Hiệu ứng đường hầm lượng tử (Quantum Tunneling)
+Hạt có thể đi xuyên qua rào thế mặc dù $E < V_0$.
+Xác suất truyền qua (Transmission probability approximate):
+$$ T \approx e^{-2 \kappa L} $$
+với $\kappa = \frac{\sqrt{2m(V_0 - E)}}{\hbar}$
 
-### 1. Phương Trình Schrödinger Phụ Thuộc Thời Gian (TDSE) / Time-Dependent Schrödinger Equation
-Phương trình chi phối mọi trạng thái lượng tử không tương đối tính:
-$$ i\hbar\frac{\partial\Psi}{\partial t} = \hat{H}\Psi = \left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V(x)\right]\Psi $$
-- $\Psi(x,t)$: Hàm sóng
-- $\hat{H}$: Toán tử Hamiltonian
+## 5. Ứng dụng (Applications)
+- Kính hiển vi quét xuyên hầm (Scanning Tunneling Microscope - STM)
+- Phân rã Alpha (Alpha decay)
+- Phản ứng tổng hợp hạt nhân trong Mặt trời (Nuclear fusion in the sun)
 
-Sự bảo toàn xác suất (Conservation of probability):
-$$ \frac{\partial}{\partial t}|\Psi|^2 + \frac{\partial j}{\partial x} = 0 $$
-Với $j$ là dòng xác suất / probability current:
-$$ j = \frac{\hbar}{2mi}\left(\Psi^*\frac{\partial\Psi}{\partial x} - \Psi\frac{\partial\Psi^*}{\partial x}\right) $$
+## 6. Sơ đồ (ASCII Diagram)
+```text
+Energy
+ |          Barrier V0
+ |          |----|
+E|----->    |~~~~|-----> Tunneling!
+ |__________|____|________ x
+```
 
-### 2. Phương Trình Độc Lập Thời Gian (TISE) / Time-Independent Schrödinger Equation
-Nếu thế năng $V(x)$ không phụ thuộc thời gian, ta dùng phương pháp tách biến:
-Giả sử: $\Psi(x,t) = \psi(x)\cdot \phi(t)$
-Thay vào TDSE, ta thu được:
-$$ \phi(t) = e^{-iEt/\hbar} $$
-Và TISE:
-$$ -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi = E\psi $$
-Đây là phương trình trị riêng (Eigenvalue equation), với $E$ là mức năng lượng.
-Nghiệm tổng quát là sự xếp chồng (superposition):
-$$ \Psi(x,t) = \sum_n c_n \psi_n(x) e^{-iE_nt/\hbar} $$
-
-### 3. Hạt Tự Do (Free Particle) / Free Particle
-Khi $V(x) = 0$, TISE trở thành:
-$$ -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} = E\psi $$
-Nghiệm: $\psi(x) = Ae^{ikx} + Be^{-ikx}$ với $k = \sqrt{2mE}/\hbar$.
-Sóng phẳng / Plane wave: $\Psi(x,t) = Ae^{i(kx-\omega t)}$
-- Tốc độ pha (Phase velocity): $v_{ph} = \frac{\omega}{k} = \frac{\hbar k}{2m} = \frac{p}{2m}$
-- Tốc độ nhóm (Group velocity): $v_g = \frac{d\omega}{dk} = \frac{\hbar k}{m} = \frac{p}{m} = v_{classical}$
-
-### 4. Xuyên Hầm Lượng Tử / Quantum Tunneling
-Khi hạt đụng phải một hàng rào thế năng có độ cao $V_0 > E$, cơ học cổ điển nói hạt sẽ bị phản xạ. Cơ học lượng tử cho phép hạt "xuyên" qua.
-- Sóng tắt dần (Evanescent wave) bên trong hàng rào: $\psi \propto e^{-\kappa x}$ với $\kappa = \frac{\sqrt{2m(V_0-E)}}{\hbar}$
-- Hệ số truyền qua (Transmission coefficient, với hàng rào dày):
-  $$ T \approx e^{-2\kappa L} $$
-*Ứng dụng:* Phân rã alpha, kính hiển vi quét xuyên hầm (STM), phản ứng nhiệt hạch trong lõi mặt trời, bộ nhớ Flash (USB).
-
-### 5. Các Tiên Đề của Cơ Học Lượng Tử / Postulates of Quantum Mechanics
-1. Mọi trạng thái vật lý được mô tả hoàn toàn bằng hàm sóng $\Psi$.
-2. Mỗi đại lượng vật lý (observable) tương ứng với một toán tử tuyến tính Hermitian.
-3. Phép đo chỉ có thể cho kết quả là một trị riêng của toán tử đó.
-4. Giá trị kỳ vọng được tính bằng $\langle A \rangle = \langle \Psi | \hat{A} | \Psi \rangle$.
-5. Hàm sóng tiến hóa theo thời gian tuân theo TDSE.
-
-## Ví Dụ Tính Toán / Worked Examples
-
-**Ví dụ 1 / Example 1:**
-Một electron với năng lượng 2 eV đập vào một hàng rào thế năng cao 5 eV và dày 0.1 nm. Ước tính xác suất electron xuyên qua hàng rào.
-An electron with 2 eV energy strikes a potential barrier of 5 eV and 0.1 nm thickness. Estimate the tunneling probability.
-
-**Giải / Solution:**
-1. Tính $\kappa$:
-   $$ \kappa = \frac{\sqrt{2m_e(V_0-E)}}{\hbar} $$
-   $$ V_0 - E = 3 \text{ eV} = 3 \times 1.6 \times 10^{-19} \text{ J} = 4.8 \times 10^{-19} \text{ J} $$
-   $$ \kappa = \frac{\sqrt{2 \times 9.11 \times 10^{-31} \times 4.8 \times 10^{-19}}}{1.055 \times 10^{-34}} \approx 8.87 \times 10^9 \text{ m}^{-1} $$
-2. Tính hệ số xuyên hầm $T$:
-   $$ 2\kappa L = 2 \times (8.87 \times 10^9) \times (0.1 \times 10^{-9}) = 1.774 $$
-   $$ T \approx e^{-1.774} \approx 0.17 \text{ (hay 17%)} $$
-Vậy có khoảng 17% cơ hội hạt sẽ xuyên qua!
-
-## Code Python / Python Simulation
-
+## 7. Mô phỏng Python (Python Simulation)
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from numpy.fft import fft, ifft, fftfreq
 
-def simulate_tunneling(L=20, N=1024, dt=0.005, T=5.0,
-                       x0=-5, k0=8, sigma=1.0,
-                       V0=50, barrier_start=0, barrier_width=0.5):
-    """
-    Mô phỏng xuyên hầm lượng tử / Quantum tunneling simulation
-    Sử dụng phương pháp split-step Fourier / Split-step Fourier method
-    (Natural units: ℏ=1, m=1)
-    """
-    x = np.linspace(-L/2, L/2, N)
-    dx = x[1] - x[0]
-    dk = 2*np.pi / (N*dx)
-    k = fftfreq(N, d=dx/(2*np.pi))
-    
-    # Potential barrier / Hàng rào thế
-    V = np.zeros(N)
-    mask = (x >= barrier_start) & (x <= barrier_start + barrier_width)
-    V[mask] = V0
-    
-    # Initial Gaussian wave packet / Gói sóng Gaussian ban đầu
-    psi = np.exp(-(x-x0)**2/(2*sigma**2)) * np.exp(1j*k0*x)
-    psi /= np.sqrt(np.sum(np.abs(psi)**2)*dx)  # Normalize
-    
-    # Half-step operators / Toán tử bước nửa
-    exp_V = np.exp(-1j * V * dt/2)   # Half position step
-    exp_K = np.exp(-1j * k**2/2 * dt) # Full momentum step
-    
-    snapshots = []
-    n_steps = int(T/dt)
-    for step in range(n_steps):
-        psi = exp_V * psi
-        psi = ifft(exp_K * fft(psi))
-        psi = exp_V * psi
-        if step % (n_steps//8) == 0:
-            snapshots.append((step*dt, x, np.abs(psi)**2, V/V0*5))
-    
-    # Calculate transmission / Tính hệ số truyền qua
-    prob_right = np.sum(np.abs(psi[x > barrier_start + barrier_width])**2) * dx
-    prob_left  = np.sum(np.abs(psi[x < barrier_start])**2) * dx
-    T_coeff = prob_right / (prob_right + prob_left)
-    print(f'Tunneling coefficient T = {T_coeff:.4f}')
-    
-    # Analytical approximation
-    kappa = np.sqrt(2*(np.maximum(0, V0 - k0**2/2)))  # (natural units)
-    T_analytical = np.exp(-2*kappa*barrier_width)
-    print(f'Analytical T ≈ exp(-2κL) = {T_analytical:.4f}')
-    
-    # Plot
-    fig, axes = plt.subplots(2, 4, figsize=(14, 6))
-    colors = plt.cm.plasma(np.linspace(0, 1, len(snapshots)))
-    for i, (t, x_s, prob, V_s) in enumerate(snapshots):
-        ax = axes.flat[i]
-        ax.fill_between(x_s, V_s, alpha=0.3, color='gray', label='Barrier')
-        ax.plot(x_s, prob, color=colors[i], lw=2)
-        ax.set_title(f't={t:.1f}'); ax.set_ylim(0, None); ax.grid(alpha=0.3)
-    plt.suptitle('Xuyên Hầm Lượng Tử / Quantum Tunneling', fontsize=13)
-    plt.tight_layout(); plt.savefig('week03_tunneling.png', dpi=150)
-    return T_coeff
+def T_coef(E, V0, m, a, hbar=1.0):
+    if E >= V0: return 1.0
+    kappa = np.sqrt(2*m*(V0 - E))/hbar
+    k = np.sqrt(2*m*E)/hbar
+    denom = 1 + (V0**2 * np.sinh(kappa*a)**2)/(4*E*(V0-E))
+    return 1.0 / denom
+
+E_vals = np.linspace(0.1, 2.0, 500)
+V0 = 1.0
+T_vals = [T_coef(E, V0, 1.0, 1.0) for E in E_vals]
+
+plt.plot(E_vals, T_vals)
+plt.axvline(V0, color='r', linestyle='--', label='V0')
+plt.title('Hệ số truyền qua Đường hầm lượng tử (Tunneling Transmission)')
+plt.xlabel('Năng lượng E (Energy)')
+plt.ylabel('Hệ số truyền qua T (Transmission)')
+plt.legend()
+plt.grid(True)
+plt.show()
 ```
 
-## ⚠️ Hiểu Lầm Thường Gặp / Common Misconceptions
-1. **Hạt bay xuyên qua hàng rào bằng cách khoét lỗ:** Tunneling không phá hỏng hàng rào. Nó xảy ra do bản chất sóng của vật chất "rò rỉ" qua vùng cấm cổ điển.
-   **Particles physically drill holes:** Tunneling doesn't damage the barrier. It is purely the wave nature of matter leaking through a classically forbidden region.
-2. **Năng lượng không được bảo toàn:** Thực tế, khi xuyên hầm hạt vẫn giữ nguyên tổng năng lượng $E$, nó chỉ nằm ở vùng mà $V > E$.
-   **Energy is not conserved:** The particle's total energy $E$ remains constant; it just exists in a region where kinetic energy would classically be negative.
+## 8. Ví dụ tính toán
+**Bài toán:** Tính năng lượng cơ bản của electron trong hộp 1D dài 1 nm.
+**Giải:** $E_1 = \frac{1^2 \pi^2 \hbar^2}{2 m_e (10^{-9})^2} \approx 0.376 \text{ eV}$
 
-## Câu Hỏi Thảo Luận / Discussion
-1. Phương pháp tách biến (Separation of variables) thất bại khi nào? / When does the separation of variables method fail?
-2. Tại sao phương trình Schrödinger độc lập thời gian lại là một bài toán trị riêng? / Why is the Time-Independent Schrödinger Equation an eigenvalue problem?
-3. Trình bày cơ chế vật lý giúp mặt trời phát sáng nhờ hiệu ứng xuyên hầm. / Explain the physical mechanism by which quantum tunneling allows the sun to shine.
-4. Điều gì sẽ xảy ra nếu hằng số Planck bằng không? / What would happen to tunneling if Planck's constant were zero?
-5. Nếu xuyên hầm luôn có thể xảy ra, tại sao con người không thể đi xuyên tường? / If tunneling is always possible, why can't humans walk through walls?
+## 9. Câu hỏi thảo luận
+1. Ý nghĩa của việc năng lượng không bằng 0 ở trạng thái cơ bản là gì? (Zero-point energy meaning?)
+2. Làm sao một hạt có thể xuất hiện ở phía bên kia rào thế mà không đi xuyên qua nó theo nghĩa cổ điển?
+3. Xác suất đường hầm phụ thuộc vào khối lượng hạt như thế nào?
+4. Thiết kế của STM tận dụng hiệu ứng đường hầm ra sao?
+5. Tại sao Mặt trời không thể cháy nếu không có hiệu ứng đường hầm?
 
-## Bài Tập / Homework Problems
-1. Chứng minh rằng dòng xác suất $j$ của sóng phẳng $\Psi(x) = Ae^{ikx}$ là hằng số và độc lập với vị trí.
-   Prove that the probability current $j$ for a plane wave $\Psi(x) = Ae^{ikx}$ is constant and position-independent.
-2. Thiết lập TISE cho hệ một hạt chịu lực cản đàn hồi lý tưởng (Harmonic oscillator).
-   Set up the TISE for a particle under an ideal elastic restoring force (Harmonic oscillator).
-3. Một proton đập vào hàng rào 5 MeV. Nếu thay proton bằng hạt alpha (gấp 4 lần khối lượng), tỷ lệ xuyên hầm thay đổi thế nào?
-   A proton hits a 5 MeV barrier. If replaced by an alpha particle (4x mass), how does the tunneling probability change?
+## 10. Bài tập về nhà
+1. Tính xác suất một electron hầm qua rào cản dày 0.5 nm, cao 5eV, nếu $E = 2eV$.
+2. Tìm bước sóng của electron trong giếng thế 1D ở trạng thái n=3.
 
-## Đánh Giá / Assessment Rubric
-| Tiêu Chí / Criteria | Xuất Sắc / Excellent (9-10) | Khá / Good (7-8) | Cơ Bản / Basic (5-6) |
-|---------------------|-----------------------------|------------------|----------------------|
-| Hiểu phương trình | Vận dụng linh hoạt TDSE và TISE, hiểu rõ ranh giới áp dụng. | Nắm được định dạng phương trình. | Hay nhầm lẫn TDSE và TISE. |
-| Xuyên hầm | Giải bài tập xuyên hầm tốt, hiểu được hàm mũ giảm dần. | Tính T được nhưng hay nhầm hằng số. | Không biết áp dụng công thức suy giảm. |
-| Python / Code | Có khả năng sửa dt, dx, dx ổn định để tránh lỗi phân kỳ. | Chạy được và hiểu code FFT. | Chưa hiểu FFT và không chạy được. |
+## 11. Những hiểu lầm thường gặp
+- ⚠️ Hạt "đục lỗ" qua rào cản. -> Không, nó chỉ là xác suất hàm sóng không suy giảm hoàn toàn về 0.
+- ⚠️ Năng lượng bên trong rào cản là âm. -> Động năng âm chỉ là khái niệm toán học, thực tế hạt không quan sát được ở trạng thái vi mô bên trong rào cản một cách cổ điển.
+
+
+## Phụ lục A: Đánh giá & Chấm điểm (Appendix A: Assessment & Rubric)
+| Tiêu chí (Criteria) | Xuất sắc (Excellent - 90-100%) | Tốt (Good - 70-89%) | Đạt (Pass - 50-69%) | Cần cố gắng (Needs Improvement - <50%) |
+|---------------------|--------------------------------|---------------------|---------------------|----------------------------------------|
+| **Hiểu biết lý thuyết (Theoretical Understanding)** | Nắm vững toàn bộ các khái niệm cốt lõi, giải thích rõ ràng bằng toán học. (Mastered all core concepts, clear mathematical explanations.) | Hiểu hầu hết các khái niệm, có thể mắc lỗi nhỏ trong toán học. (Understands most concepts, minor math errors.) | Hiểu cơ bản, giải thích còn mơ hồ hoặc thiếu chi tiết. (Basic understanding, vague or missing details.) | Không nắm được khái niệm cơ bản. (Fails to grasp basic concepts.) |
+| **Kỹ năng giải bài tập (Problem Solving Skills)** | Giải quyết trọn vẹn, lập luận logic, kết quả chính xác tuyệt đối. (Complete solution, logical arguments, perfect accuracy.) | Giải đúng hướng nhưng có thể sai sót nhỏ trong tính toán. (Correct approach but minor calculation errors.) | Biết cách bắt đầu nhưng không thể hoàn thành bài toán. (Knows how to start but cannot finish.) | Không biết cách giải quyết. (Unable to solve.) |
+| **Kỹ năng lập trình (Programming Skills)** | Code chạy hoàn hảo, tối ưu, chú thích đầy đủ, biểu đồ đẹp. (Perfect code, optimized, well-commented, beautiful plots.) | Code chạy được, có chú thích nhưng chưa tối ưu. (Working code, commented but unoptimized.) | Code có lỗi nhỏ, thiếu chú thích, biểu đồ sơ sài. (Minor bugs, lacks comments, basic plots.) | Code không chạy, không có chú thích. (Code doesn't run, no comments.) |
+| **Tư duy phản biện (Critical Thinking)** | Trả lời xuất sắc câu hỏi thảo luận, liên hệ thực tế sâu sắc. (Excellent discussion answers, deep real-world connections.) | Trả lời tốt câu hỏi, có liên hệ thực tế. (Good answers, some real-world connection.) | Trả lời hời hợt, không có liên hệ thực tế. (Superficial answers, no real-world connection.) | Không tham gia thảo luận. (Does not participate.) |
+
+## Phụ lục B: Thuật ngữ Vật lý Lượng tử (Appendix B: Quantum Physics Glossary)
+1. **Lưỡng tính Sóng-Hạt (Wave-Particle Duality)**: Khái niệm cho rằng mọi thực thể lượng tử đều thể hiện tính chất của cả sóng và hạt. (The concept that every quantum entity exhibits both wave and particle properties.)
+2. **Hàm sóng (Wavefunction)**: Một hàm toán học mô tả trạng thái lượng tử của hệ thống. Ký hiệu là $\Psi$. (A mathematical function describing the quantum state of a system. Denoted as $\Psi$.)
+3. **Nguyên lý Xếp chồng (Superposition Principle)**: Khả năng hệ lượng tử ở nhiều trạng thái cùng một lúc cho đến khi bị đo đạc. (The ability of a quantum system to be in multiple states simultaneously until measured.)
+4. **Sự Vướng mắc Lượng tử (Quantum Entanglement)**: Hiện tượng các hạt lượng tử liên kết với nhau sao cho trạng thái của hạt này phụ thuộc tức thời vào trạng thái của hạt kia. (A phenomenon where quantum particles are linked such that the state of one instantaneously depends on the other.)
+5. **Đường hầm Lượng tử (Quantum Tunneling)**: Khả năng hạt vượt qua rào cản thế năng mà theo vật lý cổ điển là không thể. (The ability of a particle to pass through a potential barrier that would be impossible in classical physics.)
+6. **Mômen Động lượng (Angular Momentum)**: Đại lượng bảo toàn đặc trưng cho chuyển động quay. Trong lượng tử, nó bị lượng tử hóa. (A conserved quantity characterizing rotational motion. In quantum, it is quantized.)
+7. **Spin**: Mômen động lượng nội tại của hạt cơ bản. (Intrinsic angular momentum of an elementary particle.)
+8. **Toán tử (Operator)**: Phép toán được áp dụng lên hàm sóng để lấy ra các đại lượng quan sát được. (A mathematical operation applied to the wavefunction to extract observables.)
+9. **Kỳ vọng (Expectation Value)**: Giá trị trung bình của nhiều phép đo trên các hệ giống hệt nhau. (The average value of many measurements on identical systems.)
+10. **Bất định Heisenberg (Heisenberg Uncertainty)**: Giới hạn cơ bản về độ chính xác khi đo đạc đồng thời vị trí và động lượng. (Fundamental limit to the precision of simultaneously measuring position and momentum.)
+
+## Phụ lục C: Ôn tập Toán học Cơ bản (Appendix C: Basic Math Review)
+### 1. Số Phức (Complex Numbers)
+Số phức có dạng $z = a + bi$, trong đó $i^2 = -1$.
+Dạng cực (Polar form): $z = r e^{i\theta} = r(\cos\theta + i\sin\theta)$
+Số phức liên hợp (Complex conjugate): $z^* = a - bi = r e^{-i\theta}$
+Mô-đun bình phương (Modulus squared): $|z|^2 = z z^* = a^2 + b^2 = r^2$
+
+Trong cơ học lượng tử, hàm sóng thường là số phức. Mật độ xác suất $|\Psi|^2 = \Psi^* \Psi$ luôn là số thực.
+
+### 2. Đại số Tuyến tính (Linear Algebra)
+- **Không gian Hilbert (Hilbert Space)**: Không gian vector phức có tích vô hướng hoàn chỉnh.
+- **Tích vô hướng (Inner Product)**: Ký hiệu bra-ket $\langle \phi | \psi \rangle = \int \phi^* \psi dx$.
+- **Trực giao (Orthogonality)**: Hai trạng thái trực giao nếu $\langle \phi | \psi \rangle = 0$.
+- **Ma trận Hermitian (Hermitian Matrix)**: Ma trận bằng chuyển vị liên hợp của chính nó ($A = A^\dagger$). Các toán tử vật lý đều là Hermitian vì chúng có trị riêng thực.
+
+### 3. Phương trình Vi phân (Differential Equations)
+Phương trình Schrödinger là phương trình vi phân đạo hàm riêng cấp 2 tuyến tính.
+Giải phương trình dạng: $\frac{d^2 \psi}{dx^2} = -k^2 \psi$
+Nghiệm tổng quát: $\psi(x) = A \sin(kx) + B \cos(kx)$ hoặc $\psi(x) = C e^{ikx} + D e^{-ikx}$.
+
+## Phụ lục D: Cài đặt Môi trường Python (Appendix D: Python Environment Setup)
+Để chạy các đoạn code trong khóa học này, bạn cần cài đặt Python và một số thư viện khoa học. (To run the code in this course, you need Python and scientific libraries.)
+
+### Bước 1: Cài đặt Anaconda hoặc Miniconda
+Chúng tôi khuyên dùng Miniconda (nhẹ hơn).
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+### Bước 2: Tạo môi trường ảo (Create virtual environment)
+```bash
+conda create -n quantum python=3.10
+conda activate quantum
+```
+
+### Bước 3: Cài đặt thư viện (Install libraries)
+```bash
+pip install numpy scipy matplotlib qiskit jupyterlab
+```
+
+### Bước 4: Chạy Jupyter Lab
+```bash
+jupyter lab
+```
+
+### Giới thiệu về Qiskit (Introduction to Qiskit)
+Qiskit là framework mã nguồn mở của IBM để lập trình máy tính lượng tử. (Qiskit is IBM's open-source framework for quantum programming.)
+Ví dụ tạo một cổng Hadamard:
+```python
+from qiskit import QuantumCircuit, execute, Aer
+# Tạo mạch lượng tử 1 qubit (Create 1-qubit circuit)
+qc = QuantumCircuit(1, 1)
+# Áp dụng cổng H (Apply H gate)
+qc.h(0)
+# Đo đạc (Measure)
+qc.measure(0, 0)
+print(qc.draw())
+```
+
+
+## Phụ lục A: Đánh giá & Chấm điểm (Appendix A: Assessment & Rubric)
+| Tiêu chí (Criteria) | Xuất sắc (Excellent - 90-100%) | Tốt (Good - 70-89%) | Đạt (Pass - 50-69%) | Cần cố gắng (Needs Improvement - <50%) |
+|---------------------|--------------------------------|---------------------|---------------------|----------------------------------------|
+| **Hiểu biết lý thuyết (Theoretical Understanding)** | Nắm vững toàn bộ các khái niệm cốt lõi, giải thích rõ ràng bằng toán học. (Mastered all core concepts, clear mathematical explanations.) | Hiểu hầu hết các khái niệm, có thể mắc lỗi nhỏ trong toán học. (Understands most concepts, minor math errors.) | Hiểu cơ bản, giải thích còn mơ hồ hoặc thiếu chi tiết. (Basic understanding, vague or missing details.) | Không nắm được khái niệm cơ bản. (Fails to grasp basic concepts.) |
+| **Kỹ năng giải bài tập (Problem Solving Skills)** | Giải quyết trọn vẹn, lập luận logic, kết quả chính xác tuyệt đối. (Complete solution, logical arguments, perfect accuracy.) | Giải đúng hướng nhưng có thể sai sót nhỏ trong tính toán. (Correct approach but minor calculation errors.) | Biết cách bắt đầu nhưng không thể hoàn thành bài toán. (Knows how to start but cannot finish.) | Không biết cách giải quyết. (Unable to solve.) |
+| **Kỹ năng lập trình (Programming Skills)** | Code chạy hoàn hảo, tối ưu, chú thích đầy đủ, biểu đồ đẹp. (Perfect code, optimized, well-commented, beautiful plots.) | Code chạy được, có chú thích nhưng chưa tối ưu. (Working code, commented but unoptimized.) | Code có lỗi nhỏ, thiếu chú thích, biểu đồ sơ sài. (Minor bugs, lacks comments, basic plots.) | Code không chạy, không có chú thích. (Code doesn't run, no comments.) |
+| **Tư duy phản biện (Critical Thinking)** | Trả lời xuất sắc câu hỏi thảo luận, liên hệ thực tế sâu sắc. (Excellent discussion answers, deep real-world connections.) | Trả lời tốt câu hỏi, có liên hệ thực tế. (Good answers, some real-world connection.) | Trả lời hời hợt, không có liên hệ thực tế. (Superficial answers, no real-world connection.) | Không tham gia thảo luận. (Does not participate.) |
+
+## Phụ lục B: Thuật ngữ Vật lý Lượng tử (Appendix B: Quantum Physics Glossary)
+1. **Lưỡng tính Sóng-Hạt (Wave-Particle Duality)**: Khái niệm cho rằng mọi thực thể lượng tử đều thể hiện tính chất của cả sóng và hạt. (The concept that every quantum entity exhibits both wave and particle properties.)
+2. **Hàm sóng (Wavefunction)**: Một hàm toán học mô tả trạng thái lượng tử của hệ thống. Ký hiệu là $\Psi$. (A mathematical function describing the quantum state of a system. Denoted as $\Psi$.)
+3. **Nguyên lý Xếp chồng (Superposition Principle)**: Khả năng hệ lượng tử ở nhiều trạng thái cùng một lúc cho đến khi bị đo đạc. (The ability of a quantum system to be in multiple states simultaneously until measured.)
+4. **Sự Vướng mắc Lượng tử (Quantum Entanglement)**: Hiện tượng các hạt lượng tử liên kết với nhau sao cho trạng thái của hạt này phụ thuộc tức thời vào trạng thái của hạt kia. (A phenomenon where quantum particles are linked such that the state of one instantaneously depends on the other.)
+5. **Đường hầm Lượng tử (Quantum Tunneling)**: Khả năng hạt vượt qua rào cản thế năng mà theo vật lý cổ điển là không thể. (The ability of a particle to pass through a potential barrier that would be impossible in classical physics.)
+6. **Mômen Động lượng (Angular Momentum)**: Đại lượng bảo toàn đặc trưng cho chuyển động quay. Trong lượng tử, nó bị lượng tử hóa. (A conserved quantity characterizing rotational motion. In quantum, it is quantized.)
+7. **Spin**: Mômen động lượng nội tại của hạt cơ bản. (Intrinsic angular momentum of an elementary particle.)
+8. **Toán tử (Operator)**: Phép toán được áp dụng lên hàm sóng để lấy ra các đại lượng quan sát được. (A mathematical operation applied to the wavefunction to extract observables.)
+9. **Kỳ vọng (Expectation Value)**: Giá trị trung bình của nhiều phép đo trên các hệ giống hệt nhau. (The average value of many measurements on identical systems.)
+10. **Bất định Heisenberg (Heisenberg Uncertainty)**: Giới hạn cơ bản về độ chính xác khi đo đạc đồng thời vị trí và động lượng. (Fundamental limit to the precision of simultaneously measuring position and momentum.)
+
+## Phụ lục C: Ôn tập Toán học Cơ bản (Appendix C: Basic Math Review)
+### 1. Số Phức (Complex Numbers)
+Số phức có dạng $z = a + bi$, trong đó $i^2 = -1$.
+Dạng cực (Polar form): $z = r e^{i\theta} = r(\cos\theta + i\sin\theta)$
+Số phức liên hợp (Complex conjugate): $z^* = a - bi = r e^{-i\theta}$
+Mô-đun bình phương (Modulus squared): $|z|^2 = z z^* = a^2 + b^2 = r^2$
+
+Trong cơ học lượng tử, hàm sóng thường là số phức. Mật độ xác suất $|\Psi|^2 = \Psi^* \Psi$ luôn là số thực.
+
+### 2. Đại số Tuyến tính (Linear Algebra)
+- **Không gian Hilbert (Hilbert Space)**: Không gian vector phức có tích vô hướng hoàn chỉnh.
+- **Tích vô hướng (Inner Product)**: Ký hiệu bra-ket $\langle \phi | \psi \rangle = \int \phi^* \psi dx$.
+- **Trực giao (Orthogonality)**: Hai trạng thái trực giao nếu $\langle \phi | \psi \rangle = 0$.
+- **Ma trận Hermitian (Hermitian Matrix)**: Ma trận bằng chuyển vị liên hợp của chính nó ($A = A^\dagger$). Các toán tử vật lý đều là Hermitian vì chúng có trị riêng thực.
+
+### 3. Phương trình Vi phân (Differential Equations)
+Phương trình Schrödinger là phương trình vi phân đạo hàm riêng cấp 2 tuyến tính.
+Giải phương trình dạng: $\frac{d^2 \psi}{dx^2} = -k^2 \psi$
+Nghiệm tổng quát: $\psi(x) = A \sin(kx) + B \cos(kx)$ hoặc $\psi(x) = C e^{ikx} + D e^{-ikx}$.
+
+## Phụ lục D: Cài đặt Môi trường Python (Appendix D: Python Environment Setup)
+Để chạy các đoạn code trong khóa học này, bạn cần cài đặt Python và một số thư viện khoa học. (To run the code in this course, you need Python and scientific libraries.)
+
+### Bước 1: Cài đặt Anaconda hoặc Miniconda
+Chúng tôi khuyên dùng Miniconda (nhẹ hơn).
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+### Bước 2: Tạo môi trường ảo (Create virtual environment)
+```bash
+conda create -n quantum python=3.10
+conda activate quantum
+```
+
+### Bước 3: Cài đặt thư viện (Install libraries)
+```bash
+pip install numpy scipy matplotlib qiskit jupyterlab
+```
+
+### Bước 4: Chạy Jupyter Lab
+```bash
+jupyter lab
+```
+
+### Giới thiệu về Qiskit (Introduction to Qiskit)
+Qiskit là framework mã nguồn mở của IBM để lập trình máy tính lượng tử. (Qiskit is IBM's open-source framework for quantum programming.)
+Ví dụ tạo một cổng Hadamard:
+```python
+from qiskit import QuantumCircuit, execute, Aer
+# Tạo mạch lượng tử 1 qubit (Create 1-qubit circuit)
+qc = QuantumCircuit(1, 1)
+# Áp dụng cổng H (Apply H gate)
+qc.h(0)
+# Đo đạc (Measure)
+qc.measure(0, 0)
+print(qc.draw())
+```
+
+
+## Phụ lục A: Đánh giá & Chấm điểm (Appendix A: Assessment & Rubric)
+| Tiêu chí (Criteria) | Xuất sắc (Excellent - 90-100%) | Tốt (Good - 70-89%) | Đạt (Pass - 50-69%) | Cần cố gắng (Needs Improvement - <50%) |
+|---------------------|--------------------------------|---------------------|---------------------|----------------------------------------|
+| **Hiểu biết lý thuyết (Theoretical Understanding)** | Nắm vững toàn bộ các khái niệm cốt lõi, giải thích rõ ràng bằng toán học. (Mastered all core concepts, clear mathematical explanations.) | Hiểu hầu hết các khái niệm, có thể mắc lỗi nhỏ trong toán học. (Understands most concepts, minor math errors.) | Hiểu cơ bản, giải thích còn mơ hồ hoặc thiếu chi tiết. (Basic understanding, vague or missing details.) | Không nắm được khái niệm cơ bản. (Fails to grasp basic concepts.) |
+| **Kỹ năng giải bài tập (Problem Solving Skills)** | Giải quyết trọn vẹn, lập luận logic, kết quả chính xác tuyệt đối. (Complete solution, logical arguments, perfect accuracy.) | Giải đúng hướng nhưng có thể sai sót nhỏ trong tính toán. (Correct approach but minor calculation errors.) | Biết cách bắt đầu nhưng không thể hoàn thành bài toán. (Knows how to start but cannot finish.) | Không biết cách giải quyết. (Unable to solve.) |
+| **Kỹ năng lập trình (Programming Skills)** | Code chạy hoàn hảo, tối ưu, chú thích đầy đủ, biểu đồ đẹp. (Perfect code, optimized, well-commented, beautiful plots.) | Code chạy được, có chú thích nhưng chưa tối ưu. (Working code, commented but unoptimized.) | Code có lỗi nhỏ, thiếu chú thích, biểu đồ sơ sài. (Minor bugs, lacks comments, basic plots.) | Code không chạy, không có chú thích. (Code doesn't run, no comments.) |
+| **Tư duy phản biện (Critical Thinking)** | Trả lời xuất sắc câu hỏi thảo luận, liên hệ thực tế sâu sắc. (Excellent discussion answers, deep real-world connections.) | Trả lời tốt câu hỏi, có liên hệ thực tế. (Good answers, some real-world connection.) | Trả lời hời hợt, không có liên hệ thực tế. (Superficial answers, no real-world connection.) | Không tham gia thảo luận. (Does not participate.) |
+
+## Phụ lục B: Thuật ngữ Vật lý Lượng tử (Appendix B: Quantum Physics Glossary)
+1. **Lưỡng tính Sóng-Hạt (Wave-Particle Duality)**: Khái niệm cho rằng mọi thực thể lượng tử đều thể hiện tính chất của cả sóng và hạt. (The concept that every quantum entity exhibits both wave and particle properties.)
+2. **Hàm sóng (Wavefunction)**: Một hàm toán học mô tả trạng thái lượng tử của hệ thống. Ký hiệu là $\Psi$. (A mathematical function describing the quantum state of a system. Denoted as $\Psi$.)
+3. **Nguyên lý Xếp chồng (Superposition Principle)**: Khả năng hệ lượng tử ở nhiều trạng thái cùng một lúc cho đến khi bị đo đạc. (The ability of a quantum system to be in multiple states simultaneously until measured.)
+4. **Sự Vướng mắc Lượng tử (Quantum Entanglement)**: Hiện tượng các hạt lượng tử liên kết với nhau sao cho trạng thái của hạt này phụ thuộc tức thời vào trạng thái của hạt kia. (A phenomenon where quantum particles are linked such that the state of one instantaneously depends on the other.)
+5. **Đường hầm Lượng tử (Quantum Tunneling)**: Khả năng hạt vượt qua rào cản thế năng mà theo vật lý cổ điển là không thể. (The ability of a particle to pass through a potential barrier that would be impossible in classical physics.)
+6. **Mômen Động lượng (Angular Momentum)**: Đại lượng bảo toàn đặc trưng cho chuyển động quay. Trong lượng tử, nó bị lượng tử hóa. (A conserved quantity characterizing rotational motion. In quantum, it is quantized.)
+7. **Spin**: Mômen động lượng nội tại của hạt cơ bản. (Intrinsic angular momentum of an elementary particle.)
+8. **Toán tử (Operator)**: Phép toán được áp dụng lên hàm sóng để lấy ra các đại lượng quan sát được. (A mathematical operation applied to the wavefunction to extract observables.)
+9. **Kỳ vọng (Expectation Value)**: Giá trị trung bình của nhiều phép đo trên các hệ giống hệt nhau. (The average value of many measurements on identical systems.)
+10. **Bất định Heisenberg (Heisenberg Uncertainty)**: Giới hạn cơ bản về độ chính xác khi đo đạc đồng thời vị trí và động lượng. (Fundamental limit to the precision of simultaneously measuring position and momentum.)
+
+## Phụ lục C: Ôn tập Toán học Cơ bản (Appendix C: Basic Math Review)
+### 1. Số Phức (Complex Numbers)
+Số phức có dạng $z = a + bi$, trong đó $i^2 = -1$.
+Dạng cực (Polar form): $z = r e^{i\theta} = r(\cos\theta + i\sin\theta)$
+Số phức liên hợp (Complex conjugate): $z^* = a - bi = r e^{-i\theta}$
+Mô-đun bình phương (Modulus squared): $|z|^2 = z z^* = a^2 + b^2 = r^2$
+
+Trong cơ học lượng tử, hàm sóng thường là số phức. Mật độ xác suất $|\Psi|^2 = \Psi^* \Psi$ luôn là số thực.
+
+### 2. Đại số Tuyến tính (Linear Algebra)
+- **Không gian Hilbert (Hilbert Space)**: Không gian vector phức có tích vô hướng hoàn chỉnh.
+- **Tích vô hướng (Inner Product)**: Ký hiệu bra-ket $\langle \phi | \psi \rangle = \int \phi^* \psi dx$.
+- **Trực giao (Orthogonality)**: Hai trạng thái trực giao nếu $\langle \phi | \psi \rangle = 0$.
+- **Ma trận Hermitian (Hermitian Matrix)**: Ma trận bằng chuyển vị liên hợp của chính nó ($A = A^\dagger$). Các toán tử vật lý đều là Hermitian vì chúng có trị riêng thực.
+
+### 3. Phương trình Vi phân (Differential Equations)
+Phương trình Schrödinger là phương trình vi phân đạo hàm riêng cấp 2 tuyến tính.
+Giải phương trình dạng: $\frac{d^2 \psi}{dx^2} = -k^2 \psi$
+Nghiệm tổng quát: $\psi(x) = A \sin(kx) + B \cos(kx)$ hoặc $\psi(x) = C e^{ikx} + D e^{-ikx}$.
+
+## Phụ lục D: Cài đặt Môi trường Python (Appendix D: Python Environment Setup)
+Để chạy các đoạn code trong khóa học này, bạn cần cài đặt Python và một số thư viện khoa học. (To run the code in this course, you need Python and scientific libraries.)
+
+### Bước 1: Cài đặt Anaconda hoặc Miniconda
+Chúng tôi khuyên dùng Miniconda (nhẹ hơn).
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+### Bước 2: Tạo môi trường ảo (Create virtual environment)
+```bash
+conda create -n quantum python=3.10
+conda activate quantum
+```
+
+### Bước 3: Cài đặt thư viện (Install libraries)
+```bash
+pip install numpy scipy matplotlib qiskit jupyterlab
+```
+
+### Bước 4: Chạy Jupyter Lab
+```bash
+jupyter lab
+```
+
+### Giới thiệu về Qiskit (Introduction to Qiskit)
+Qiskit là framework mã nguồn mở của IBM để lập trình máy tính lượng tử. (Qiskit is IBM's open-source framework for quantum programming.)
+Ví dụ tạo một cổng Hadamard:
+```python
+from qiskit import QuantumCircuit, execute, Aer
+# Tạo mạch lượng tử 1 qubit (Create 1-qubit circuit)
+qc = QuantumCircuit(1, 1)
+# Áp dụng cổng H (Apply H gate)
+qc.h(0)
+# Đo đạc (Measure)
+qc.measure(0, 0)
+print(qc.draw())
+```
+
+
+## Phụ lục A: Đánh giá & Chấm điểm (Appendix A: Assessment & Rubric)
+| Tiêu chí (Criteria) | Xuất sắc (Excellent - 90-100%) | Tốt (Good - 70-89%) | Đạt (Pass - 50-69%) | Cần cố gắng (Needs Improvement - <50%) |
+|---------------------|--------------------------------|---------------------|---------------------|----------------------------------------|
+| **Hiểu biết lý thuyết (Theoretical Understanding)** | Nắm vững toàn bộ các khái niệm cốt lõi, giải thích rõ ràng bằng toán học. (Mastered all core concepts, clear mathematical explanations.) | Hiểu hầu hết các khái niệm, có thể mắc lỗi nhỏ trong toán học. (Understands most concepts, minor math errors.) | Hiểu cơ bản, giải thích còn mơ hồ hoặc thiếu chi tiết. (Basic understanding, vague or missing details.) | Không nắm được khái niệm cơ bản. (Fails to grasp basic concepts.) |
+| **Kỹ năng giải bài tập (Problem Solving Skills)** | Giải quyết trọn vẹn, lập luận logic, kết quả chính xác tuyệt đối. (Complete solution, logical arguments, perfect accuracy.) | Giải đúng hướng nhưng có thể sai sót nhỏ trong tính toán. (Correct approach but minor calculation errors.) | Biết cách bắt đầu nhưng không thể hoàn thành bài toán. (Knows how to start but cannot finish.) | Không biết cách giải quyết. (Unable to solve.) |
+| **Kỹ năng lập trình (Programming Skills)** | Code chạy hoàn hảo, tối ưu, chú thích đầy đủ, biểu đồ đẹp. (Perfect code, optimized, well-commented, beautiful plots.) | Code chạy được, có chú thích nhưng chưa tối ưu. (Working code, commented but unoptimized.) | Code có lỗi nhỏ, thiếu chú thích, biểu đồ sơ sài. (Minor bugs, lacks comments, basic plots.) | Code không chạy, không có chú thích. (Code doesn't run, no comments.) |
+| **Tư duy phản biện (Critical Thinking)** | Trả lời xuất sắc câu hỏi thảo luận, liên hệ thực tế sâu sắc. (Excellent discussion answers, deep real-world connections.) | Trả lời tốt câu hỏi, có liên hệ thực tế. (Good answers, some real-world connection.) | Trả lời hời hợt, không có liên hệ thực tế. (Superficial answers, no real-world connection.) | Không tham gia thảo luận. (Does not participate.) |
+
+## Phụ lục B: Thuật ngữ Vật lý Lượng tử (Appendix B: Quantum Physics Glossary)
+1. **Lưỡng tính Sóng-Hạt (Wave-Particle Duality)**: Khái niệm cho rằng mọi thực thể lượng tử đều thể hiện tính chất của cả sóng và hạt. (The concept that every quantum entity exhibits both wave and particle properties.)
+2. **Hàm sóng (Wavefunction)**: Một hàm toán học mô tả trạng thái lượng tử của hệ thống. Ký hiệu là $\Psi$. (A mathematical function describing the quantum state of a system. Denoted as $\Psi$.)
+3. **Nguyên lý Xếp chồng (Superposition Principle)**: Khả năng hệ lượng tử ở nhiều trạng thái cùng một lúc cho đến khi bị đo đạc. (The ability of a quantum system to be in multiple states simultaneously until measured.)
+4. **Sự Vướng mắc Lượng tử (Quantum Entanglement)**: Hiện tượng các hạt lượng tử liên kết với nhau sao cho trạng thái của hạt này phụ thuộc tức thời vào trạng thái của hạt kia. (A phenomenon where quantum particles are linked such that the state of one instantaneously depends on the other.)
+5. **Đường hầm Lượng tử (Quantum Tunneling)**: Khả năng hạt vượt qua rào cản thế năng mà theo vật lý cổ điển là không thể. (The ability of a particle to pass through a potential barrier that would be impossible in classical physics.)
+6. **Mômen Động lượng (Angular Momentum)**: Đại lượng bảo toàn đặc trưng cho chuyển động quay. Trong lượng tử, nó bị lượng tử hóa. (A conserved quantity characterizing rotational motion. In quantum, it is quantized.)
+7. **Spin**: Mômen động lượng nội tại của hạt cơ bản. (Intrinsic angular momentum of an elementary particle.)
+8. **Toán tử (Operator)**: Phép toán được áp dụng lên hàm sóng để lấy ra các đại lượng quan sát được. (A mathematical operation applied to the wavefunction to extract observables.)
+9. **Kỳ vọng (Expectation Value)**: Giá trị trung bình của nhiều phép đo trên các hệ giống hệt nhau. (The average value of many measurements on identical systems.)
+10. **Bất định Heisenberg (Heisenberg Uncertainty)**: Giới hạn cơ bản về độ chính xác khi đo đạc đồng thời vị trí và động lượng. (Fundamental limit to the precision of simultaneously measuring position and momentum.)
+
+## Phụ lục C: Ôn tập Toán học Cơ bản (Appendix C: Basic Math Review)
+### 1. Số Phức (Complex Numbers)
+Số phức có dạng $z = a + bi$, trong đó $i^2 = -1$.
+Dạng cực (Polar form): $z = r e^{i\theta} = r(\cos\theta + i\sin\theta)$
+Số phức liên hợp (Complex conjugate): $z^* = a - bi = r e^{-i\theta}$
+Mô-đun bình phương (Modulus squared): $|z|^2 = z z^* = a^2 + b^2 = r^2$
+
+Trong cơ học lượng tử, hàm sóng thường là số phức. Mật độ xác suất $|\Psi|^2 = \Psi^* \Psi$ luôn là số thực.
+
+### 2. Đại số Tuyến tính (Linear Algebra)
+- **Không gian Hilbert (Hilbert Space)**: Không gian vector phức có tích vô hướng hoàn chỉnh.
+- **Tích vô hướng (Inner Product)**: Ký hiệu bra-ket $\langle \phi | \psi \rangle = \int \phi^* \psi dx$.
+- **Trực giao (Orthogonality)**: Hai trạng thái trực giao nếu $\langle \phi | \psi \rangle = 0$.
+- **Ma trận Hermitian (Hermitian Matrix)**: Ma trận bằng chuyển vị liên hợp của chính nó ($A = A^\dagger$). Các toán tử vật lý đều là Hermitian vì chúng có trị riêng thực.
+
+### 3. Phương trình Vi phân (Differential Equations)
+Phương trình Schrödinger là phương trình vi phân đạo hàm riêng cấp 2 tuyến tính.
+Giải phương trình dạng: $\frac{d^2 \psi}{dx^2} = -k^2 \psi$
+Nghiệm tổng quát: $\psi(x) = A \sin(kx) + B \cos(kx)$ hoặc $\psi(x) = C e^{ikx} + D e^{-ikx}$.
+
+## Phụ lục D: Cài đặt Môi trường Python (Appendix D: Python Environment Setup)
+Để chạy các đoạn code trong khóa học này, bạn cần cài đặt Python và một số thư viện khoa học. (To run the code in this course, you need Python and scientific libraries.)
+
+### Bước 1: Cài đặt Anaconda hoặc Miniconda
+Chúng tôi khuyên dùng Miniconda (nhẹ hơn).
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+### Bước 2: Tạo môi trường ảo (Create virtual environment)
+```bash
+conda create -n quantum python=3.10
+conda activate quantum
+```
+
+### Bước 3: Cài đặt thư viện (Install libraries)
+```bash
+pip install numpy scipy matplotlib qiskit jupyterlab
+```
+
+### Bước 4: Chạy Jupyter Lab
+```bash
+jupyter lab
+```
+
+### Giới thiệu về Qiskit (Introduction to Qiskit)
+Qiskit là framework mã nguồn mở của IBM để lập trình máy tính lượng tử. (Qiskit is IBM's open-source framework for quantum programming.)
+Ví dụ tạo một cổng Hadamard:
+```python
+from qiskit import QuantumCircuit, execute, Aer
+# Tạo mạch lượng tử 1 qubit (Create 1-qubit circuit)
+qc = QuantumCircuit(1, 1)
+# Áp dụng cổng H (Apply H gate)
+qc.h(0)
+# Đo đạc (Measure)
+qc.measure(0, 0)
+print(qc.draw())
+```
+
+
+## Phụ lục A: Đánh giá & Chấm điểm (Appendix A: Assessment & Rubric)
+| Tiêu chí (Criteria) | Xuất sắc (Excellent - 90-100%) | Tốt (Good - 70-89%) | Đạt (Pass - 50-69%) | Cần cố gắng (Needs Improvement - <50%) |
+|---------------------|--------------------------------|---------------------|---------------------|----------------------------------------|
+| **Hiểu biết lý thuyết (Theoretical Understanding)** | Nắm vững toàn bộ các khái niệm cốt lõi, giải thích rõ ràng bằng toán học. (Mastered all core concepts, clear mathematical explanations.) | Hiểu hầu hết các khái niệm, có thể mắc lỗi nhỏ trong toán học. (Understands most concepts, minor math errors.) | Hiểu cơ bản, giải thích còn mơ hồ hoặc thiếu chi tiết. (Basic understanding, vague or missing details.) | Không nắm được khái niệm cơ bản. (Fails to grasp basic concepts.) |
+| **Kỹ năng giải bài tập (Problem Solving Skills)** | Giải quyết trọn vẹn, lập luận logic, kết quả chính xác tuyệt đối. (Complete solution, logical arguments, perfect accuracy.) | Giải đúng hướng nhưng có thể sai sót nhỏ trong tính toán. (Correct approach but minor calculation errors.) | Biết cách bắt đầu nhưng không thể hoàn thành bài toán. (Knows how to start but cannot finish.) | Không biết cách giải quyết. (Unable to solve.) |
+| **Kỹ năng lập trình (Programming Skills)** | Code chạy hoàn hảo, tối ưu, chú thích đầy đủ, biểu đồ đẹp. (Perfect code, optimized, well-commented, beautiful plots.) | Code chạy được, có chú thích nhưng chưa tối ưu. (Working code, commented but unoptimized.) | Code có lỗi nhỏ, thiếu chú thích, biểu đồ sơ sài. (Minor bugs, lacks comments, basic plots.) | Code không chạy, không có chú thích. (Code doesn't run, no comments.) |
+| **Tư duy phản biện (Critical Thinking)** | Trả lời xuất sắc câu hỏi thảo luận, liên hệ thực tế sâu sắc. (Excellent discussion answers, deep real-world connections.) | Trả lời tốt câu hỏi, có liên hệ thực tế. (Good answers, some real-world connection.) | Trả lời hời hợt, không có liên hệ thực tế. (Superficial answers, no real-world connection.) | Không tham gia thảo luận. (Does not participate.) |
+
+## Phụ lục B: Thuật ngữ Vật lý Lượng tử (Appendix B: Quantum Physics Glossary)
+1. **Lưỡng tính Sóng-Hạt (Wave-Particle Duality)**: Khái niệm cho rằng mọi thực thể lượng tử đều thể hiện tính chất của cả sóng và hạt. (The concept that every quantum entity exhibits both wave and particle properties.)
+2. **Hàm sóng (Wavefunction)**: Một hàm toán học mô tả trạng thái lượng tử của hệ thống. Ký hiệu là $\Psi$. (A mathematical function describing the quantum state of a system. Denoted as $\Psi$.)
+3. **Nguyên lý Xếp chồng (Superposition Principle)**: Khả năng hệ lượng tử ở nhiều trạng thái cùng một lúc cho đến khi bị đo đạc. (The ability of a quantum system to be in multiple states simultaneously until measured.)
+4. **Sự Vướng mắc Lượng tử (Quantum Entanglement)**: Hiện tượng các hạt lượng tử liên kết với nhau sao cho trạng thái của hạt này phụ thuộc tức thời vào trạng thái của hạt kia. (A phenomenon where quantum particles are linked such that the state of one instantaneously depends on the other.)
+5. **Đường hầm Lượng tử (Quantum Tunneling)**: Khả năng hạt vượt qua rào cản thế năng mà theo vật lý cổ điển là không thể. (The ability of a particle to pass through a potential barrier that would be impossible in classical physics.)
+6. **Mômen Động lượng (Angular Momentum)**: Đại lượng bảo toàn đặc trưng cho chuyển động quay. Trong lượng tử, nó bị lượng tử hóa. (A conserved quantity characterizing rotational motion. In quantum, it is quantized.)
+7. **Spin**: Mômen động lượng nội tại của hạt cơ bản. (Intrinsic angular momentum of an elementary particle.)
+8. **Toán tử (Operator)**: Phép toán được áp dụng lên hàm sóng để lấy ra các đại lượng quan sát được. (A mathematical operation applied to the wavefunction to extract observables.)
+9. **Kỳ vọng (Expectation Value)**: Giá trị trung bình của nhiều phép đo trên các hệ giống hệt nhau. (The average value of many measurements on identical systems.)
+10. **Bất định Heisenberg (Heisenberg Uncertainty)**: Giới hạn cơ bản về độ chính xác khi đo đạc đồng thời vị trí và động lượng. (Fundamental limit to the precision of simultaneously measuring position and momentum.)
+
+## Phụ lục C: Ôn tập Toán học Cơ bản (Appendix C: Basic Math Review)
+### 1. Số Phức (Complex Numbers)
+Số phức có dạng $z = a + bi$, trong đó $i^2 = -1$.
+Dạng cực (Polar form): $z = r e^{i\theta} = r(\cos\theta + i\sin\theta)$
+Số phức liên hợp (Complex conjugate): $z^* = a - bi = r e^{-i\theta}$
+Mô-đun bình phương (Modulus squared): $|z|^2 = z z^* = a^2 + b^2 = r^2$
+
+Trong cơ học lượng tử, hàm sóng thường là số phức. Mật độ xác suất $|\Psi|^2 = \Psi^* \Psi$ luôn là số thực.
+
+### 2. Đại số Tuyến tính (Linear Algebra)
+- **Không gian Hilbert (Hilbert Space)**: Không gian vector phức có tích vô hướng hoàn chỉnh.
+- **Tích vô hướng (Inner Product)**: Ký hiệu bra-ket $\langle \phi | \psi \rangle = \int \phi^* \psi dx$.
+- **Trực giao (Orthogonality)**: Hai trạng thái trực giao nếu $\langle \phi | \psi \rangle = 0$.
+- **Ma trận Hermitian (Hermitian Matrix)**: Ma trận bằng chuyển vị liên hợp của chính nó ($A = A^\dagger$). Các toán tử vật lý đều là Hermitian vì chúng có trị riêng thực.
+
+### 3. Phương trình Vi phân (Differential Equations)
+Phương trình Schrödinger là phương trình vi phân đạo hàm riêng cấp 2 tuyến tính.
+Giải phương trình dạng: $\frac{d^2 \psi}{dx^2} = -k^2 \psi$
+Nghiệm tổng quát: $\psi(x) = A \sin(kx) + B \cos(kx)$ hoặc $\psi(x) = C e^{ikx} + D e^{-ikx}$.
+
+## Phụ lục D: Cài đặt Môi trường Python (Appendix D: Python Environment Setup)
+Để chạy các đoạn code trong khóa học này, bạn cần cài đặt Python và một số thư viện khoa học. (To run the code in this course, you need Python and scientific libraries.)
+
+### Bước 1: Cài đặt Anaconda hoặc Miniconda
+Chúng tôi khuyên dùng Miniconda (nhẹ hơn).
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+### Bước 2: Tạo môi trường ảo (Create virtual environment)
+```bash
+conda create -n quantum python=3.10
+conda activate quantum
+```
+
+### Bước 3: Cài đặt thư viện (Install libraries)
+```bash
+pip install numpy scipy matplotlib qiskit jupyterlab
+```
+
+### Bước 4: Chạy Jupyter Lab
+```bash
+jupyter lab
+```
+
+### Giới thiệu về Qiskit (Introduction to Qiskit)
+Qiskit là framework mã nguồn mở của IBM để lập trình máy tính lượng tử. (Qiskit is IBM's open-source framework for quantum programming.)
+Ví dụ tạo một cổng Hadamard:
+```python
+from qiskit import QuantumCircuit, execute, Aer
+# Tạo mạch lượng tử 1 qubit (Create 1-qubit circuit)
+qc = QuantumCircuit(1, 1)
+# Áp dụng cổng H (Apply H gate)
+qc.h(0)
+# Đo đạc (Measure)
+qc.measure(0, 0)
+print(qc.draw())
+```
