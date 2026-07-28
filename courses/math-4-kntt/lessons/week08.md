@@ -2,213 +2,419 @@
 # Week 8: Parallelogram, Rhombus & Area Calculations
 
 ## 1. Mục Tiêu Bài Học / Learning Objectives
-- **Vietnamese**:
-  - Nhận dạng được hình bình hành và hình thoi trong toán học và thực tế.
-  - Phân tích và chỉ ra các tính chất đặc trưng của hai hình (Cặp cạnh song song, bằng nhau, đường chéo).
-  - Thuộc lòng và hiểu bản chất công thức tính diện tích Hình Bình Hành ($S = a \times h$) và Hình Thoi ($S = \frac{m \times n}{2}$).
-  - Vẽ được hình bình hành và hình thoi bằng thước kẻ và ê-ke trên giấy ô ly.
-  - Vận dụng linh hoạt giải toán lời văn, tính diện tích thửa ruộng, mặt kính, biển báo.
-- **English**:
-  - Identify parallelograms and rhombuses in geometry and real-world contexts.
-  - Analyze the defining characteristics of both shapes (Parallel/equal sides, diagonals).
-  - Memorize and understand the area formulas for Parallelograms ($S = a \times h$) and Rhombuses ($S = \frac{m \times n}{2}$).
-  - Draw these shapes using a ruler and set square on grid paper.
-  - Flexibly apply concepts to word problems (fields, glass panes, signs).
+- **Vietnamese**: Nhận biết hình bình hành, hình thoi. Tính được diện tích các hình này.
+- **English**: Identify parallelogram and rhombus. Calculate their area.
 
 ## 2. Chủ Đề Sách Giáo Khoa / Textbook Themes
-- Sách Giáo Khoa Kết nối tri thức Toán 4 (Tập 2): Chủ đề 8 (Bài 39, 40, 41, 42, 43)
+- SGK Kết nối tri thức Toán 4: Chủ đề 8 (Bài 39, 40, 41, 42, 43)
 
 ## 3. Công Cụ STEM & EdTech / STEM & EdTech Tools
-| Công cụ / Tool | Ứng dụng / Application | Ghi chú / Notes |
-|---|---|---|
-| Tangram Puzzle | Trò chơi ghép 7 mảnh ghép để tạo thành hình bình hành khổng lồ / Puzzle solving | Rèn luyện tư duy không gian |
-| Giấy màu, Kéo / Paper & Scissors | Thực hành chứng minh công thức diện tích bằng cách cắt dán / Proof by cutting | Trực quan hóa toán học |
-| Khung xếp hình (Geoboard) | Dùng chun căng tạo hình thoi, kiểm tra 2 đường chéo vuông góc / Rubber band geometry | |
-| Python 3.10+ | Lập trình chương trình tính chu vi & diện tích đa năng / Geometry calculator | |
-| GeoGebra Primary | Mô phỏng đường chéo hình thoi cắt nhau tại trung điểm / Digital interactive visual | App trên máy tính bảng |
+| Công cụ / Tool | Ứng dụng / Application |
+|---|---|
+| Tangram | Ghép hình / Puzzle geometry |
+| Giấy cắt / Cutting Paper | Biến đổi hình / Shape transformation |
+| Python 3.10+ | Tính diện tích / Area calculator |
 
-## 4. Lý Thuyết Chi Tiết / Detailed Geometry Theory
+## 4. Lý Thuyết & Ví Dụ / Theory & Examples
+### Hình Bình Hành / Parallelogram
+- Công thức diện tích / Area: $S = a \times h$
 
-### 4.1 Hình Bình Hành / Parallelogram
-**Định nghĩa**:
-- Hình bình hành là tứ giác có hai cặp cạnh đối diện song song và bằng nhau.
-- Nói cách khác: Cạnh trên song song và dài bằng cạnh dưới; Cạnh trái song song và dài bằng cạnh phải.
-**Tính chất hình học**:
-- Các góc đối diện bằng nhau (Góc tù bằng góc tù, góc nhọn bằng góc nhọn).
-- Đường cao ($h$) là đoạn thẳng hạ từ một đỉnh, vuông góc với cạnh đáy ($a$) đối diện.
-**Công thức tính diện tích**:
-- **S = a x h** (Diện tích bằng cạnh đáy nhân với chiều cao tương ứng).
-- Giải thích: Nếu cắt phần tam giác nhô ra ở một bên và đắp sang bên kia, hình bình hành biến thành hình chữ nhật có Dài = a, Rộng = h. Do đó diện tích là a x h.
-**Công thức tính chu vi**:
-- P = (a + b) x 2 (Tổng độ dài 2 cạnh kề nhau nhân 2).
+### Hình Thoi / Rhombus
+- Bốn cạnh bằng nhau.
+- Công thức diện tích / Area: $S = \frac{m \times n}{2}$
 
-### 4.2 Hình Thoi / Rhombus
-**Định nghĩa**:
-- Hình thoi là tứ giác có 4 cạnh bằng nhau.
-- Nó cũng có hai cặp cạnh đối diện song song (giống hình bình hành). Do đó, hình thoi là dạng đặc biệt của hình bình hành.
-**Tính chất đặc biệt của đường chéo**:
-- Hai đường chéo vuông góc với nhau tại trung điểm của mỗi đường. (Tạo ra chữ thập hoàn hảo ở giữa).
-**Công thức tính diện tích**:
-- **S = (m x n) : 2** hoặc $S = \frac{m \times n}{2}$ (Trong đó m, n là độ dài hai đường chéo).
-- Giải thích: Diện tích hình thoi bằng một nửa diện tích hình chữ nhật bao bọc bên ngoài (có chiều dài và rộng bằng 2 đường chéo m, n).
-**Công thức tính chu vi**:
-- P = a x 4 (Độ dài 1 cạnh nhân 4, giống hệt hình vuông).
-
-## 5. Hoạt Động STEM Thực Hành / Hands-on STEM Labs
-
-### Bài Thực Hành 1: "Biến Hình" Hình Bình Hành (Cắt dán chứng minh)
-- Phát cho mỗi học sinh 1 tờ giấy hình bình hành.
-- **Nhiệm vụ**: Dùng ê-ke vẽ đường cao $h$ từ góc tù xuống cạnh đáy.
-- Lấy kéo cắt dọc theo đường cao $h$ đó, ta được 1 tam giác vuông và 1 hình thang vuông.
-- Di chuyển hình tam giác vuông sang cạnh đối diện, ghép lại bằng hồ dán.
-- **Wow!** Hình đã biến thành một Hình Chữ Nhật với chiều dài là $a$ và chiều rộng là $h$. Tính diện tích hình chữ nhật là $a \times h$. Suy ra diện tích hình bình hành ban đầu cũng là $a \times h$.
-
-### Bài Thực Hành 2: Chế Tạo Con Diều Hình Thoi (Kite Building)
-- Vật liệu: 2 thanh tre (1 dài 60cm, 1 dài 40cm), dây dù, giấy bọc quà.
-- Học sinh phải buộc chữ thập 2 thanh tre sao cho chúng **vuông góc tại trung điểm** (Tạo bộ khung hình thoi m=60, n=40).
-- Áp dụng công thức tính $S = (60 \times 40) : 2 = 1200\text{ cm}^2$ để cắt đúng lượng giấy cần thiết dán lên khung tre. Sản phẩm tạo ra là một con diều truyền thống.
-
-## 6. Góc Công Nghệ / Python Calculator Suite
-
-```python
-# MATH GRADE 4: GEOMETRY SUITE
-# Chương trình Tính Chu Vi & Diện Tích Đa Năng
-
-def geometry_calculator():
-    print("=== MÁY TÍNH HÌNH HỌC LỚP 4 ===")
-    print("1. Hình Bình Hành")
-    print("2. Hình Thoi")
-    print("3. Hình Chữ Nhật (Ôn tập)")
-    
-    choice = input("Nhập số chọn hình bạn muốn tính (1/2/3): ")
-    
-    if choice == '1':
-        print("\n--- HÌNH BÌNH HÀNH ---")
-        a = float(input("Nhập độ dài cạnh đáy (a): "))
-        h = float(input("Nhập chiều cao (h): "))
-        b = float(input("Nhập độ dài cạnh bên (b): "))
-        
-        area = a * h
-        perimeter = (a + b) * 2
-        
-        print(f"=> Diện tích (S) = {a} x {h} = {area}")
-        print(f"=> Chu vi (P) = ({a} + {b}) x 2 = {perimeter}")
-        
-    elif choice == '2':
-        print("\n--- HÌNH THOI ---")
-        m = float(input("Nhập đường chéo thứ nhất (m): "))
-        n = float(input("Nhập đường chéo thứ hai (n): "))
-        a = float(input("Nhập độ dài 1 cạnh (a): "))
-        
-        area = (m * n) / 2
-        perimeter = a * 4
-        
-        print(f"=> Diện tích (S) = ({m} x {n}) : 2 = {area}")
-        print(f"=> Chu vi (P) = {a} x 4 = {perimeter}")
-        
-    else:
-        print("Lựa chọn không hợp lệ. Thoát chương trình.")
-
-# Chạy mô phỏng (trong môi trường thật)
-# geometry_calculator()
+## 5. Sơ Đồ & Minh Họa / Diagrams
+```text
+   ____
+  /   /  Parallelogram
+ /___/
 ```
 
-## 7. Lỗi Thường Gặp & Hiểu Lầm / Common Misconceptions
-- 💡 **Nhầm Chu Vi và Diện Tích (Hình Bình Hành)**: Trẻ quen tính diện tích hình chữ nhật là Dài x Rộng, nên sang hình bình hành, trẻ lấy Cạnh đáy x Cạnh bên. (SAI! Phải là Cạnh đáy x Chiều cao).
-- 💡 **Quên "Chia 2" ở Hình Thoi**: Rất nhiều bạn áp dụng công thức (m x n) xong là ghi luôn kết quả mà quên mất phải chia cho 2. Giáo viên dùng thơ vè: "Diện tích hình thoi, nhân hai đường chéo, cắt đôi (chia 2) liền tay".
-- 💡 **Lấy đường chéo nhân cạnh bên**: Trong hình thoi có số đo cạnh và số đo đường chéo. Có bạn lấy đường chéo nhân cạnh bên để tính diện tích. Cần làm rõ: Diện tích chỉ dùng 2 đường chéo, chu vi chỉ dùng độ dài cạnh ngoài.
+## 6. Hoạt Động STEM / STEM Activities
+- **Tangram puzzle**: Use tangram to build parallelograms.
+- **Paper cutting**: Cut a parallelogram to make a rectangle.
 
-## 8. Bài Tập Luyện Tập Chuyên Sâu & Đáp Án / Deep Practice & Solutions
+## 7. Lập Trình Python / Python Lab
+```python
+def area_parallelogram(base, height):
+    return base * height
 
-### Dạng 1: Diện Tích Hình Bình Hành
-**Bài 1**: Tính diện tích hình bình hành biết độ dài đáy là 15 cm, chiều cao tương ứng là 7 cm.
-*Giải (Solution)*:
-- Diện tích $S = a \times h = 15 \times 7 = 105\text{ cm}^2$.
-- Đáp số: 105 $\text{cm}^2$.
+def area_rhombus(d1, d2):
+    return (d1 * d2) / 2
 
-**Bài 2**: Một khu rừng hình bình hành có chiều dài đáy là 5 km, chiều cao là 3 km. Diện tích khu rừng đó là bao nhiêu ki-lô-mét vuông?
-*Giải (Solution)*:
-- Diện tích $S = 5 \times 3 = 15\text{ km}^2$.
-- Đáp số: 15 $\text{km}^2$.
+print("Parallelogram area (a=5, h=4):", area_parallelogram(5, 4))
+print("Rhombus area (m=6, n=8):", area_rhombus(6, 8))
+```
 
-**Bài 3**: Một mảnh đất hình bình hành có diện tích 120 $m^2$. Độ dài đáy là 15 m. Hỏi chiều cao của mảnh đất là bao nhiêu mét?
-*Giải (Solution)*:
-- Từ công thức $S = a \times h$, suy ra $h = S : a$.
-- Chiều cao $h = 120 : 15 = 8\text{ m}$.
-- Đáp số: 8 m.
+## 8. Lỗi Thường Gặp / Common Misconceptions
+- 💡 **Nhầm chu vi và diện tích / Confusing perimeter vs area**: Multiplying side by side instead of base by height.
 
-**Bài 4**: (Đổi đơn vị) Tính diện tích hình bình hành biết đáy dài 4 dm, chiều cao 25 cm.
-*Giải (Solution)*:
-- Đổi 4 dm = 40 cm.
-- Diện tích $S = 40 \times 25 = 1000\text{ cm}^2$.
-- Đáp số: 1000 $\text{cm}^2$.
+## 9. Câu Hỏi Thảo Luận / Discussion Questions
+1. Hình thoi có phải hình bình hành không? / Is a rhombus a parallelogram?
+2. Chiều cao hình bình hành đo thế nào? / How to measure parallelogram height?
+3. Hai đường chéo hình thoi có vuông góc không? / Are rhombus diagonals perpendicular?
+4. Đơn vị diện tích là gì? / Area units?
+5. Diện tích hình thoi 2 đường chéo 4 và 5? / Rhombus area with diagonals 4 and 5?
 
-**Bài 5**: Hình bình hành ABCD có chu vi 40 cm. Cạnh đáy AB = 12 cm. Hỏi cạnh bên BC bằng bao nhiêu?
-*Giải (Solution)*:
-- Nửa chu vi hình bình hành: 40 : 2 = 20 cm.
-- Cạnh bên BC = 20 - 12 = 8 cm.
-- Đáp số: 8 cm.
+## 10. Bài Tập / Exercises
+### Bài Tập Thực Hành / Practice Exercises
 
-### Dạng 2: Diện Tích Hình Thoi
-**Bài 6**: Hình thoi MNPQ có độ dài hai đường chéo là 8 cm và 10 cm. Tính diện tích.
-*Giải (Solution)*:
-- Diện tích $S = \frac{8 \times 10}{2} = \frac{80}{2} = 40\text{ cm}^2$.
-- Đáp số: 40 $\text{cm}^2$.
+**Bài / Exercise 1:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 3$ cm, chiều cao $h = 4$ cm. Tính diện tích.
+Parallelogram with base $a = 3$ cm, height $h = 4$ cm. Calculate area.
 
-**Bài 7**: Một biển báo giao thông hình thoi có đường chéo m = 40 cm, n = 30 cm. Diện tích biển báo là bao nhiêu?
-*Giải (Solution)*:
-- Diện tích $S = \frac{40 \times 30}{2} = \frac{1200}{2} = 600\text{ cm}^2$.
-- Đáp số: 600 $\text{cm}^2$.
+*Giải / Solution:*
+Diện tích là / Area is: $S = 3 \times 4 = 12$ cm$^2$
 
-**Bài 8**: Diện tích hình thoi là 100 $dm^2$. Biết độ dài một đường chéo là 10 dm. Tính độ dài đường chéo thứ hai.
-*Giải (Solution)*:
-- Tích của 2 đường chéo là: $S \times 2 = 100 \times 2 = 200$.
-- Độ dài đường chéo thứ hai: 200 : 10 = 20 dm.
-- Đáp số: 20 dm.
+**Bài / Exercise 2:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 4$ cm, chiều cao $h = 5$ cm. Tính diện tích.
+Parallelogram with base $a = 4$ cm, height $h = 5$ cm. Calculate area.
 
-**Bài 9**: Hình thoi có 4 cạnh đều bằng 5 cm. Tính chu vi hình thoi đó.
-*Giải (Solution)*:
-- Chu vi $P = 5 \times 4 = 20\text{ cm}$.
-- Đáp số: 20 cm.
+*Giải / Solution:*
+Diện tích là / Area is: $S = 4 \times 5 = 20$ cm$^2$
 
-**Bài 10**: Hình vuông có cạnh 6 cm. Nếu coi hình vuông là một hình thoi có 2 đường chéo bằng nhau, em tính diện tích nó bằng công thức cạnh x cạnh xem ra kết quả là bao nhiêu?
-*Giải (Solution)*:
-- $S = 6 \times 6 = 36\text{ cm}^2$.
+**Bài / Exercise 3:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 5$ cm, chiều cao $h = 6$ cm. Tính diện tích.
+Parallelogram with base $a = 5$ cm, height $h = 6$ cm. Calculate area.
 
-### Dạng 3: Toán Tổng Hợp & Lời Văn
-**Bài 11**: Một thửa ruộng hình bình hành có đáy dài 50m, chiều cao bằng một nửa đáy. Người ta trồng lúa, cứ 1 $m^2$ thu được 2 kg thóc. Hỏi cả thửa ruộng thu được bao nhiêu kg thóc?
-*Giải (Solution)*:
-- Chiều cao thửa ruộng: 50 : 2 = 25 m.
-- Diện tích thửa ruộng: 50 x 25 = 1250 $m^2$.
-- Số kg thóc thu được: 1250 x 2 = 2500 kg.
-- Đáp số: 2500 kg.
+*Giải / Solution:*
+Diện tích là / Area is: $S = 5 \times 6 = 30$ cm$^2$
 
-**Bài 12**: Một tấm kính hình thoi có 2 đường chéo lần lượt là 2m và 15dm. Tính diện tích tấm kính theo đơn vị đề-xi-mét vuông ($dm^2$).
-*Giải (Solution)*:
-- Đổi 2m = 20 dm.
-- Diện tích tấm kính: $\frac{20 \times 15}{2} = \frac{300}{2} = 150\text{ dm}^2$.
-- Đáp số: 150 $dm^2$.
+**Bài / Exercise 4:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 6$ cm, chiều cao $h = 7$ cm. Tính diện tích.
+Parallelogram with base $a = 6$ cm, height $h = 7$ cm. Calculate area.
 
-**Bài 13**: Bác thợ nề lát nền một căn phòng bằng 400 viên gạch hình vuông cạnh 4dm. Biết căn phòng hình chữ nhật. Tính diện tích căn phòng đó bằng mét vuông. (Vận dụng linh hoạt).
-*Giải (Solution)*:
-- Diện tích 1 viên gạch: 4 x 4 = 16 $dm^2$.
-- Diện tích căn phòng: 16 x 400 = 6400 $dm^2$.
-- Đổi 6400 $dm^2$ = 64 $m^2$.
-- Đáp số: 64 $m^2$.
+*Giải / Solution:*
+Diện tích là / Area is: $S = 6 \times 7 = 42$ cm$^2$
 
-**Bài 14**: Hình bình hành và hình thoi có điểm gì giống nhau nhất về các cặp cạnh đối diện?
-*Giải (Solution)*:
-- Cả hai hình đều có 2 cặp cạnh đối diện song song và bằng nhau.
+**Bài / Exercise 5:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 7$ cm, chiều cao $h = 8$ cm. Tính diện tích.
+Parallelogram with base $a = 7$ cm, height $h = 8$ cm. Calculate area.
 
-**Bài 15**: Cho hình thoi ABCD, hai đường chéo cắt nhau tại O. Góc AOB là góc gì?
-*Giải (Solution)*:
-- Góc AOB là góc vuông (Vì 2 đường chéo của hình thoi vuông góc với nhau).
+*Giải / Solution:*
+Diện tích là / Area is: $S = 7 \times 8 = 56$ cm$^2$
 
-## 9. Đánh Giá / Assessment Rubric (100-point scale)
+**Bài / Exercise 6:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 8$ cm, chiều cao $h = 9$ cm. Tính diện tích.
+Parallelogram with base $a = 8$ cm, height $h = 9$ cm. Calculate area.
 
-| Tiêu chí / Criteria | Xuất sắc / Excellent (90-100) | Tốt / Good (70-89) | Đạt / Pass (50-69) | Cần cố gắng / Needs Work (<50) |
-|---|---|---|---|---|
-| **Công thức & Lý thuyết (30 đ)**<br>Formula mastery | Thuộc làu công thức chữ và ý nghĩa bản chất. Nhớ "chia 2" cho hình thoi. | Thuộc công thức, làm đúng, thi thoảng tính ngược chiều cao hơi chậm. | Rất hay nhầm lẫn chu vi và diện tích, quên chia 2 hình thoi. | Không nhớ công thức tính. |
-| **Giải Toán & Đơn Vị (40 đ)**<br>Math problem solving | Giải chuẩn bài dài 3 bước. Đổi đơn vị tuyệt đối chính xác trước khi nhân. | Giải tốt bài cơ bản, bài lời văn phức tạp bị vướng số liệu. | Chỉ tính được S khi có sẵn a, h, m, n cùng đơn vị. | Không tính toán được nhân chia 2 chữ số. |
-| **Dự án STEM (20 đ)**<br>Hands-on Kite/Paper | Tự tin cắt dán, làm diều cực chuẩn góc vuông chữ thập. Sáng tạo. | Làm được khung diều, nếp dán giấy còn nhăn nheo, cắt mấp mô. | Cần nhiều sự trợ giúp mới chốt được góc vuông tre. | Làm sai hướng dẫn hoàn toàn. |
-| **Logic Tin Học (10 đ)**<br>Tech/Python usage | Hiểu code chạy điều kiện If/Else để chọn tính 2 hình. | Nhập số vào máy tính python tốt. | Nhìn chưa hiểu logic máy. | Bỏ qua. |
+*Giải / Solution:*
+Diện tích là / Area is: $S = 8 \times 9 = 72$ cm$^2$
+
+**Bài / Exercise 7:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 9$ cm, chiều cao $h = 10$ cm. Tính diện tích.
+Parallelogram with base $a = 9$ cm, height $h = 10$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 9 \times 10 = 90$ cm$^2$
+
+**Bài / Exercise 8:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 10$ cm, chiều cao $h = 11$ cm. Tính diện tích.
+Parallelogram with base $a = 10$ cm, height $h = 11$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 10 \times 11 = 110$ cm$^2$
+
+**Bài / Exercise 9:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 11$ cm, chiều cao $h = 12$ cm. Tính diện tích.
+Parallelogram with base $a = 11$ cm, height $h = 12$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 11 \times 12 = 132$ cm$^2$
+
+**Bài / Exercise 10:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 12$ cm, chiều cao $h = 13$ cm. Tính diện tích.
+Parallelogram with base $a = 12$ cm, height $h = 13$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 12 \times 13 = 156$ cm$^2$
+
+**Bài / Exercise 11:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 13$ cm, chiều cao $h = 14$ cm. Tính diện tích.
+Parallelogram with base $a = 13$ cm, height $h = 14$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 13 \times 14 = 182$ cm$^2$
+
+**Bài / Exercise 12:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 14$ cm, chiều cao $h = 15$ cm. Tính diện tích.
+Parallelogram with base $a = 14$ cm, height $h = 15$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 14 \times 15 = 210$ cm$^2$
+
+**Bài / Exercise 13:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 15$ cm, chiều cao $h = 16$ cm. Tính diện tích.
+Parallelogram with base $a = 15$ cm, height $h = 16$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 15 \times 16 = 240$ cm$^2$
+
+**Bài / Exercise 14:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 16$ cm, chiều cao $h = 17$ cm. Tính diện tích.
+Parallelogram with base $a = 16$ cm, height $h = 17$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 16 \times 17 = 272$ cm$^2$
+
+**Bài / Exercise 15:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 17$ cm, chiều cao $h = 18$ cm. Tính diện tích.
+Parallelogram with base $a = 17$ cm, height $h = 18$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 17 \times 18 = 306$ cm$^2$
+
+**Bài / Exercise 16:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 18$ cm, chiều cao $h = 19$ cm. Tính diện tích.
+Parallelogram with base $a = 18$ cm, height $h = 19$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 18 \times 19 = 342$ cm$^2$
+
+**Bài / Exercise 17:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 19$ cm, chiều cao $h = 20$ cm. Tính diện tích.
+Parallelogram with base $a = 19$ cm, height $h = 20$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 19 \times 20 = 380$ cm$^2$
+
+**Bài / Exercise 18:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 20$ cm, chiều cao $h = 21$ cm. Tính diện tích.
+Parallelogram with base $a = 20$ cm, height $h = 21$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 20 \times 21 = 420$ cm$^2$
+
+**Bài / Exercise 19:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 21$ cm, chiều cao $h = 22$ cm. Tính diện tích.
+Parallelogram with base $a = 21$ cm, height $h = 22$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 21 \times 22 = 462$ cm$^2$
+
+**Bài / Exercise 20:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 22$ cm, chiều cao $h = 23$ cm. Tính diện tích.
+Parallelogram with base $a = 22$ cm, height $h = 23$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 22 \times 23 = 506$ cm$^2$
+
+**Bài / Exercise 21:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 23$ cm, chiều cao $h = 24$ cm. Tính diện tích.
+Parallelogram with base $a = 23$ cm, height $h = 24$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 23 \times 24 = 552$ cm$^2$
+
+**Bài / Exercise 22:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 24$ cm, chiều cao $h = 25$ cm. Tính diện tích.
+Parallelogram with base $a = 24$ cm, height $h = 25$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 24 \times 25 = 600$ cm$^2$
+
+**Bài / Exercise 23:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 25$ cm, chiều cao $h = 26$ cm. Tính diện tích.
+Parallelogram with base $a = 25$ cm, height $h = 26$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 25 \times 26 = 650$ cm$^2$
+
+**Bài / Exercise 24:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 26$ cm, chiều cao $h = 27$ cm. Tính diện tích.
+Parallelogram with base $a = 26$ cm, height $h = 27$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 26 \times 27 = 702$ cm$^2$
+
+**Bài / Exercise 25:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 27$ cm, chiều cao $h = 28$ cm. Tính diện tích.
+Parallelogram with base $a = 27$ cm, height $h = 28$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 27 \times 28 = 756$ cm$^2$
+
+**Bài / Exercise 26:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 28$ cm, chiều cao $h = 29$ cm. Tính diện tích.
+Parallelogram with base $a = 28$ cm, height $h = 29$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 28 \times 29 = 812$ cm$^2$
+
+**Bài / Exercise 27:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 29$ cm, chiều cao $h = 30$ cm. Tính diện tích.
+Parallelogram with base $a = 29$ cm, height $h = 30$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 29 \times 30 = 870$ cm$^2$
+
+**Bài / Exercise 28:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 30$ cm, chiều cao $h = 31$ cm. Tính diện tích.
+Parallelogram with base $a = 30$ cm, height $h = 31$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 30 \times 31 = 930$ cm$^2$
+
+**Bài / Exercise 29:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 31$ cm, chiều cao $h = 32$ cm. Tính diện tích.
+Parallelogram with base $a = 31$ cm, height $h = 32$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 31 \times 32 = 992$ cm$^2$
+
+**Bài / Exercise 30:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 32$ cm, chiều cao $h = 33$ cm. Tính diện tích.
+Parallelogram with base $a = 32$ cm, height $h = 33$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 32 \times 33 = 1056$ cm$^2$
+
+**Bài / Exercise 31:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 33$ cm, chiều cao $h = 34$ cm. Tính diện tích.
+Parallelogram with base $a = 33$ cm, height $h = 34$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 33 \times 34 = 1122$ cm$^2$
+
+**Bài / Exercise 32:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 34$ cm, chiều cao $h = 35$ cm. Tính diện tích.
+Parallelogram with base $a = 34$ cm, height $h = 35$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 34 \times 35 = 1190$ cm$^2$
+
+**Bài / Exercise 33:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 35$ cm, chiều cao $h = 36$ cm. Tính diện tích.
+Parallelogram with base $a = 35$ cm, height $h = 36$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 35 \times 36 = 1260$ cm$^2$
+
+**Bài / Exercise 34:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 36$ cm, chiều cao $h = 37$ cm. Tính diện tích.
+Parallelogram with base $a = 36$ cm, height $h = 37$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 36 \times 37 = 1332$ cm$^2$
+
+**Bài / Exercise 35:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 37$ cm, chiều cao $h = 38$ cm. Tính diện tích.
+Parallelogram with base $a = 37$ cm, height $h = 38$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 37 \times 38 = 1406$ cm$^2$
+
+**Bài / Exercise 36:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 38$ cm, chiều cao $h = 39$ cm. Tính diện tích.
+Parallelogram with base $a = 38$ cm, height $h = 39$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 38 \times 39 = 1482$ cm$^2$
+
+**Bài / Exercise 37:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 39$ cm, chiều cao $h = 40$ cm. Tính diện tích.
+Parallelogram with base $a = 39$ cm, height $h = 40$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 39 \times 40 = 1560$ cm$^2$
+
+**Bài / Exercise 38:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 40$ cm, chiều cao $h = 41$ cm. Tính diện tích.
+Parallelogram with base $a = 40$ cm, height $h = 41$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 40 \times 41 = 1640$ cm$^2$
+
+**Bài / Exercise 39:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 41$ cm, chiều cao $h = 42$ cm. Tính diện tích.
+Parallelogram with base $a = 41$ cm, height $h = 42$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 41 \times 42 = 1722$ cm$^2$
+
+**Bài / Exercise 40:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 42$ cm, chiều cao $h = 43$ cm. Tính diện tích.
+Parallelogram with base $a = 42$ cm, height $h = 43$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 42 \times 43 = 1806$ cm$^2$
+
+**Bài / Exercise 41:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 43$ cm, chiều cao $h = 44$ cm. Tính diện tích.
+Parallelogram with base $a = 43$ cm, height $h = 44$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 43 \times 44 = 1892$ cm$^2$
+
+**Bài / Exercise 42:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 44$ cm, chiều cao $h = 45$ cm. Tính diện tích.
+Parallelogram with base $a = 44$ cm, height $h = 45$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 44 \times 45 = 1980$ cm$^2$
+
+**Bài / Exercise 43:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 45$ cm, chiều cao $h = 46$ cm. Tính diện tích.
+Parallelogram with base $a = 45$ cm, height $h = 46$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 45 \times 46 = 2070$ cm$^2$
+
+**Bài / Exercise 44:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 46$ cm, chiều cao $h = 47$ cm. Tính diện tích.
+Parallelogram with base $a = 46$ cm, height $h = 47$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 46 \times 47 = 2162$ cm$^2$
+
+**Bài / Exercise 45:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 47$ cm, chiều cao $h = 48$ cm. Tính diện tích.
+Parallelogram with base $a = 47$ cm, height $h = 48$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 47 \times 48 = 2256$ cm$^2$
+
+**Bài / Exercise 46:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 48$ cm, chiều cao $h = 49$ cm. Tính diện tích.
+Parallelogram with base $a = 48$ cm, height $h = 49$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 48 \times 49 = 2352$ cm$^2$
+
+**Bài / Exercise 47:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 49$ cm, chiều cao $h = 50$ cm. Tính diện tích.
+Parallelogram with base $a = 49$ cm, height $h = 50$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 49 \times 50 = 2450$ cm$^2$
+
+**Bài / Exercise 48:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 50$ cm, chiều cao $h = 51$ cm. Tính diện tích.
+Parallelogram with base $a = 50$ cm, height $h = 51$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 50 \times 51 = 2550$ cm$^2$
+
+**Bài / Exercise 49:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 51$ cm, chiều cao $h = 52$ cm. Tính diện tích.
+Parallelogram with base $a = 51$ cm, height $h = 52$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 51 \times 52 = 2652$ cm$^2$
+
+**Bài / Exercise 50:** Tính diện tích / Calculate area
+Hình bình hành có đáy $a = 52$ cm, chiều cao $h = 53$ cm. Tính diện tích.
+Parallelogram with base $a = 52$ cm, height $h = 53$ cm. Calculate area.
+
+*Giải / Solution:*
+Diện tích là / Area is: $S = 52 \times 53 = 2756$ cm$^2$
+
+
+
+## 11. Đánh Giá / Assessment Rubric
+| Tiêu chí / Criteria | Điểm / Score |
+|---|---|
+| Hiểu lý thuyết / Theory | 30/100 |
+| Giải toán / Math | 40/100 |
+| Hoạt động nhóm / Group | 20/100 |
+| Code Python / Python | 10/100 |

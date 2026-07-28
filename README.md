@@ -1,97 +1,78 @@
-# DIY — STEM Hardware Studio
-
-> Không gian thiết kế phần cứng STEM bằng hội thoại: gom **yêu cầu, linh kiện, sơ đồ nối dây, mô hình CAD 3D, hướng dẫn lắp ráp và rubric** vào một workspace có kiểm định. Lấy cảm hứng từ trải nghiệm Blueprint, với nhận diện DIY STEM riêng.
-
-<p align="center">
-  <img src="tools/diy-app/public/humanoid-robot-visual.png" width="49%">
-  <img src="tools/diy-app/public/robodog-visual.png" width="49%">
-</p>
-
-Mã nguồn ứng dụng nằm trong thư mục **[`DIY/`](DIY/)** (Next.js + Three.js/WebGL2 + MCP CAD).
+# 🌐 HỆ THỐNG GIÁO DỤC STEM & NÔNG NĂNG KHOA HỌC — SCIENCE WORKSPACE
+# *Science Workspace: STEM Courses, Official Curricula, Applications & Tools*
 
 ---
 
-## 🎨 Thư viện mẫu thiết kế
+## 📌 Tổng Quan Dự Án / Project Overview
 
-Ứng dụng đi kèm **34 template dự án dân sự**, mỗi mẫu có đủ Parts · Wiring · Mech · Instructions · mô hình CAD 3D. Một số mẫu tiêu biểu:
-
-| | | |
-|---|---|---|
-| <img src="tools/diy-app/public/smart-mobile-robot-visual.png" width="260"><br>**Smart Mobile Robot**<br><sub>STM32 + ESP32-CAM · dò line, tránh vật cản</sub> | <img src="tools/diy-app/public/humanoid-robot-visual.png" width="260"><br>**Humanoid Robot**<br><sub>Jetson Orin · khớp Dynamixel · RGB-D</sub> | <img src="tools/diy-app/public/robodog-visual.png" width="260"><br>**Robodog**<br><sub>4 chân · 12× BLDC trên bus CAN</sub> |
-| <img src="tools/diy-app/public/mini-submarine-visual.png" width="260"><br>**Mini Submarine Drone**<br><sub>ROV · 6 thruster · thân acrylic kín nước</sub> | <img src="tools/diy-app/public/fpv-racing-drone-visual.png" width="260"><br>**FPV Racing Drone**<br><sub>5-inch 6S carbon · FC H7 · FPV analog</sub> | <img src="tools/diy-app/public/scara-arm-robot-visual.png" width="260"><br>**SCARA Arm Robot**<br><sub>cánh tay 4 trục · gripper 2 ngón</sub> |
-| <img src="tools/diy-app/public/modular-wind-harvester-visual.png" width="260"><br>**Modular Wind Harvester**<br><sub>turbine gió · MPPT + siêu tụ</sub> | <img src="tools/diy-app/public/long-range-uav-visual.png" width="260"><br>**Long Range UAV**<br><sub>fixed-wing · Pixhawk · tầm xa</sub> | <img src="tools/diy-app/public/rc-boat-visual.png" width="260"><br>**RC Submersible Boat**<br><sub>thuyền RC · camera thả bằng tời</sub> |
-
-### ✨ Sinh sản phẩm mới từ prompt
-
-Ngoài các template có sẵn, ứng dụng có **cửa sổ chat sinh sản phẩm mới**: gõ mô tả tự do (ví dụ *"robotic dragonfly with flapping wings, FPV camera and microphone streamed to VR goggles"*) rồi bấm **✨ TẠO** — engine phân loại **archetype** (ornithopter · multirotor · fixed-wing · rover · marine · robotic arm · gadget) và **tính năng** (camera, mic, VR/FPV stream, GPS, LiDAR, gimbal, thermal), rồi dựng đầy đủ **BOM · sơ đồ nối dây · hướng dẫn · mô hình CAD 3D chi tiết**. Chạy hoàn toàn offline (không cần API key); cùng entry point có thể cắm LLM sau này. Cùng lõi engine được MCP CAD server dùng lại cho `cad.generate_feature_tree` / `cad.render_preview`.
-
-Bộ dựng mesh được bổ sung các **primitive tham số chi tiết hơn**: `wing` (cánh/airfoil thon), `lathe` (revolve biên dạng — thân, bánh xe, vòi phun), `sphere` · `cone` · `tube` — cho hình khối sát thực tế hơn thay vì chỉ hộp/trụ.
-
-### Xem trước mô hình CAD 3D
-
-Các mẫu còn lại được dựng và xem trước bằng **mô hình CAD 3D tương tác** ngay trong ứng dụng (orbit · zoom · exploded view):
-
-| | | | |
-|---|---|---|---|
-| <img src="tools/diy-app/public/vtol-survey-visual.png" width="200"><br><sub>**VTOL Survey Drone**</sub> | <img src="tools/diy-app/public/observation-multirotor-visual.png" width="200"><br><sub>**Observation Multirotor**</sub> | <img src="tools/diy-app/public/dragonfly-ornithopter-visual.png" width="200"><br><sub>**Dragonfly Ornithopter**</sub> | <img src="tools/diy-app/public/budget-mini-uav-visual.png" width="200"><br><sub>**Budget Mini UAV**</sub> |
-| <img src="tools/diy-app/public/filming-drone-visual.png" width="200"><br><sub>**Professional Filming Drone**</sub> | <img src="tools/diy-app/public/delivery-drone-visual.png" width="200"><br><sub>**Autonomous Delivery Drone**</sub> | <img src="tools/diy-app/public/endurance-drone-visual.png" width="200"><br><sub>**Endurance Drone**</sub> | <img src="tools/diy-app/public/walle-robot-visual.png" width="200"><br><sub>**Autonomous Wall-E Robot**</sub> |
-| <img src="tools/diy-app/public/garden-irrigation-visual.png" width="200"><br><sub>**Smart Garden Irrigation**</sub> | <img src="tools/diy-app/public/companion-bot-visual.png" width="200"><br><sub>**Desktop Companion Bot**</sub> | <img src="tools/diy-app/public/ar-glasses-visual.png" width="200"><br><sub>**AR Smart Glasses**</sub> | <img src="tools/diy-app/public/printer-3d-visual.png" width="200"><br><sub>**3D Printer Budget**</sub> |
-| <img src="tools/diy-app/public/plasma-thruster-visual.png" width="200"><br><sub>**Pulsed Plasma Thruster** *(tham chiếu)*</sub> | | | |
+Hệ thống lưu trữ và tự động hóa toàn bộ tài nguyên học liệu GDPT 2018 (Kết nối tri thức với cuộc sống), các khóa học STEM 10 tuần (Tiểu học & THCS/THPT), giáo án Kế hoạch bài dạy (Công văn 5512), 48 bài học Chuyên đề nâng cao và các ứng dụng EdTech/AI.
 
 ---
 
-## 📦 Danh mục template (34)
+## 🗂️ Cấu Trúc Thư Mục Chuẩn Hóa / Standardized Directory Architecture
 
-| Nhóm | Template |
-|---|---|
-| **UAV / bay** | Budget Mini UAV · Long Range UAV · Mother UAV Carrier · VTOL Survey Drone · Aerial Observation Multirotor · Dragonfly Ornithopter · FPV Racing Drone · Professional Filming Drone · Autonomous Delivery Drone · Endurance Drone · Autonomous Cargo Drone · Cost-Effective Drone |
-| **Robot mặt đất** | Smart Mobile Robot · Humanoid Robot · Robodog · Autonomous Wall-E Robot · SCARA Arm Robot |
-| **Dưới nước / mặt nước** | Autonomous Survey USV · Mini Submarine Drone · RC Submersible Boat |
-| **IoT / năng lượng / thiết bị** | Modular Wind Harvester · Smart Garden Irrigation · Desktop Companion Bot · AR Smart Glasses · 3D Printer Budget · Smart Home Blueprint |
-| **Máy công cụ / chế tạo** | Desktop CNC Mill · Large 3D Printer |
-| **Xe / phương tiện** | Electric Motocross Bike *(xe điện off-road, HV 72V)* |
-| **Thiết bị đeo (wearable)** | Powered Exoskeleton *(khung trợ lực dân sự — đã lược hệ vũ khí)* · Hydraulic Lift Boot *(giày nâng thuỷ lực, cảnh báo kẹp/áp lực)* |
-| **Tham chiếu nghiên cứu** | Pulsed Plasma Thruster *(khái niệm không gian, cảnh báo HV/cryogenic)* · Cyber Multi-tool *(công cụ nghiên cứu bảo mật, chỉ dùng hợp pháp trên thiết bị của bạn)* · Automated Biodiesel Reactor *(rig tự động hoá quá trình, cảnh báo methanol/lye)* |
-
----
-
-## 🚀 Khởi chạy
-
-```bash
-cd DIY
-npm install
-npm run dev      # phát triển
-npm run build    # build production
+```text
+/Users/dangvietchung/Science/
+├── courses/                      # 🎓 11 Khóa học STEM 10 Tuần & Chuyên sâu
+│   ├── math-4-kntt/              # Toán 4 KNTT (10 tuần / 48 bài)
+│   ├── vietnamese-4-kntt/        # Tiếng Việt 4 KNTT (10 tuần / 18 bài)
+│   ├── math-7-kntt/              # Toán 7 KNTT (10 tuần / 35 bài)
+│   ├── literature-7-kntt/        # Ngữ văn 7 KNTT (10 tuần / 10 bài)
+│   ├── english-7-global-success/ # Tiếng Anh 7 Global Success (10 tuần / 12 units)
+│   ├── english-7-kntt -> english-7-global-success (Symlink chuẩn hóa)
+│   ├── physics-10-kntt/          # Vật lí 10 KNTT (10 tuần / 35 bài)
+│   ├── physics-11-kntt/          # Vật lí 11 KNTT (10 tuần / 26 bài)
+│   ├── physics-12-kntt/          # Vật lí 12 KNTT (10 tuần / 25 bài + 3 CĐ)
+│   ├── hydro-cfd/                # STEM Khí động học CFD trong nước
+│   ├── quantum-physics/          # STEM Vật lí lượng tử
+│   └── rocket-engine/            # STEM Thiết kế động cơ tên lửa
+│
+├── curriculum/                   # 📚 Chương Trình & Học Liệu GDPT 2018
+│   ├── hoc-lieu/                 # 8 Danh mục học liệu Bộ GD&ĐT
+│   │   ├── 01_CHINH_KHOA/        # Kế hoạch bài dạy CV 5512 (Vật lí 10, 11, 12)
+│   │   │   ├── Vat_ly/ (grade10, grade11, grade12)
+│   │   │   ├── Vat_ly_10 -> Vat_ly/grade10 (Symlink chuẩn hóa)
+│   │   │   ├── Vat_ly_11 -> Vat_ly/grade11
+│   │   │   └── Vat_ly_12 -> Vat_ly/grade12
+│   │   ├── 02_CHUYEN_DE_VA_KHAM_PHA/ # Chuyên đề (Lớp 10, 11, 12 & Trải nghiệm)
+│   │   ├── 03_STEM_MAKER/        # Tài liệu STEM Maker & Micro:bit
+│   │   ├── 04_THUC_HANH_THI_NGHIEM/
+│   │   ├── 05_DANH_GIA/
+│   │   ├── 06_KE_HOACH_GIANG_DAY/
+│   │   ├── 07_TAI_NGUYEN_VA_CONG_CU/
+│   │   └── 99_KHO_NGUON_GOC/
+│   └── chuyen-de/                # Kho 48 bài học Chuyên đề Vật lí nâng cao
+│
+├── tools/                        # 🛠️ Ứng Dụng & Công Cụ Học Tập / AI
+│   ├── diy-app/                  # Web Application STEM Builder (Next.js)
+│   ├── ai-workflow/              # Quy trình AI Agents & Prompt Engineering
+│   ├── dataset/                  # Dữ liệu khảo sát & học liệu
+│   ├── design/                   # Bản vẽ thiết kế kỹ thuật
+│   └── khao-sat/                 # Biểu mẫu khảo sát GDPT
+│
+├── assets/                       # 🖼️ Hình ảnh & Media dùng chung
+├── generate_lessons.py           # Master script sinh tự động khóa học 10 tuần
+└── README.md                     # Tài liệu tổng quan dự án
 ```
 
-Giai đoạn 2 — MCP CAD server (stdio) công bố ba tool CAD và một project resource:
+---
 
-```bash
-npm run mcp:build
-npm run mcp:smoke
-npm run mcp:start
-```
+## 🚀 Danh Mục Các Khóa Học 10 Tuần Đã Hoàn Thành (Completed Courses)
 
-Xem thêm: [Kiến trúc MVP](DIY/docs/ARCHITECTURE.md) · [Hợp đồng MCP CAD v1](DIY/mcp/cad-tools.schema.json) · [Hướng dẫn kết nối MCP](DIY/mcp-server/README.md).
+| Môn Học & Khóa Học | Cấu Trúc Bài Học | Đường Dẫn Thư Mục | Trạng Thái |
+|-------------------|------------------|-------------------|------------|
+| 📐 **Toán 4 KNTT** | 10 Tuần / 9 Chủ đề / 48 Bài | `courses/math-4-kntt/` | ✅ Hoàn thành |
+| 📖 **Tiếng Việt 4 KNTT** | 10 Tuần / 18 Bài học | `courses/vietnamese-4-kntt/` | ✅ Hoàn thành |
+| 📐 **Toán 7 KNTT** | 10 Tuần / 9 Chương / 35 Bài | `courses/math-7-kntt/` | ✅ Hoàn thành |
+| 📖 **Ngữ văn 7 KNTT** | 10 Tuần / 10 Bài học | `courses/literature-7-kntt/` | ✅ Hoàn thành |
+| 🇬🇧 **Tiếng Anh 7 Global Success** | 10 Tuần / 12 Units + 4 Reviews | `courses/english-7-global-success/` | ✅ Hoàn thành |
+| 🔭 **Vật lí 10 KNTT** | 10 Tuần / 7 Chương / 35 Bài | `courses/physics-10-kntt/` | ✅ Hoàn thành |
+| 🌊 **Vật lí 11 KNTT** | 10 Tuần / 4 Chương / 26 Bài | `courses/physics-11-kntt/` | `courses/physics-11-kntt/` | ✅ Hoàn thành |
+| ⚛️ **Vật lí 12 KNTT** | 10 Tuần / 4 Chương / 25 Bài + 3 CĐ | `courses/physics-12-kntt/` | ✅ Hoàn thành |
+| 🚀 **STEM Động Cơ Tên Lửa** | 10 Tuần / 20 Buổi | `courses/rocket-engine/` | ✅ Hoàn thành |
+| 🌊 **STEM Khí Động Học CFD** | 10 Tuần / 20 Buổi | `courses/hydro-cfd/` | ✅ Hoàn thành |
+| ⚛️ **STEM Vật Lý Lượng Tử** | 10 Tuần / 20 Buổi | `courses/quantum-physics/` | ✅ Hoàn thành |
 
 ---
 
-## 🛡️ Nguyên tắc an toàn
-
-Toàn bộ template là **bản dân sự, không vũ khí hoá**. Trong quá trình dựng thư viện, các thiết kế mang tính vũ khí/do thám đã **bị loại hoặc chỉ giữ bản dân sự đã lược bỏ**:
-
-- ⛔ **Laser Mosquito Zapper** — không dựng (hệ laser tự động ngắm-bắn theo thị giác).
-- ⛔ **VTOL Jamming Drone** và **phần lén/tàng hình của Stealth Autonomous Boat** — không clone bản gốc; chỉ có bản dân sự (VTOL Survey Drone, USV khảo sát) đã bỏ phần gây nhiễu/do thám.
-- ⚠️ **Pulsed Plasma Thruster** — chỉ đưa vào dạng tham chiếu nghiên cứu, kèm cảnh báo điện áp cao / cryogenic, ghi rõ *không phải đồ tự chế tại nhà*.
-- ⚠️ **Cyber Multi-tool** — công cụ nghiên cứu bảo mật (sub-GHz/NFC/RFID/IR) chỉ dành cho **mục đích hợp pháp, được phép**, thao tác trên thiết bị/thẻ/điều khiển **của chính bạn** và tuân thủ quy định RF địa phương. Không kèm bất kỳ hướng dẫn tấn công/truy cập trái phép nào.
-- ⚠️ **Automated Biodiesel Reactor** — chỉ đưa vào dạng **tham chiếu tự động hoá quá trình** (phần điều khiển/cơ khí), kèm cảnh báo mạnh: methanol dễ cháy/độc và lye ăn mòn, bắt buộc PPE + thông gió + không nguồn lửa, tuân thủ quy định địa phương; **không phải hướng dẫn sản xuất nhiên liệu trọn gói**.
-- ⚠️ **Electric Motocross Bike** — build EV cao áp 72V; thao tác HV bởi người có chuyên môn, dùng off-road/sân kín, mặc đồ bảo hộ.
-- ⛔→✅ **Exoskeleton Suit (gốc)** — bản gốc tích hợp **bệ phóng đạn khí nén** ở cẳng tay (nòng thép, van solenoid 1500 PSI, bình CO2, cơ cấu khoá nòng, giáp "ballistic"). **Không clone bản gốc**; chỉ giữ **Powered Exoskeleton** dân sự (khung trợ lực) đã **lược bỏ toàn bộ hệ vũ khí**, kèm cảnh báo actuator mạnh.
-- ⚠️ **Hydraulic Lift Boot** — wearable thực nghiệm; xi-lanh/áp lực thuỷ lực gây nguy cơ **kẹp/nghiền**, phải leak-test và thử full-stroke khi **tháo giày** trước khi đeo.
-- ⛔ **Automated Targeting Turret** — không dựng (hệ tự động ngắm-bắn theo thị giác).
-
----
-
-## 📚 Học liệu khác
-
-Repo này cũng chứa cổng học liệu Vật lí/STEM (PhysicsLab, HOC_LIEU, chuyên đề). Xem [`HOC_LIEU/`](HOC_LIEU/) và các thư mục liên quan để tra cứu và triển khai theo mục đích dạy học.
+*🌐 Science Workspace · Updated 07/2026*
