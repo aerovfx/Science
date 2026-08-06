@@ -1,4 +1,4 @@
-# 🌐 HỆ THỐNG GIÁO DỤC STEM & NÔNG NĂNG KHOA HỌC — SCIENCE WORKSPACE
+# 🌐 HỆ THỐNG GIÁO DỤC STEM & KHOA HỌC — SCIENCE WORKSPACE
 # *Science Workspace: STEM Courses, Official Curricula, Applications & Tools*
 
 ---
