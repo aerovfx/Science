@@ -480,6 +480,7 @@
   <a href="ket-qua.html">Kết quả</a>
 </footer>
 
+<script src="js/cloud.js"></script>
 <script>
 /* ── GRADE BADGE PICKER ── */
 document.querySelectorAll('.grade-badge').forEach(badge=>{
@@ -564,6 +565,20 @@ document.getElementById('surveyForm').addEventListener('submit',e=>{
   };
   surveys.push(record);
   localStorage.setItem('stem_surveys', JSON.stringify(surveys));
+
+  /* ── đồng bộ lên Google Sheets (nếu đã kết nối) ── */
+  if(window.STEMCloud){
+    STEMCloud.push('survey', Object.assign({}, data, {
+      id: record.id,
+      studentId: record.studentId,
+      studentName: record.studentName,
+      classId: record.classId,
+      sessionId: record.sessionId,
+      sessionTitle: record.sessionTitle,
+      submittedAt: record.submittedAt
+    }), { uid: record.id });
+  }
+
   document.getElementById('success-overlay').classList.add('show');
 });
 

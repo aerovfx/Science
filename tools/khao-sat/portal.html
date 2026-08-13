@@ -385,10 +385,12 @@ Phạm Thị Dung
 <footer>
   🎓 STEM Edu Program · micro:bit + Elecrow Crowtail ·
   <a href="danh-gia.html">Đánh giá đồng đẳng</a> ·
-  <a href="ket-qua.html">Kết quả</a>
+  <a href="ket-qua.html">Kết quả</a> ·
+  <a href="ket-noi.html">☁️ Kết nối dữ liệu</a>
 </footer>
 
 <!-- ═══════════════════════════ SCRIPT ═══════════════════════════ -->
+<script src="js/cloud.js"></script>
 <script>
 /* ── DEFAULT DATA (embedded – no fetch needed) ── */
 const DEFAULT_DB = {
@@ -507,6 +509,29 @@ function init(){
   renderClasses();
   renderSessions();
   populateModalClasses();
+  napTuSheets();
+}
+
+/* ── Lấy danh sách lớp/học sinh mới nhất từ Google Sheets (nếu đã kết nối) ── */
+function napTuSheets(){
+  if(!window.STEMCloud || !STEMCloud.enabled()) return;
+  STEMCloud.get('roster').then(r=>{
+    const d = r.data || {};
+    if(!d.students || !d.students.length) return;
+    // gộp: dữ liệu Sheets là nguồn chính, giữ thêm mục chỉ có ở máy
+    const co = new Set(d.students.map(s=>s.id));
+    DB.students = [...d.students, ...DB.students.filter(s=>!co.has(s.id))];
+    if(d.classes && d.classes.length){
+      const cc = new Set(d.classes.map(c=>c.id));
+      DB.classes = [...d.classes, ...DB.classes.filter(c=>!cc.has(c.id))];
+    }
+    if(d.sessions && d.sessions.length) DB.sessions = d.sessions;
+    if(d.criteria && d.criteria.length) DB.criteria = d.criteria;
+    renderClasses();
+    renderSessions();
+    populateModalClasses();
+    showToast('☁️ Đã tải danh sách mới nhất từ Google Sheets');
+  }).catch(()=>{ /* im lặng — vẫn dùng dữ liệu sẵn có */ });
 }
 
 /* ── CLASSES ── */
@@ -809,6 +834,11 @@ function saveNewStudent(){
   const prev = JSON.parse(localStorage.getItem('stem_db')||'{"classes":[],"students":[]}');
   prev.students = [...(prev.students||[]), ...added];
   localStorage.setItem('stem_db', JSON.stringify(prev));
+
+  // đẩy học sinh mới lên Google Sheets (nếu đã kết nối)
+  if(window.STEMCloud && added.length){
+    STEMCloud.push('roster', { students: DB.students, classes: DB.classes }, { uid:'roster' });
+  }
 
   closeModal();
   renderStudents(document.getElementById('studentSearch').value);

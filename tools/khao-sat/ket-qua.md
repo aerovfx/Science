@@ -56,8 +56,19 @@ Khi học viên nộp form và copy markdown từ trang kết quả, nội dung 
 
 ---
 
+## ☁️ Lưu dữ liệu tập trung (Google Sheets + Forms)
+
+Từ nay dữ liệu không chỉ nằm trong trình duyệt: mở trang **[Kết nối dữ liệu](ket-noi.html)**,
+dán URL Web App của Apps Script là mọi khảo sát / đánh giá đồng đẳng / điểm giáo viên
+tự đẩy về **1 bảng tính Google Sheets (9 sheet)** và **3 Google Form** trong tài khoản
+`cgsharefive@gmail.com` (thư mục [danhgia](https://drive.google.com/drive/folders/1M9C1CaUaDlde5E3BjDUEz4vtAMeBZg4X)).
+
+Cách triển khai: [`gas/HUONG-DAN.md`](gas/HUONG-DAN.md) · Mã nguồn backend: [`gas/Code.gs`](gas/Code.gs).
+
 ## 🔗 Liên kết
 
 - [Form khảo sát](index.html)
+- [Kết nối Google Sheets & Forms](ket-noi.html)
+- [Hướng dẫn triển khai backend](gas/HUONG-DAN.md)
 - [GitHub Actions workflow](.github/workflows/form-to-md.yml)
 - [Chương trình STEM](../stem/INDEX.md)
