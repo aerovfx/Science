@@ -1,0 +1,44 @@
+/* Editorial adaptive-learning hero inspired by the referenced design language. */
+.hero {
+  min-height: calc(100vh - 72px);
+  padding: clamp(44px, 6vw, 86px) clamp(20px, 5vw, 72px) 0;
+  grid-template-columns: minmax(310px, 1fr) minmax(300px, .9fr) minmax(220px, .55fr);
+  grid-template-rows: 1fr auto;
+  gap: 30px 4vw;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {font-size:clamp(3rem,5.4vw,6.2rem);line-height:.84;letter-spacing:-.075em;color:#111}
+.hero .lead {max-width:470px;font-size:clamp(.95rem,1.2vw,1.1rem)}
+.hero-actions {align-items:center;gap:24px}
+.text-link {color:var(--ink);font-size:.88rem;font-weight:750;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.science-orbit {width:min(37vw,510px);aspect-ratio:1;position:relative;justify-self:center;filter:drop-shadow(0 24px 35px rgba(36,92,70,.13))}
+.orbit {position:absolute;inset:15%;border:2px solid rgba(36,92,70,.34);border-radius:50%;transform-style:preserve-3d}
+.orbit-a {transform:rotate(18deg) scaleY(.35);animation:orbitA 13s linear infinite}
+.orbit-b {transform:rotate(78deg) scaleY(.35);border-color:rgba(185,144,60,.4);animation:orbitB 17s linear infinite reverse}
+.orbit-c {inset:25%;border-style:dashed;transform:rotate(-36deg) scaleY(.5);animation:orbitA 22s linear infinite reverse}
+.core {position:absolute;inset:38%;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#f4ffd0,var(--lime) 38%,#6d8b31);color:#fff;font:800 clamp(2rem,5vw,4.5rem)/1 Georgia,serif;box-shadow:inset -12px -18px 25px rgba(24,66,47,.32),0 18px 45px rgba(36,92,70,.2)}
+.particle {position:absolute;width:13px;height:13px;background:var(--green);border:3px solid #fff;border-radius:50%;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+.p1 {left:15%;top:33%}.p2 {right:13%;top:43%;background:#b9903c}.p3 {left:38%;bottom:11%;width:9px;height:9px}.p4 {right:31%;top:13%;width:8px;height:8px;background:#b9903c}
+.hero-insight {align-self:center;max-width:245px}
+.hero-insight span {font-size:.67rem;letter-spacing:.16em;font-weight:850;color:var(--muted)}
+.hero-insight p {font:500 .88rem/1.65 Georgia,serif;color:#303a35}
+.hero-insight a {display:inline-flex;margin-top:10px;padding:10px 15px;border-radius:99px;background:#171b18;color:#fff;text-decoration:none;font-size:.74rem;font-weight:750}
+.hero-index {grid-column:1/-1;display:grid;grid-template-columns:65px 130px minmax(150px,250px) 1fr;gap:18px;align-items:center;border:1px solid var(--line);border-bottom:0;border-radius:16px 16px 0 0;padding:22px 28px;background:#f8faf7}
+.hero-index strong {font:500 2.4rem/1 Georgia,serif}.hero-index small {font-size:.6rem;letter-spacing:.08em;color:var(--muted)}.hero-index b {font-size:.82rem}.hero-index p {font-size:.74rem;color:var(--muted);margin:0}
+.section {background:var(--paper)}
+@keyframes orbitA {to{transform:rotate(378deg) scaleY(.35)}}
+@keyframes orbitB {to{transform:rotate(438deg) scaleY(.35)}}
+@media (max-width:900px) {
+  .hero {grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto}
+  .hero-copy {padding-top:20px}.science-orbit {width:min(47vw,430px)}
+  .hero-insight {grid-column:1/-1;max-width:none;display:flex;align-items:center;gap:20px}.hero-insight p {flex:1}
+  .hero-index {grid-template-columns:55px 1fr 1fr}.hero-index p {display:none}
+}
+@media (max-width:600px) {
+  .hero {grid-template-columns:1fr;padding-top:38px}.science-orbit {width:82vw;grid-row:2}
+  .hero-insight {grid-column:auto;display:block}.hero-index {grid-template-columns:46px 1fr;padding:18px}.hero-index b {display:none}
+  .hero h1 {font-size:clamp(3.3rem,16vw,5rem)}.hero-actions {align-items:flex-start;flex-direction:column;gap:15px}
+}
+@media (prefers-reduced-motion:reduce) {.orbit {animation:none!important}}

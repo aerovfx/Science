@@ -277,12 +277,14 @@
   </div>
 </div><!-- /container -->
 
+<script src="js/cloud.js"></script>
 <script>
   /* ── load context ── */
   const ctx = JSON.parse(sessionStorage.getItem('stem_user') || 'null');
-  if(!ctx){ window.location.href='portal.html'; }
+  if(!ctx){ window.location.replace('portal.html'); }
 
-  const { student, class: cls, session, peers } = ctx;
+  // Keep initialization safe while the browser completes the redirect.
+  const { student = {}, class: cls = {}, session = {}, peers = [] } = ctx || {};
   const STORAGE_KEY = `stem_eval_${student.id}_sess${session.id}`;
 
   /* show user info */
@@ -436,6 +438,18 @@
     showToast(`✅ Đã lưu đánh giá ${peer.name}!`);
     updateSummary();
 
+    // gửi ngay từng phiếu lên Sheets (khoá trùng sẽ ghi đè, không sinh dòng mới)
+    if(window.STEMCloud){
+      const clean = {};
+      criteria.forEach(c=>{ if(scores[c.id]) clean[c.id] = scores[c.id]; });
+      STEMCloud.push('peer_eval', {
+        sessionId: session.id, sessionTitle: session.title, classId: cls.id,
+        raterId: student.id, raterName: student.name,
+        targetId: peer.id, targetName: peer.name,
+        scores: clean, note, savedAt: new Date().toISOString()
+      }, { uid: `peer_${student.id}_${session.id}_${peer.id}` });
+    }
+
     // move to next
     const next = currentPeerIdx + 1;
     if(next < peers.length){
@@ -451,6 +465,25 @@
       `Bạn đã đánh giá ${done}/${peers.length} bạn trong lớp ${cls.name} cho Buổi ${session.id}.`;
     document.getElementById('doneOverlay').classList.add('show');
     exportToMarkdown();
+    dongBoLenSheets();
+  }
+
+  /* ── gửi toàn bộ phiếu của buổi này lên Google Sheets ── */
+  function dongBoLenSheets(){
+    if(!window.STEMCloud) return;
+    const items = Object.entries(evaluations).map(([peerId, ev])=>{
+      const peer = peers.find(p=>p.id===peerId) || {};
+      const scores = {};
+      criteria.forEach(c=>{ if(ev.scores[c.id]) scores[c.id] = ev.scores[c.id]; });
+      return { targetId: peerId, targetName: peer.name || '', scores,
+               note: ev.note || '', savedAt: ev.savedAt };
+    });
+    if(!items.length) return;
+    STEMCloud.push('peer_eval_set', {
+      sessionId: session.id, sessionTitle: session.title, classId: cls.id,
+      raterId: student.id, raterName: student.name, items
+    }, { uid: `peerset_${student.id}_sess${session.id}` })
+    .then(r=>{ if(r && r.queued) showToast('⏳ Chưa gửi được lên Sheets — đã lưu chờ gửi lại.'); });
   }
 
   function updateSummary(){
@@ -499,7 +532,7 @@
 
     peers.forEach(p=>{
       const ev = evaluations[p.id];
-      if(!ev){ lines.push(`| ${p.name} | ${criteria.map(()='—').join(' | ')} | — |`); return; }
+      if(!ev){ lines.push(`| ${p.name} | ${criteria.map(()=>'—').join(' | ')} | — |`); return; }
       const scores = criteria.map(c => ev.scores[c.id] || '—');
       const nums = scores.filter(s=>s!=='—').map(Number);
       const avg = nums.length ? (nums.reduce((a,b)=>a+b,0)/nums.length).toFixed(1) : '—';

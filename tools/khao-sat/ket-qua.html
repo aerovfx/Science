@@ -216,6 +216,7 @@
   </div>
 </div><!-- /container -->
 
+<script src="js/cloud.js"></script>
 <script>
   const ctx = JSON.parse(sessionStorage.getItem('stem_user') || 'null');
   let DB = null, criteria = [];
@@ -226,7 +227,8 @@
       DB = db;
       criteria = db.criteria;
       if(ctx) document.getElementById('userChipTop').textContent = `${ctx.student.avatar} ${ctx.student.name}`;
-      buildDashboard();
+      buildDashboard();                       // vẽ ngay bằng dữ liệu máy
+      napTuSheets().then(()=>buildDashboard()); // vẽ lại khi có dữ liệu đám mây
     });
 
   /* ── collect all evaluations from localStorage ── */
@@ -247,13 +249,45 @@
     return result;
   }
 
+  /* ── lấy đánh giá từ Google Sheets rồi gộp với dữ liệu máy ── */
+  let cloudEvals = [];
+  function napTuSheets(){
+    if(!window.STEMCloud || !STEMCloud.enabled()) return Promise.resolve([]);
+    return STEMCloud.get('peer', { limit: 2000 }).then(r=>{
+      cloudEvals = (r.data||[]).map(row=>{
+        const scores = {};
+        criteria.forEach(c=>{ const v = row[c.label]; if(v!=='' && v!=null) scores[c.id] = Number(v); });
+        return {
+          studentId: row['Mã người đánh giá'] || row['Người đánh giá'],
+          sessionId: String(row['Buổi số']||''),
+          peerId: row['Mã bạn được ĐG'] || row['Bạn được đánh giá'],
+          peerName: row['Bạn được đánh giá'] || '',
+          scores, note: row['Nhận xét']||'', savedAt: row['Thời gian'], nguon: 'cloud'
+        };
+      });
+      return cloudEvals;
+    }).catch(()=>[]);
+  }
+
+  function gopEvals(){
+    const local = getAllEvals();
+    const key = e => `${e.studentId}|${e.sessionId}|${e.peerId}`;
+    const map = new Map();
+    cloudEvals.forEach(e=>map.set(key(e), e));
+    local.forEach(e=>map.set(key(e), e));   // dữ liệu máy ưu tiên (mới nhất do người dùng vừa chấm)
+    return [...map.values()];
+  }
+
   function buildDashboard(){
-    const evals = getAllEvals();
+    const evals = gopEvals();
     renderStats(evals);
     renderCriteriaChart(evals);
     renderSessionList(evals);
     renderPeerTable(evals);
     renderMdSelect(evals);
+    const chip = document.getElementById('userChipTop');
+    if(window.STEMCloud && STEMCloud.enabled() && chip)
+      chip.textContent = (ctx? `${ctx.student.avatar} ${ctx.student.name} · ` : '') + `☁️ ${cloudEvals.length} phiếu từ Sheets`;
   }
 
   /* ── stats ── */
@@ -347,7 +381,8 @@
   /* ── markdown tab ── */
   function renderMdSelect(evals){
     const sel = document.getElementById('mdSessionSelect');
-    const sessions = [...new Set(evals.map(e=>e.sessionId))];
+    sel.innerHTML = '<option value="">— Chọn buổi học —</option>';  // tránh nhân đôi khi vẽ lại
+    const sessions = [...new Set(evals.map(e=>e.sessionId))].filter(Boolean).sort((a,b)=>a-b);
     sessions.forEach(id=>{
       const sess = DB?.sessions.find(s=>s.id==id);
       const o = document.createElement('option');
