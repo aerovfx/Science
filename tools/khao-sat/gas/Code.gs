@@ -30,6 +30,8 @@ var CONFIG = {
   SPREADSHEET   : 'STEM — CSDL Khảo sát & Đánh giá',
   TIMEZONE      : 'Asia/Ho_Chi_Minh',
   TOKEN         : '',           // điền chuỗi bí mật nếu muốn bắt buộc token
+  // Email giáo viên nhận báo cáo tổng hợp (có thể đổi lúc khởi tạo hoặc trong trang ket-noi.html)
+  TEACHER_EMAIL : 'vietchungvn@gmail.com',
   BASE_URL      : 'https://aerovfx.github.io/Science/tools/khao-sat/',
   ROSTER_URL    : 'https://aerovfx.github.io/Science/tools/khao-sat/data/students.json',
   COURSES_URL   : 'https://aerovfx.github.io/Science/tools/khao-sat/data/courses.json'
@@ -142,6 +144,8 @@ function taoToanBo() {
 
   caiTrigger_();
   capNhatTongHop();
+  batBaoCaoHangTuan();                      // báo cáo tự động sáng thứ Hai
+  out.push('📧 Báo cáo gửi về: ' + emailGiaoVien_());
   ghiLog_('taoToanBo', '', 'OK', out.join(' | '));
 
   var msg = ['✅ ĐÃ TẠO XONG HỆ THỐNG ĐA KHOÁ', '', 'Bảng tính:', '  ' + ss.getUrl(), '', 'Biểu mẫu:']
@@ -607,6 +611,8 @@ function xuLyGoi_(body) {
         try { return { type: it.type, ok: true, r: xuLyGoi_({ type: it.type, payload: it.payload, device: it.device }) }; }
         catch (err) { return { type: it.type, ok: false, error: err.message }; }
       });
+    case 'set_email':     return datEmailGiaoVien(p.email);
+    case 'send_report':   return guiBaoCaoTongHop(p.email, p.courseId);
     case 'ping':          return { pong: true };
     default: throw new Error('Loại dữ liệu không hỗ trợ: ' + type);
   }
@@ -628,6 +634,10 @@ function doGet(e) {
       case 'summary':   kq = { ok: true, data: tomTat_() }; break;
       case 'rebuild':   capNhatTongHop(); kq = { ok: true, data: 'Đã cập nhật Tổng hợp' }; break;
       case 'reload':    kq = { ok: true, data: napDuLieuTuWeb_(bang_()) }; break;
+      case 'email':     kq = { ok: true, data: { email: emailGiaoVien_(), weekly: lichBaoCao_() } }; break;
+      case 'set_email': kq = { ok: true, data: datEmailGiaoVien(p.email) }; break;
+      case 'report':    kq = { ok: true, data: guiBaoCaoTongHop(p.email, p.course) }; break;
+      case 'weekly':    kq = { ok: true, data: (p.on === '0' ? tatBaoCaoHangTuan() : batBaoCaoHangTuan()) }; break;
       default: kq = { ok: false, error: 'Hành động không hỗ trợ: ' + action };
     }
   } catch (err) { kq = { ok: false, error: err.message }; }
@@ -774,7 +784,156 @@ function capNhatTongHop() {
   return rows.length;
 }
 
-/* ═════════════════ 9. NHẬT KÝ & TIỆN ÍCH ═════════════════ */
+/* ═════════════════ 9. BÁO CÁO QUA EMAIL ═════════════════ */
+function emailGiaoVien_() {
+  return PropertiesService.getScriptProperties().getProperty('TEACHER_EMAIL') || CONFIG.TEACHER_EMAIL;
+}
+
+/** Đặt email nhận báo cáo (chạy tay hoặc gọi từ trang ket-noi.html) */
+function datEmailGiaoVien(email) {
+  email = String(email || '').trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new Error('Email không hợp lệ: ' + email);
+  PropertiesService.getScriptProperties().setProperty('TEACHER_EMAIL', email);
+  ghiLog_('datEmailGiaoVien', '', 'OK', email);
+  return { email: email };
+}
+
+/** Bật/tắt lịch gửi báo cáo hằng tuần (sáng thứ Hai) */
+function batBaoCaoHangTuan() {
+  if (!ScriptApp.getProjectTriggers().filter(function (t) {
+        return t.getHandlerFunction() === 'guiBaoCaoDinhKy'; }).length) {
+    ScriptApp.newTrigger('guiBaoCaoDinhKy').timeBased()
+      .onWeekDay(ScriptApp.WeekDay.MONDAY).atHour(7).create();
+  }
+  return { weekly: true, email: emailGiaoVien_() };
+}
+function tatBaoCaoHangTuan() {
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === 'guiBaoCaoDinhKy') ScriptApp.deleteTrigger(t);
+  });
+  return { weekly: false };
+}
+function lichBaoCao_() {
+  return ScriptApp.getProjectTriggers().filter(function (t) {
+    return t.getHandlerFunction() === 'guiBaoCaoDinhKy'; }).length > 0;
+}
+function guiBaoCaoDinhKy() { return guiBaoCaoTongHop(); }
+
+/** Gửi báo cáo tổng hợp. email/courseId để trống = dùng mặc định / tất cả khoá */
+function guiBaoCaoTongHop(email, courseId) {
+  email = email || emailGiaoVien_();
+  capNhatTongHop();
+
+  var tt = tomTat_();
+  var dash = docSheet_(SH.DASH);
+  if (courseId) dash = dash.filter(function (r) { return r['Mã khoá'] === courseId; });
+
+  var theoKhoa = {};
+  dash.forEach(function (r) {
+    var k = r['Mã khoá'] || '—';
+    var o = theoKhoa[k] || (theoKhoa[k] = { ten: r['Tên khoá'] || k, hs: 0, peer: [], gv: [], sv: 0 });
+    o.hs++;
+    if (r['TB bạn đánh giá'] !== '') o.peer.push(Number(r['TB bạn đánh giá']));
+    if (r['TB giáo viên'] !== '')   o.gv.push(Number(r['TB giáo viên']));
+    o.sv += Number(r['Số khảo sát']) || 0;
+  });
+
+  var xepHang = dash.filter(function (r) { return r['Điểm tổng hợp'] !== ''; })
+                    .sort(function (a, b) { return Number(b['Điểm tổng hợp']) - Number(a['Điểm tổng hợp']); });
+  var top = xepHang.slice(0, 5);
+  var canHoTro = xepHang.slice(-5).reverse().filter(function (r) { return Number(r['Điểm tổng hợp']) < 3.5; });
+
+  var phanHoi = docSheet_(SH.SURVEY, 5).reverse().filter(function (r) {
+    return !courseId || r['Mã khoá'] === courseId;
+  });
+
+  var ngay = Utilities.formatDate(new Date(), CONFIG.TIMEZONE, 'dd/MM/yyyy HH:mm');
+  var css = 'style="border:1px solid #dce5df;padding:7px 10px;text-align:left;font-size:13px"';
+  var th  = 'style="border:1px solid #dce5df;padding:7px 10px;text-align:left;font-size:12px;' +
+            'background:#245c46;color:#fff;font-weight:700"';
+
+  var html = [
+    '<div style="font-family:Inter,Arial,sans-serif;color:#18251f;max-width:760px">',
+    '<h2 style="margin:0 0 4px">📊 Báo cáo tổng hợp — STEM Portal</h2>',
+    '<p style="color:#6a7770;margin:0 0 18px">Cập nhật ' + ngay +
+      (courseId ? ' · Khoá: ' + courseId : ' · Tất cả khoá học') + '</p>',
+    '<table style="border-collapse:collapse;margin-bottom:20px">',
+    '<tr><td ' + css + '>🎓 Khoá học</td><td ' + css + '><b>' + tt.khoaHoc + '</b></td>',
+    '<td ' + css + '>📅 Buổi học</td><td ' + css + '><b>' + tt.buoiHoc + '</b></td></tr>',
+    '<tr><td ' + css + '>👥 Học sinh</td><td ' + css + '><b>' + tt.hocSinh + '</b></td>',
+    '<td ' + css + '>🏫 Lớp</td><td ' + css + '><b>' + tt.lop + '</b></td></tr>',
+    '<tr><td ' + css + '>🧪 Phiếu khảo sát</td><td ' + css + '><b>' + tt.khaoSat + '</b></td>',
+    '<td ' + css + '>🔄 Phiếu đồng đẳng</td><td ' + css + '><b>' + tt.dongDang + '</b></td></tr>',
+    '<tr><td ' + css + '>👩‍🏫 Phiếu giáo viên</td><td ' + css + '><b>' + tt.giaoVien + '</b></td>',
+    '<td ' + css + '></td><td ' + css + '></td></tr>',
+    '</table>'
+  ];
+
+  var kA = Object.keys(theoKhoa);
+  if (kA.length) {
+    html.push('<h3 style="margin:18px 0 8px">📚 Theo khoá học</h3>',
+      '<table style="border-collapse:collapse;width:100%"><tr>',
+      '<th ' + th + '>Khoá học</th><th ' + th + '>Học sinh</th><th ' + th + '>TB bạn ĐG</th>',
+      '<th ' + th + '>TB giáo viên</th><th ' + th + '>Khảo sát</th></tr>');
+    kA.forEach(function (k) {
+      var o = theoKhoa[k];
+      html.push('<tr><td ' + css + '>' + o.ten + '</td><td ' + css + '>' + o.hs + '</td><td ' + css + '>' +
+        (tb_(o.peer) || '—') + '</td><td ' + css + '>' + (tb_(o.gv) || '—') + '</td><td ' + css + '>' + o.sv + '</td></tr>');
+    });
+    html.push('</table>');
+  }
+
+  if (top.length) {
+    html.push('<h3 style="margin:18px 0 8px">🏆 Top 5 điểm tổng hợp</h3>',
+      '<table style="border-collapse:collapse;width:100%"><tr>',
+      '<th ' + th + '>Học sinh</th><th ' + th + '>Lớp</th><th ' + th + '>Khoá</th><th ' + th + '>Điểm</th></tr>');
+    top.forEach(function (r) {
+      html.push('<tr><td ' + css + '>' + (r['Họ tên'] || r['Mã HS']) + '</td><td ' + css + '>' + r['Lớp'] +
+        '</td><td ' + css + '>' + r['Tên khoá'] + '</td><td ' + css + '><b>' + r['Điểm tổng hợp'] + '</b>/5</td></tr>');
+    });
+    html.push('</table>');
+  }
+
+  if (canHoTro.length) {
+    html.push('<h3 style="margin:18px 0 8px">🎯 Cần hỗ trợ thêm (dưới 3.5/5)</h3>',
+      '<table style="border-collapse:collapse;width:100%"><tr>',
+      '<th ' + th + '>Học sinh</th><th ' + th + '>Lớp</th><th ' + th + '>Khoá</th><th ' + th + '>Điểm</th></tr>');
+    canHoTro.forEach(function (r) {
+      html.push('<tr><td ' + css + '>' + (r['Họ tên'] || r['Mã HS']) + '</td><td ' + css + '>' + r['Lớp'] +
+        '</td><td ' + css + '>' + r['Tên khoá'] + '</td><td ' + css + '><b>' + r['Điểm tổng hợp'] + '</b>/5</td></tr>');
+    });
+    html.push('</table>');
+  }
+
+  if (phanHoi.length) {
+    html.push('<h3 style="margin:18px 0 8px">💬 Phản hồi gần nhất</h3>');
+    phanHoi.forEach(function (r) {
+      html.push('<div style="border-left:3px solid #245c46;background:#f7f9f6;padding:9px 12px;margin:6px 0">',
+        '<b>' + (r['Họ tên'] || '—') + '</b> <span style="color:#6a7770;font-size:12px">· ' +
+        (r['Tên khoá'] || '') + ' · ' + (r['Đánh giá (1-5)'] || '—') + '/5</span><br/>',
+        '<span style="font-size:13px">👍 ' + (r['Điều thích nhất'] || '—') + '<br/>🔧 ' +
+        (r['Cần cải thiện'] || '—') + '</span></div>');
+    });
+  }
+
+  var props = PropertiesService.getScriptProperties();
+  html.push('<p style="margin-top:22px;font-size:12px;color:#6a7770">',
+    '📄 <a href="https://docs.google.com/spreadsheets/d/' + props.getProperty('SS_ID') + '/edit">Mở bảng tính đầy đủ</a> · ',
+    '📊 <a href="' + CONFIG.BASE_URL + 'ket-qua.html">Dashboard</a><br/>',
+    'Email tự động từ STEM Portal — Apps Script (' + CONFIG.OWNER_EMAIL + ')</p></div>');
+
+  var body = html.join('');
+  MailApp.sendEmail({
+    to: email,
+    subject: '📊 Báo cáo STEM Portal — ' + ngay,
+    htmlBody: body,
+    name: 'STEM Portal'
+  });
+  ghiLog_('guiBaoCaoTongHop', courseId || '', 'OK', email);
+  return { sent: true, to: email, courses: kA.length, students: dash.length, quotaLeft: MailApp.getRemainingDailyQuota() };
+}
+
+/* ═════════════════ 10. NHẬT KÝ & TIỆN ÍCH ═════════════════ */
 function ghiLog_(hanhDong, khoa, ketQua, chiTiet) {
   try {
     var ss = bang_();

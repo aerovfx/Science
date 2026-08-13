@@ -115,9 +115,23 @@ th{color:var(--muted);font-weight:700;font-size:.78rem;text-transform:uppercase;
     <p class="hint">Đẩy lại nhiều lần không tạo dòng trùng: mỗi bản ghi có khoá riêng, gửi lại sẽ ghi đè đúng dòng cũ.</p>
   </section>
 
-  <!-- 5. Chia sẻ -->
+  <!-- 5. Báo cáo email -->
   <section class="card">
-    <h2><span class="step-no">5</span> Dùng trên máy khác</h2>
+    <h2><span class="step-no">5</span> Báo cáo tổng hợp gửi email giáo viên</h2>
+    <input type="email" id="teacherEmail" placeholder="vietchungvn@gmail.com" autocomplete="email"/>
+    <div class="row">
+      <button class="primary" onclick="luuEmail()">💾 Lưu email</button>
+      <button onclick="guiBaoCao()">📧 Gửi báo cáo ngay</button>
+      <button id="weeklyBtn" onclick="doiLichTuan()">⏰ Báo cáo hằng tuần: —</button>
+    </div>
+    <div class="status" id="st5"></div>
+    <p class="hint">Báo cáo gồm: số liệu từng khoá học, top 5 điểm tổng hợp, danh sách cần hỗ trợ (dưới 3.5/5)
+      và phản hồi khảo sát mới nhất. Lịch tự động: <strong>7:00 sáng thứ Hai hằng tuần</strong>.</p>
+  </section>
+
+  <!-- 6. Chia sẻ -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Dùng trên máy khác</h2>
     <p class="hint" style="margin-top:0">Gửi link kèm tham số <code>?api=</code> — máy nhận sẽ tự lưu cấu hình:</p>
     <input type="text" id="shareLink" readonly value="—"/>
     <div class="row"><button onclick="chepLink()">📋 Sao chép link</button></div>
@@ -162,6 +176,7 @@ function kiemTra(){
     say('st1','✅ Kết nối thành công — máy chủ phản hồi lúc '+new Date(r.time).toLocaleString('vi-VN'),'ok');
     veLienKet(r.config);
     lamMoi();
+    napEmail();
     STEMCloud.repaint();
   }).catch(e=>{
     say('st1','❌ '+e.message+'<br><span style="font-weight:500">Kiểm tra: đã Triển khai với quyền “Bất kỳ ai” chưa? URL có đuôi <code>/exec</code> chưa?</span>','err');
@@ -285,7 +300,47 @@ function guiHangCho(){
 }
 function capNhatHangCho(){ $('qn').textContent = STEMCloud.queueSize(); }
 
-/* ── 5. chia sẻ ── */
+/* ── 5. báo cáo email ── */
+let weeklyOn = false;
+function napEmail(){
+  if(!STEMCloud.enabled()) return;
+  STEMCloud.get('email').then(r=>{
+    $('teacherEmail').value = r.data.email || '';
+    weeklyOn = !!r.data.weekly;
+    veNutTuan();
+  }).catch(()=>{});
+}
+function veNutTuan(){
+  $('weeklyBtn').textContent = '⏰ Báo cáo hằng tuần: ' + (weeklyOn ? 'BẬT' : 'TẮT');
+}
+function luuEmail(){
+  const e = $('teacherEmail').value.trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){ say('st5','⚠️ Email không hợp lệ.','err'); return; }
+  say('st5','⏳ Đang lưu…','wait');
+  STEMCloud.get('set_email', { email: e })
+    .then(()=>say('st5','✅ Báo cáo sẽ gửi về <strong>'+e+'</strong>.','ok'))
+    .catch(err=>say('st5','❌ '+err.message,'err'));
+}
+function guiBaoCao(){
+  const e = $('teacherEmail').value.trim();
+  if(!STEMCloud.enabled()){ say('st5','⚠️ Hãy kết nối ở bước 1 trước.','err'); return; }
+  say('st5','⏳ Đang tổng hợp và gửi email… (có thể mất 20–30 giây)','wait');
+  STEMCloud.get('report', e ? { email: e } : {}, 90000)
+    .then(r=>say('st5','✅ Đã gửi báo cáo tới <strong>'+r.data.to+'</strong> — '+
+      r.data.students+' học sinh, '+r.data.courses+' khoá. Còn '+r.data.quotaLeft+' email trong hạn mức hôm nay.','ok'))
+    .catch(err=>say('st5','❌ '+err.message,'err'));
+}
+function doiLichTuan(){
+  if(!STEMCloud.enabled()){ say('st5','⚠️ Hãy kết nối ở bước 1 trước.','err'); return; }
+  say('st5','⏳ Đang cập nhật lịch…','wait');
+  STEMCloud.get('weekly', { on: weeklyOn ? '0' : '1' }, 60000).then(r=>{
+    weeklyOn = !!r.data.weekly; veNutTuan();
+    say('st5', weeklyOn ? '✅ Đã bật báo cáo tự động 7:00 sáng thứ Hai hằng tuần.'
+                        : '⏸️ Đã tắt báo cáo tự động.', weeklyOn ? 'ok' : 'wait');
+  }).catch(err=>say('st5','❌ '+err.message,'err'));
+}
+
+/* ── 6. chia sẻ ── */
 function capNhatShareLink(){
   const u = STEMCloud.getUrl();
   const base = location.href.split('?')[0].replace(/ket-noi\.html$/,'portal.html');
