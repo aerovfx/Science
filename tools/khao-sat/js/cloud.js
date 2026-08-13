@@ -97,7 +97,8 @@
       var qs = new URLSearchParams(Object.assign({ action: action, callback: cb }, params));
       var s = document.createElement('script');
       var done = false;
-      var timer = setTimeout(function () { finish(new Error('Hết thời gian chờ máy chủ')); }, timeoutMs || 20000);
+      // Apps Script khởi động nguội có thể mất >20s cho lần gọi đầu
+      var timer = setTimeout(function () { finish(new Error('Hết thời gian chờ máy chủ')); }, timeoutMs || 45000);
 
       function finish(err, data) {
         if (done) return; done = true;

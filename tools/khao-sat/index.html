@@ -560,6 +560,8 @@ document.getElementById('surveyForm').addEventListener('submit',e=>{
     classId: context?.class?.id || data.grade || '',
     sessionId: context?.session?.id || Number(data.sessions) || 0,
     sessionTitle: context?.session?.title || '',
+    courseId: context?.course?.id || 'stem-microbit',
+    courseTitle: context?.course?.title || '',
     submittedAt: new Date().toISOString(),
     answers: data
   };
@@ -568,8 +570,11 @@ document.getElementById('surveyForm').addEventListener('submit',e=>{
 
   /* ── đồng bộ lên Google Sheets (nếu đã kết nối) ── */
   if(window.STEMCloud){
+    const kh = (context && context.course) || null;
     STEMCloud.push('survey', Object.assign({}, data, {
       id: record.id,
+      courseId: kh ? kh.id : 'stem-microbit',
+      courseTitle: kh ? kh.title : '',
       studentId: record.studentId,
       studentName: record.studentName,
       classId: record.classId,

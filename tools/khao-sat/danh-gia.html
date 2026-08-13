@@ -285,11 +285,14 @@
 
   // Keep initialization safe while the browser completes the redirect.
   const { student = {}, class: cls = {}, session = {}, peers = [] } = ctx || {};
-  const STORAGE_KEY = `stem_eval_${student.id}_sess${session.id}`;
+  const course = (ctx && ctx.course) ||
+    { id:'stem-microbit', title:'STEM micro:bit + Crowtail', icon:'🤖', group:'stem' };
+  const STORAGE_KEY = `stem_eval_${course.id}_${student.id}_sess${session.id}`;
 
   /* show user info */
   document.getElementById('userChip').textContent = `${student.avatar} ${student.name}`;
-  document.getElementById('sessionChip').textContent = `📅 Buổi ${session.id} – ${session.title}`;
+  document.getElementById('sessionChip').textContent =
+    `${course.icon||'📘'} ${course.title} · Buổi ${session.id} – ${session.title}`;
   document.getElementById('sumTotal').textContent = peers.length;
 
   /* load existing evaluations */
@@ -298,13 +301,25 @@
 
   let criteria = [], currentPeerIdx = 0;
 
-  /* ── load criteria from data ── */
-  fetch('data/students.json')
+  /* ── tiêu chí: ưu tiên bộ tiêu chí của khoá (portal truyền sang) ── */
+  if(ctx && ctx.criteria && ctx.criteria.length){
+    criteria = ctx.criteria;
+    initPeers();
+  } else
+  fetch('data/courses.json')
     .then(r=>r.json())
-    .then(db=>{
-      criteria = db.criteria;
+    .then(d=>{
+      const g = (d.criteriaGroups||[]).find(x=>x.id===course.group);
+      if(!g) throw new Error('không có nhóm tiêu chí');
+      criteria = g.criteria;
       initPeers();
-    });
+    })
+    .catch(()=>fetch('data/students.json')
+      .then(r=>r.json())
+      .then(db=>{
+        criteria = db.criteria;
+        initPeers();
+      }));
 
   /* ── init peer chips ── */
   function initPeers(){
@@ -443,11 +458,12 @@
       const clean = {};
       criteria.forEach(c=>{ if(scores[c.id]) clean[c.id] = scores[c.id]; });
       STEMCloud.push('peer_eval', {
+        courseId: course.id, courseTitle: course.title, group: course.group,
         sessionId: session.id, sessionTitle: session.title, classId: cls.id,
         raterId: student.id, raterName: student.name,
         targetId: peer.id, targetName: peer.name,
         scores: clean, note, savedAt: new Date().toISOString()
-      }, { uid: `peer_${student.id}_${session.id}_${peer.id}` });
+      }, { uid: `peer_${course.id}_${student.id}_${session.id}_${peer.id}` });
     }
 
     // move to next
@@ -480,9 +496,10 @@
     });
     if(!items.length) return;
     STEMCloud.push('peer_eval_set', {
+      courseId: course.id, courseTitle: course.title, group: course.group,
       sessionId: session.id, sessionTitle: session.title, classId: cls.id,
       raterId: student.id, raterName: student.name, items
-    }, { uid: `peerset_${student.id}_sess${session.id}` })
+    }, { uid: `peerset_${course.id}_${student.id}_sess${session.id}` })
     .then(r=>{ if(r && r.queued) showToast('⏳ Chưa gửi được lên Sheets — đã lưu chờ gửi lại.'); });
   }
 

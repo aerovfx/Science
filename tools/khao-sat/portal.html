@@ -313,7 +313,15 @@ Phạm Thị Dung
   <!-- ══ PANEL 1: Chọn lớp ══ -->
   <div class="panel active" id="panel1">
     <div class="card">
-      <div class="card-title">🏫 Bước 1 – Chọn lớp của bạn</div>
+      <div class="card-title">📚 Bước 1 – Chọn khoá học</div>
+      <div class="class-grid" id="courseGrid">
+        <!-- rendered by JS -->
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin:-.6rem 0 1.2rem" id="courseHint">
+        Mỗi khoá có bộ tiêu chí đánh giá riêng.
+      </p>
+
+      <div class="card-title">🏫 Chọn lớp của bạn</div>
       <div class="class-grid" id="classGrid">
         <!-- rendered by JS -->
       </div>
@@ -487,7 +495,7 @@ const DEFAULT_DB = {
 
 /* ── STATE ── */
 let DB = null;
-let selectedClass = null, selectedSession = null, selectedStudent = null;
+let selectedClass = null, selectedSession = null, selectedStudent = null, selectedCourse = null;
 let modalMode = 'single';
 
 /* ── INIT ── */
@@ -507,9 +515,30 @@ function init(){
     DB = {...DEFAULT_DB};
   }
   renderClasses();
+  renderCourses();
   renderSessions();
   populateModalClasses();
-  napTuSheets();
+  napKhoaHoc();      // danh sách khoá từ data/courses.json
+  napTuSheets();     // lớp/học sinh mới nhất từ Google Sheets
+}
+
+/* ── Nạp 12 khoá học ── */
+function napKhoaHoc(){
+  fetch('data/courses.json')
+    .then(r=>r.json())
+    .then(d=>{
+      DB.courses = d.courses || [];
+      DB.criteriaGroups = d.criteriaGroups || [];
+      const luu = sessionStorage.getItem('stem_course');
+      selectedCourse = DB.courses.find(c=>c.id===luu) || DB.courses[0] || null;
+      if(selectedCourse){
+        DB.sessions = selectedCourse.sessions;
+        DB.criteria = criteriaOf(selectedCourse) || DB.criteria;
+      }
+      renderCourses();
+      renderSessions();
+    })
+    .catch(()=>{ /* không có file → giữ khoá mặc định */ });
 }
 
 /* ── Lấy danh sách lớp/học sinh mới nhất từ Google Sheets (nếu đã kết nối) ── */
@@ -525,8 +554,17 @@ function napTuSheets(){
       const cc = new Set(d.classes.map(c=>c.id));
       DB.classes = [...d.classes, ...DB.classes.filter(c=>!cc.has(c.id))];
     }
-    if(d.sessions && d.sessions.length) DB.sessions = d.sessions;
-    if(d.criteria && d.criteria.length) DB.criteria = d.criteria;
+    if(d.courses && d.courses.length){
+      DB.courses = d.courses;
+      if(d.criteriaGroups && d.criteriaGroups.length) DB.criteriaGroups = d.criteriaGroups;
+      const luu = sessionStorage.getItem('stem_course');
+      selectedCourse = DB.courses.find(c=>c.id===(selectedCourse?selectedCourse.id:luu)) || DB.courses[0];
+      if(selectedCourse){ DB.sessions = selectedCourse.sessions; DB.criteria = criteriaOf(selectedCourse); }
+      renderCourses();
+    } else {
+      if(d.sessions && d.sessions.length) DB.sessions = d.sessions;
+      if(d.criteria && d.criteria.length) DB.criteria = d.criteria;
+    }
     renderClasses();
     renderSessions();
     populateModalClasses();
@@ -625,6 +663,48 @@ function selectClass(cls, el){
   checkStep1Ready();
 }
 
+/* ── COURSES (đa khoá) ── */
+function renderCourses(){
+  const grid = document.getElementById('courseGrid');
+  if(!grid) return;
+  const list = DB.courses || [];
+  if(!list.length){ grid.innerHTML = '<p style="color:var(--muted);font-size:.85rem">Đang tải danh sách khoá học…</p>'; return; }
+  if(!selectedCourse) selectedCourse = list[0];
+  const mau = { stem:'#7c3aed', khtn:'#0ea5e9', ngonngu:'#f59e0b' };
+  grid.innerHTML = list.map(c=>{
+    const m = mau[c.group] || '#7c3aed';
+    const on = selectedCourse && selectedCourse.id===c.id;
+    return `<div class="class-card${on?' selected':''}" data-id="${c.id}" onclick="pickCourse('${c.id}')"
+              style="border-color:${on?m:'rgba(255,255,255,.1)'}">
+      <div class="check-mark" style="background:${m}">✓</div>
+      <div class="class-badge-cnt">${(c.sessions||[]).length} buổi</div>
+      <div class="class-badge" style="background:${m}22;color:${m}">${c.icon||'📘'}</div>
+      <div class="class-name">${c.title}</div>
+      <div class="class-meta">🎯 ${nhomTen(c.group)}</div>
+    </div>`;
+  }).join('');
+  const h = document.getElementById('courseHint');
+  if(h && selectedCourse) h.textContent =
+    `Tiêu chí đánh giá: ${(criteriaOf(selectedCourse)||[]).map(c=>c.icon+' '+c.label).join(' · ')}`;
+}
+function nhomTen(g){
+  const x = (DB.criteriaGroups||[]).find(k=>k.id===g);
+  return x ? x.name : 'STEM & Kỹ thuật';
+}
+function criteriaOf(course){
+  const g = (DB.criteriaGroups||[]).find(k=>k.id===(course&&course.group));
+  return g ? g.criteria : DB.criteria;
+}
+function pickCourse(id){
+  selectedCourse = (DB.courses||[]).find(c=>c.id===id) || selectedCourse;
+  selectedSession = null;
+  DB.sessions = (selectedCourse && selectedCourse.sessions) || DB.sessions;
+  DB.criteria  = criteriaOf(selectedCourse) || DB.criteria;
+  renderCourses();
+  renderSessions();
+  checkStep1Ready();
+}
+
 /* ── SESSIONS ── */
 function renderSessions(){
   const sel = document.getElementById('sessionSelect');
@@ -642,7 +722,7 @@ function renderSessions(){
 }
 
 function checkStep1Ready(){
-  document.getElementById('toStep2Btn').disabled = !(selectedClass && selectedSession);
+  document.getElementById('toStep2Btn').disabled = !(selectedCourse && selectedClass && selectedSession);
 }
 
 /* ── STUDENTS ── */
@@ -693,7 +773,9 @@ function renderConfirm(){
     <div class="info-box"><div class="ib-icon">📅</div>
       <div class="ib-val">Buổi ${selectedSession.id}</div><div class="ib-lbl">${selectedSession.title}</div></div>
     <div class="info-box"><div class="ib-icon">👥</div>
-      <div class="ib-val">${peers.length}</div><div class="ib-lbl">Bạn cùng lớp</div></div>`;
+      <div class="ib-val">${peers.length}</div><div class="ib-lbl">Bạn cùng lớp</div></div>
+    ${selectedCourse ? `<div class="info-box"><div class="ib-icon">${selectedCourse.icon||'📘'}</div>
+      <div class="ib-val">${selectedCourse.title}</div><div class="ib-lbl">${nhomTen(selectedCourse.group)}</div></div>` : ''}`;
 
   document.getElementById('actionGrid').innerHTML = `
     <a class="action-btn ab-success" href="danh-gia.html">
@@ -706,10 +788,15 @@ function renderConfirm(){
       <span class="ab-icon">⚙️</span><span>Quản lý (Giáo viên)</span></a>`;
 
   // save context for other pages
+  const crit = criteriaOf(selectedCourse) || DB.criteria;
+  if(selectedCourse) sessionStorage.setItem('stem_course', selectedCourse.id);
   sessionStorage.setItem('stem_user', JSON.stringify({
     student:selectedStudent, class:selectedClass,
     session:selectedSession, peers,
-    db_criteria: DB.criteria
+    course: selectedCourse ? {id:selectedCourse.id, title:selectedCourse.title,
+                              icon:selectedCourse.icon, group:selectedCourse.group} : null,
+    criteria: crit,
+    db_criteria: crit
   }));
   sessionStorage.setItem('stem_db_full', JSON.stringify(DB));
 }

@@ -161,7 +161,8 @@ function nangCapV2() {
     var sh = ss.getSheetByName(n);
     if (sh && sh.getLastRow() <= 1) ss.deleteSheet(sh);
   });
-  ['FORM_PEER', 'FORM_TEACHER'].forEach(function (k) {   // 2 form cũ theo 1 bộ tiêu chí
+  // 3 form của bản v1 (thiếu câu hỏi "Khoá học") → bỏ vào thùng rác, tạo lại bản mới
+  ['FORM_SURVEY', 'FORM_PEER', 'FORM_TEACHER'].forEach(function (k) {
     var id = props.getProperty(k);
     if (!id) return;
     try { DriveApp.getFileById(id).setTrashed(true); } catch (e) {}
