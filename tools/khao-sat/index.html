@@ -550,6 +550,20 @@ document.getElementById('surveyForm').addEventListener('submit',e=>{
   }
   window._survey = data;
   window._surveyTime = new Date().toLocaleString('vi-VN');
+  const context = JSON.parse(sessionStorage.getItem('stem_user') || 'null');
+  const surveys = JSON.parse(localStorage.getItem('stem_surveys') || '[]');
+  const record = {
+    id: `survey_${Date.now()}`,
+    studentId: context?.student?.id || '',
+    studentName: context?.student?.name || data.name || '',
+    classId: context?.class?.id || data.grade || '',
+    sessionId: context?.session?.id || Number(data.sessions) || 0,
+    sessionTitle: context?.session?.title || '',
+    submittedAt: new Date().toISOString(),
+    answers: data
+  };
+  surveys.push(record);
+  localStorage.setItem('stem_surveys', JSON.stringify(surveys));
   document.getElementById('success-overlay').classList.add('show');
 });
 
