@@ -56,14 +56,19 @@ Khi học viên nộp form và copy markdown từ trang kết quả, nội dung 
 
 ---
 
-## ☁️ Lưu dữ liệu tập trung (Google Sheets + Forms)
+## ☁️ Lưu dữ liệu tập trung (Google Sheets + Forms) — ĐANG CHẠY
 
-Từ nay dữ liệu không chỉ nằm trong trình duyệt: mở trang **[Kết nối dữ liệu](ket-noi.html)**,
-dán URL Web App của Apps Script là mọi khảo sát / đánh giá đồng đẳng / điểm giáo viên
+Dữ liệu không còn chỉ nằm trong trình duyệt. Mọi khảo sát / đánh giá đồng đẳng / điểm giáo viên
 tự đẩy về **1 bảng tính Google Sheets (9 sheet)** và **3 Google Form** trong tài khoản
-`cgsharefive@gmail.com` (thư mục [danhgia](https://drive.google.com/drive/folders/1M9C1CaUaDlde5E3BjDUEz4vtAMeBZg4X)).
+`cgsharefive@gmail.com`, thư mục [danhgia](https://drive.google.com/drive/folders/1M9C1CaUaDlde5E3BjDUEz4vtAMeBZg4X):
 
-Cách triển khai: [`gas/HUONG-DAN.md`](gas/HUONG-DAN.md) · Mã nguồn backend: [`gas/Code.gs`](gas/Code.gs).
+- 📊 [Bảng tính dữ liệu](https://docs.google.com/spreadsheets/d/1sTD6wugdq4ap4sE48scv36v-PFd9cinr2-r9dQ2D9HM/edit)
+- 🧪 [Form khảo sát học viên](https://docs.google.com/forms/d/e/1FAIpQLSd_0zPFA3capyfM8RA0JdjCjH72Ot8a5qx94zJkYjYKZJkANA/viewform)
+- 🔄 [Form đánh giá đồng đẳng](https://docs.google.com/forms/d/e/1FAIpQLScUdCwMxiolOc7TVEcEyzwqZiK_bjmZAMCEiBoA6gUzoyDWAQ/viewform)
+- 👩‍🏫 [Form đánh giá của giáo viên](https://docs.google.com/forms/d/e/1FAIpQLSeUaa5RenhLNCxrvrlSucdo4foNYdDp2k35hP8CWsgeFq0Gag/viewform)
+
+Trạng thái kết nối xem ở trang **[Kết nối dữ liệu](ket-noi.html)**.
+Tài liệu: [`gas/HUONG-DAN.md`](gas/HUONG-DAN.md) · Mã nguồn backend: [`gas/Code.gs`](gas/Code.gs).
 
 ## 🔗 Liên kết
 

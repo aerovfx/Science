@@ -13,6 +13,11 @@
 (function (global) {
   'use strict';
 
+  /* Web App đã triển khai sẵn trên tài khoản cgsharefive@gmail.com
+     (Apps Script "STEM Portal API" → thư mục Drive "danhgia").
+     Trang nào cũng dùng URL này nếu người dùng chưa tự đặt URL khác. */
+  var DEFAULT_URL = 'https://script.google.com/macros/s/AKfycbxiltAwUQOsVco6FEWFg-gTyvziJy-E-010PTQ2wkM9hSIEyTiGvXZ5Hv05gdPOSYbz6w/exec';
+
   var URL_KEY   = 'stem_api_url';
   var QUEUE_KEY = 'stem_sync_queue';
   var META_KEY  = 'stem_sync_meta';
@@ -37,7 +42,7 @@
   function getUrl() {
     var q = new URLSearchParams(location.search).get('api');
     if (q) { setUrl(q); }
-    return localStorage.getItem(URL_KEY) || (global.STEM_API_URL || '');
+    return localStorage.getItem(URL_KEY) || global.STEM_API_URL || DEFAULT_URL;
   }
   function setUrl(u) {
     u = normalizeUrl(u);

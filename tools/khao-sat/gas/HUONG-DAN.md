@@ -1,5 +1,27 @@
 # 🔌 Kết nối STEM Portal với Google Sheets + Google Forms
 
+> ## ✅ ĐÃ TRIỂN KHAI XONG — 14/08/2026
+>
+> Hệ thống đã chạy thật trên tài khoản **cgsharefive@gmail.com**. Không cần làm lại các bước bên dưới;
+> phần hướng dẫn giữ lại để tham khảo khi cần dựng lại hoặc chuyển sang tài khoản khác.
+>
+> | Thành phần | Liên kết |
+> |---|---|
+> | 📊 **Bảng tính** (9 sheet + 3 sheet phản hồi Form) | <https://docs.google.com/spreadsheets/d/1sTD6wugdq4ap4sE48scv36v-PFd9cinr2-r9dQ2D9HM/edit> |
+> | 🧪 **Form Khảo sát học viên** | <https://docs.google.com/forms/d/e/1FAIpQLSd_0zPFA3capyfM8RA0JdjCjH72Ot8a5qx94zJkYjYKZJkANA/viewform> |
+> | 🔄 **Form Đánh giá đồng đẳng** | <https://docs.google.com/forms/d/e/1FAIpQLScUdCwMxiolOc7TVEcEyzwqZiK_bjmZAMCEiBoA6gUzoyDWAQ/viewform> |
+> | 👩‍🏫 **Form Đánh giá của giáo viên** | <https://docs.google.com/forms/d/e/1FAIpQLSeUaa5RenhLNCxrvrlSucdo4foNYdDp2k35hP8CWsgeFq0Gag/viewform> |
+> | ⚙️ **Dự án Apps Script** | <https://script.google.com/u/1/home/projects/1QyJxRmbEY-dTvSueno4ZsN_WOmYRbDW15xH1w5zdWo5L7JDWjlvcPKz9/edit> |
+> | 🔗 **URL Web App (API)** | `https://script.google.com/macros/s/AKfycbxiltAwUQOsVco6FEWFg-gTyvziJy-E-010PTQ2wkM9hSIEyTiGvXZ5Hv05gdPOSYbz6w/exec` |
+>
+> URL Web App đã ghi sẵn trong [`js/cloud.js`](../js/cloud.js) (`DEFAULT_URL`) nên **mọi trang tự kết nối**,
+> không cần dán tay. Trạng thái hiện tại: 4 lớp · 20 học sinh · 22 buổi · 6 tiêu chí;
+> 4 trigger đang chạy (3 × `xuLyFormSubmit` + 1 × `capNhatTongHop` mỗi 6 giờ).
+>
+> **Khi sửa `Code.gs`:** dán lại vào dự án Apps Script rồi *Triển khai → Quản lý các tùy chọn triển khai
+> → ✏️ → Phiên bản: Mới → Triển khai* (URL giữ nguyên).
+
+
 Tài khoản chứa toàn bộ dữ liệu: **cgsharefive@gmail.com**
 Thư mục Drive đích: **`danhgia`** → <https://drive.google.com/drive/folders/1M9C1CaUaDlde5E3BjDUEz4vtAMeBZg4X>
 (đã khai sẵn trong `CONFIG.FOLDER_ID`, mọi Sheet/Form tạo ra đều nằm trong thư mục này)

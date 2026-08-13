@@ -1,0 +1,913 @@
+{
+ "updatedAt": "2026-08-14",
+ "criteriaGroups": [
+  {
+   "id": "stem",
+   "name": "STEM & Kỹ thuật",
+   "criteria": [
+    {
+     "id": "teamwork",
+     "label": "Hợp tác nhóm",
+     "icon": "🤝",
+     "desc": "Phối hợp và hỗ trợ thành viên"
+    },
+    {
+     "id": "creativity",
+     "label": "Sáng tạo",
+     "icon": "💡",
+     "desc": "Đề xuất ý tưởng, giải pháp mới"
+    },
+    {
+     "id": "coding",
+     "label": "Kỹ năng lập trình",
+     "icon": "💻",
+     "desc": "Viết code chính xác, hiệu quả"
+    },
+    {
+     "id": "problem",
+     "label": "Giải quyết vấn đề",
+     "icon": "🧩",
+     "desc": "Xử lý lỗi và tìm giải pháp"
+    },
+    {
+     "id": "presentation",
+     "label": "Thuyết trình",
+     "icon": "🎤",
+     "desc": "Trình bày rõ ràng, tự tin"
+    },
+    {
+     "id": "attitude",
+     "label": "Thái độ học tập",
+     "icon": "⭐",
+     "desc": "Chăm chỉ, tích cực, đúng giờ"
+    }
+   ]
+  },
+  {
+   "id": "khtn",
+   "name": "Khoa học tự nhiên & Toán",
+   "criteria": [
+    {
+     "id": "reasoning",
+     "label": "Lập luận khoa học",
+     "icon": "🧠",
+     "desc": "Suy luận chặt chẽ, dùng đúng khái niệm"
+    },
+    {
+     "id": "calculation",
+     "label": "Tính toán chính xác",
+     "icon": "🔢",
+     "desc": "Biến đổi, tính đúng, đúng đơn vị"
+    },
+    {
+     "id": "experiment",
+     "label": "Thực hành & mô phỏng",
+     "icon": "🔬",
+     "desc": "Làm thí nghiệm, đo đạc, mô phỏng"
+    },
+    {
+     "id": "problem",
+     "label": "Giải quyết vấn đề",
+     "icon": "🧩",
+     "desc": "Vận dụng vào bài toán/thực tiễn"
+    },
+    {
+     "id": "presentation",
+     "label": "Trình bày & lý giải",
+     "icon": "🎤",
+     "desc": "Diễn đạt lời giải mạch lạc"
+    },
+    {
+     "id": "attitude",
+     "label": "Thái độ học tập",
+     "icon": "⭐",
+     "desc": "Chăm chỉ, tích cực, đúng giờ"
+    }
+   ]
+  },
+  {
+   "id": "ngonngu",
+   "name": "Ngôn ngữ & Xã hội",
+   "criteria": [
+    {
+     "id": "listening",
+     "label": "Nghe – Nói",
+     "icon": "🗣️",
+     "desc": "Nghe hiểu và diễn đạt bằng lời"
+    },
+    {
+     "id": "reading",
+     "label": "Đọc hiểu",
+     "icon": "📖",
+     "desc": "Nắm ý chính, phân tích văn bản"
+    },
+    {
+     "id": "writing",
+     "label": "Viết",
+     "icon": "✍️",
+     "desc": "Bố cục, diễn đạt, chính tả"
+    },
+    {
+     "id": "language",
+     "label": "Từ vựng – Ngữ pháp",
+     "icon": "🔤",
+     "desc": "Dùng từ và cấu trúc chính xác"
+    },
+    {
+     "id": "creativity",
+     "label": "Sáng tạo & hợp tác",
+     "icon": "💡",
+     "desc": "Ý tưởng riêng, làm việc nhóm"
+    },
+    {
+     "id": "attitude",
+     "label": "Thái độ học tập",
+     "icon": "⭐",
+     "desc": "Chăm chỉ, tích cực, đúng giờ"
+    }
+   ]
+  }
+ ],
+ "courses": [
+  {
+   "id": "stem-microbit",
+   "icon": "🤖",
+   "title": "STEM micro:bit + Crowtail",
+   "subtitle": "Elecrow Crowtail Kit",
+   "group": "stem",
+   "docPath": "curriculum/hoc-lieu/",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Giới thiệu micro:bit & Crowtail",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Điều khiển LED",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Biến & phép toán",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Điều kiện",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Vòng lặp",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Hàm (Function)",
+     "phase": 1
+    },
+    {
+     "id": 7,
+     "title": "Buzzer – Âm thanh",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Servo – Cửa tự động",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "RGB LED",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Motor rung",
+     "phase": 2
+    },
+    {
+     "id": 11,
+     "title": "Nút cảm ứng",
+     "phase": 2
+    },
+    {
+     "id": 12,
+     "title": "Logic Gate",
+     "phase": 2
+    },
+    {
+     "id": 13,
+     "title": "Cảm biến âm thanh",
+     "phase": 3
+    },
+    {
+     "id": 14,
+     "title": "Cảm biến từ",
+     "phase": 3
+    },
+    {
+     "id": 15,
+     "title": "Siêu âm",
+     "phase": 3
+    },
+    {
+     "id": 16,
+     "title": "Độ ẩm đất",
+     "phase": 3
+    },
+    {
+     "id": 17,
+     "title": "Nhiệt độ",
+     "phase": 3
+    },
+    {
+     "id": 18,
+     "title": "Gia tốc kế",
+     "phase": 3
+    },
+    {
+     "id": 19,
+     "title": "La bàn",
+     "phase": 3
+    },
+    {
+     "id": 20,
+     "title": "Cảm biến kết hợp",
+     "phase": 3
+    },
+    {
+     "id": 35,
+     "title": "Thiết kế sản phẩm",
+     "phase": 6
+    },
+    {
+     "id": 36,
+     "title": "Demo & Bảo vệ",
+     "phase": 6
+    }
+   ]
+  },
+  {
+   "id": "english-7-global-success",
+   "icon": "🇬🇧",
+   "title": "Tiếng Anh 7",
+   "subtitle": "Global Success",
+   "group": "ngonngu",
+   "docPath": "courses/english-7-global-success/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Unit 1 (Hobbies) & Unit 2 (Healthy Living)",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Unit 3 (Community Service) & Review 1",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Unit 4 (Music and Arts) & Unit 5 (Food and Drink)",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Unit 6 (A Visit to a School) & Review 2",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Mid-Course Synthesis & Speech",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Unit 7 (Traffic) & Unit 8 (Films)",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Unit 9 (Festivals) & Review 3",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Unit 10 (Energy) & Unit 11 (Future Travel)",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Unit 12 (English-Speaking Countries) & Review 4",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Final Course Synthesis & Capstone STEM Project",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "hydro-cfd",
+   "icon": "🌊",
+   "title": "Khoá Học CFD Thủy Động Lực Học",
+   "subtitle": "10 Tuần",
+   "group": "stem",
+   "docPath": "courses/hydro-cfd/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Giới Thiệu Cơ Học Chất Lỏng & Tính Chất Nước",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Phương Trình Navier-Stokes & Phương Trình Liên Tục",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Lực Cản & Lực Nâng Trong Nước",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Lớp Biên & Mô Hình Rối",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Lưới Tính & Quy Trình CFD",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "OpenFOAM Căn Bản — Dòng Laminaire Trong Ống",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Dòng Xung Quanh Trụ — Xoáy Von Kármán",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Mô Phỏng Thủy Động Lực Học Cánh Ngầm (Hydrofoil)",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Dòng Hai Pha — Sóng & Phương Pháp VOF",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Dự Án Cuối Khoá & Tối Ưu Thiết Kế",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "literature-7-kntt",
+   "icon": "📖",
+   "title": "Ngữ Văn 7",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "ngonngu",
+   "docPath": "courses/literature-7-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Bầu Trời Tuổi Thơ (Thế Giới Truyện Ngắn & Ký Ức Tuổi Thơ)",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Khúc Nhạc Tâm Hồn (Thơ 4 Chữ, 5 Chữ & Cảm Xúc Thơ Ca)",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Cội Nguồn Yêu Thương (Tình Cảm Gia Đình, Thầy Cô & Quê Hương)",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Giai Điệu Đất Nước (Tình Yêu Quê Hương, Đất Nước & Con Người)",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Màu Sắc Trăm Miền (Văn Bản Thông Tin & Văn Hóa Vùng Miền)",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Bài 6 — Bài Học Cuộc Sống (Truyện Ngụ Ngôn & Nghị Luận Xã Hội)",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Bài 7 — Thế Giới Viễn Tưởng (Truyện Khoa Học Viễn Tưởng & Trí Tưởng Tượng)",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Bài 8 — Trải Nghiệm Để Trưởng Thành (Văn Bản Nghị Luận & Trải Nghiệm Cá Nhân)",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Bài 9 — Hòa Điệu Với Tự Nhiên (Thiên Nhiên Trong Thơ Ca & Bảo Vệ Môi Trường)",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Bài 10 — Trang Sách Và Cuộc Sống & Tổng Kết Ngữ Văn 7",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "math-4-kntt",
+   "icon": "📐",
+   "title": "Toán 4",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "khtn",
+   "docPath": "courses/math-4-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Ôn Tập 100.000 & Số Tự Nhiên Đến Lớp Triệu",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Phép Cộng, Trừ & Biểu Thức Chứa Chữ",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Dạng Toán Tìm Hai Số Khi Biết Tổng Và Hiệu",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Khái Niệm Phân Số, Rút Gọn & So Sánh Phân Số",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Các Phép Tính Với Phân Số & Giải Toán Có Lời Văn",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Đại Lượng & Đo Đại Lượng (Khối Lượng, Diện Tích, Thời Gian, Góc)",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Các Loại Góc, Đường Thẳng Vuông Góc & Song Song",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Hình Bình Hành, Hình Thoi & Tính Diện Tích",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Thống Kê & Xác Suất Đơn Giản",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Tổng Ôn Tập Toán 4 & Capstone STEM Project",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "math-7-kntt",
+   "icon": "📐",
+   "title": "Toán 7",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "khtn",
+   "docPath": "courses/math-7-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Tập Hợp Số Hữu Tỉ Q & Các Phép Tính",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Số Thực R, Số Vô Tỉ I & Căn Bậc Hai Số Học",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Góc ở Vị Trí Đặc Biệt & Đường Thẳng Song Song",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Tam Giác Bằng Nhau & Tam Giác Cân",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Thu Thập, Biểu Diễn Dữ Liệu & Thống Kê Dân Số",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Tỉ lệ thức và Đại lượng tỉ lệ",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Biểu thức đại số và Đa thức một biến (Algebraic Expressions and Single-variable Polynomials)",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Tuần 8",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Quan hệ giữa các yếu tố trong một tam giác & Sự đồng quy của các đường đặc biệt",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Tổng Ôn Tập Cuối Năm & Dự Án Capstone STEM",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "physics-10-kntt",
+   "icon": "🔭",
+   "title": "Vật Lí 10",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "khtn",
+   "docPath": "courses/physics-10-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Nhập Môn Vật Lí và Sai Số Đo Lường",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Động học Chất điểm - Độ dịch chuyển, Vận tốc và Đồ thị",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Chuyển Động Biến Đổi, Gia Tốc và Sự Rơi Tự Do",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Chuyển Động Ném & Ba Định Luật Newton",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Các Lực Cơ Học và Phương Pháp Động Lực Học",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Năng Lượng, Công, Công Suất & Định Luật Bảo Toàn Cơ Năng",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Động Lượng & Định Luật Bảo Toàn Động Lượng",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Chuyển Động Tròn & Lực Hướng Tâm",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Khối Lượng Riêng, Áp Suất Chất Lưu & Chất Khí",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "physics-11-kntt",
+   "icon": "🌊",
+   "title": "Vật Lí 11",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "khtn",
+   "docPath": "courses/physics-11-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Dao Động Điều Hòa & Mô Tả Dao Động",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Dao Động Tắt Dần, Cưỡng Bức & Hiện Tượng Cộng Hưởng",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Sóng Cơ, Sự Truyền Sóng & Các Đặc Trưng Của Sóng",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Giao Thoa Sóng & Sóng Dừng",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Sóng Âm & Thực Hành Xác Định Tần Số Của Âm",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Điện Tích, Định Luật Coulomb & Cường Độ Điện Trường",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Điện Thế, Hiệu Điện Thế, Tụ Điện & Năng Lượng Điện Trường",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Dòng Điện, Cường Độ Dòng Điện & Định Luật Ohm cho Đoạn Mạch",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Nguồn Điện, Mạch Điện Đơn Giản & Thực Hành Đo Suất Điện Động",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "physics-12-kntt",
+   "icon": "⚛️",
+   "title": "Vật Lí 12",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "khtn",
+   "docPath": "courses/physics-12-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Cấu trúc chất, Nội năng và Nhiệt độ",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Nhiệt Dung Riêng và Nhiệt Ẩn Chuyển Thể",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Động Học Phân Tử Chất Khí & Khí Lí Tưởng",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Áp suất khí, Từ trường và Lực từ",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Hiện tượng cảm ứng điện từ và Dòng điện xoay chiều",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Cấu Trúc Hạt Nhân, Năng Lượng Liên Kết & Phản Ứng Hạt Nhân",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Hiện Tượng Phóng Xạ, Tia Phóng Xạ & Công Nghiệp Hạt Nhân",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Ứng Dụng Vật Lý Trong Chẩn Đoán Y Học",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Vật Lý Lượng Tử, Hiệu Ứng Quang Điện & Quang Phổ",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Tổng Ôn Tập THPT, Hệ Thống Hóa & Capstone Project",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "quantum-physics",
+   "icon": "⚛️",
+   "title": "Khoá Học Vật Lý Lượng Tử & Máy Tính Lượng Tử",
+   "subtitle": "10 Tuần",
+   "group": "khtn",
+   "docPath": "courses/quantum-physics/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Sự Sụp Đổ Của Vật Lý Cổ Điển & Lưỡng Tính Sóng-Hạt",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Cơ Học Sóng & Phương Trình Schrödinger",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Thế 1 Chiều & Hiệu Ứng Đường Hầm",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Dao Động Tử Điều Hòa Lượng Tử",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Mômen Động Lượng & Spin",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Nguyên Tử Hydro & Hệ Nhiều Hạt",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Rối Lượng Tử & Bất Đẳng Thức Bell",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Nhập Môn Máy Tính Lượng Tử & Qubits",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Các Thuật Toán Lượng Tử Cơ Bản",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Thuật Toán Grover, Shor & Tương Lai",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "rocket-engine",
+   "icon": "🚀",
+   "title": "Khoá Học Động Cơ Tên Lửa DIY",
+   "subtitle": "10 Tuần",
+   "group": "stem",
+   "docPath": "courses/rocket-engine/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Lịch Sử Tên Lửa & Nguyên Lý Đẩy",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Nhiên Liệu & Hóa Học Đẩy",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Khí Động Học & Thiết Kế Tên Lửa",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Buồng Đốt, Vòi Phun & Vật Liệu",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Hệ Thống Phục Hồi, An Toàn & Lắp Ráp Tên Lửa Mô Hình",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Mô Phỏng Quỹ Đạo với Python",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "OpenRocket — Thiết Kế & Mô Phỏng",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Điều Khiển Vectơ Lực Đẩy & Avionics",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Phân Tích Dữ Liệu Chuyến Bay & Cải Tiến",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Dự Án Cuối Khoá & Phóng Tên Lửa",
+     "phase": 2
+    }
+   ]
+  },
+  {
+   "id": "vietnamese-4-kntt",
+   "icon": "📖",
+   "title": "Tiếng Việt 4",
+   "subtitle": "Bộ Sách Kết Nối Tri Thức Với Cuộc Sống",
+   "group": "ngonngu",
+   "docPath": "courses/vietnamese-4-kntt/INDEX.md",
+   "sessions": [
+    {
+     "id": 1,
+     "title": "Bài 1 (Chân dung của em) & Bài 2 (Mỗi người một vẻ)",
+     "phase": 1
+    },
+    {
+     "id": 2,
+     "title": "Bài 3 (Trải nghiệm và khám phá) & Bài 4 (Quê hương trong tôi)",
+     "phase": 1
+    },
+    {
+     "id": 3,
+     "title": "Bài 5 (Những người sống quanh em) & Bài 6 (Ước mơ của em)",
+     "phase": 1
+    },
+    {
+     "id": 4,
+     "title": "Bài 7 (Khám phá thế giới) & Bài 8 (Vì một thế giới bình yên)",
+     "phase": 1
+    },
+    {
+     "id": 5,
+     "title": "Bài 9 (Tài năng của em) & Ôn Tập Tổng Kết Học Kỳ I",
+     "phase": 1
+    },
+    {
+     "id": 6,
+     "title": "Bài 10 (Cuộc sống mến yêu) & Bài 11 (Thế giới quanh ta)",
+     "phase": 2
+    },
+    {
+     "id": 7,
+     "title": "Bài 12 (Những người quả cảm) & Bài 13 (Chung tay xây dựng cộng đồng)",
+     "phase": 2
+    },
+    {
+     "id": 8,
+     "title": "Bài 14 (Ngôi nhà chung) & Bài 15 (Hành trình tri thức)",
+     "phase": 2
+    },
+    {
+     "id": 9,
+     "title": "Bài 16 (Vẻ đẹp muôn màu) & Bài 17 (Những phát minh thú vị)",
+     "phase": 2
+    },
+    {
+     "id": 10,
+     "title": "Bài 18 (Em lớn lên từng ngày) & Tổng Kết Tiếng Việt 4 Capstone Project",
+     "phase": 2
+    }
+   ]
+  }
+ ]
+}

@@ -8,6 +8,12 @@
       "cwd": "DIY",
       "autoPort": true,
       "port": 5199
+    },
+    {
+      "name": "khao-sat",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "tools/khao-sat"],
+      "port": 8765
     }
   ]
 }
