@@ -7,82 +7,206 @@
         {
           "title": "🇬🇧 Tiếng Anh 7 — Global Success (Bộ Sách Kết Nối Tri Thức Với Cuộc Sống)",
           "path": "courses/english-7-global-success/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Tiếng Anh 7 Global Success",
           "path": "courses/english-7-global-success/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 1: Unit 1 (Hobbies) & Unit 2 (Healthy Living)",
           "path": "courses/english-7-global-success/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 2: Unit 3 (Community Service) & Review 1",
           "path": "courses/english-7-global-success/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 3: Unit 4 (Music and Arts) & Unit 5 (Food and Drink)",
           "path": "courses/english-7-global-success/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 4: Unit 6 (A Visit to a School) & Review 2",
           "path": "courses/english-7-global-success/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 5: Mid-Course Synthesis & Speech / Writing Clinic",
           "path": "courses/english-7-global-success/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 6: Unit 7 (Traffic) & Unit 8 (Films) / Tuần 6: Đơn vị bài học 7 & 8",
           "path": "courses/english-7-global-success/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 7: Unit 9 (Festivals) & Review 3 / Tuần 7: Đơn vị bài học 9 & Ôn tập 3",
           "path": "courses/english-7-global-success/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 8: Unit 10 (Energy) & Unit 11 (Future Travel) / Tuần 8",
           "path": "courses/english-7-global-success/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 9: Unit 12 (English-Speaking Countries) & Review 4",
           "path": "courses/english-7-global-success/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 10: Final Course Synthesis & Capstone STEM Project",
           "path": "courses/english-7-global-success/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 1: Unit 1 (Hobbies) & Unit 2 (Healthy Living)",
+          "path": "courses/english-7-global-success/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 2: Unit 3 (Community Service) & Review 1",
+          "path": "courses/english-7-global-success/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 3: Unit 4 (Music and Arts) & Unit 5 (Food and Drink)",
+          "path": "courses/english-7-global-success/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 4: Unit 6 (A Visit to a School) & Review 2",
+          "path": "courses/english-7-global-success/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 5: Mid-Course Synthesis & Speech / Writing Clinic",
+          "path": "courses/english-7-global-success/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 6: Unit 7 (Traffic) & Unit 8 (Films) / Tuần 6: Đơn vị bài học 7 & 8",
+          "path": "courses/english-7-global-success/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 7: Unit 9 (Festivals) & Review 3 / Tuần 7: Đơn vị bài học 9 & Ôn tập 3",
+          "path": "courses/english-7-global-success/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 8: Unit 10 (Energy) & Unit 11 (Future Travel) / Tuần 8",
+          "path": "courses/english-7-global-success/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 9: Unit 12 (English-Speaking Countries) & Review 4",
+          "path": "courses/english-7-global-success/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 10: Final Course Synthesis & Capstone STEM Project",
+          "path": "courses/english-7-global-success/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 1: Unit 1 (Hobbies) & Unit 2 (Healthy Living)",
+          "path": "courses/english-7-global-success/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 2: Unit 3 (Community Service) & Review 1",
+          "path": "courses/english-7-global-success/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 3: Unit 4 (Music and Arts) & Unit 5 (Food and Drink)",
+          "path": "courses/english-7-global-success/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 4: Unit 6 (A Visit to a School) & Review 2",
+          "path": "courses/english-7-global-success/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 5: Mid-Course Synthesis & Speech / Writing Clinic",
+          "path": "courses/english-7-global-success/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 6: Unit 7 (Traffic) & Unit 8 (Films) / Tuần 6: Đơn vị bài học 7 & 8",
+          "path": "courses/english-7-global-success/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 7: Unit 9 (Festivals) & Review 3 / Tuần 7: Đơn vị bài học 9 & Ôn tập 3",
+          "path": "courses/english-7-global-success/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 8: Unit 10 (Energy) & Unit 11 (Future Travel) / Tuần 8",
+          "path": "courses/english-7-global-success/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 9: Unit 12 (English-Speaking Countries) & Review 4",
+          "path": "courses/english-7-global-success/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 10: Final Course Synthesis & Capstone STEM Project",
+          "path": "courses/english-7-global-success/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "english_toolkit_7.py",
+          "path": "courses/english-7-global-success/code/python/english_toolkit_7.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM / EdTech — Tiếng Anh 7 Global Success",
           "path": "courses/english-7-global-success/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Học Tập & Phần Mềm EdTech (BOM) — Tiếng Anh 7 Global Success",
-          "path": "courses/english-7-global-success/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Tắc Văn Hóa Giao Tiếp & An Toàn Không Gian Số — Tiếng Anh 7 Global Success",
-          "path": "courses/english-7-global-success/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm EdTech & Python Language Tools",
-          "path": "courses/english-7-global-success/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -94,72 +218,206 @@
         {
           "title": "🌊 Khoá Học CFD Thủy Động Lực Học — 10 Tuần",
           "path": "courses/hydro-cfd/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học 10 Tuần — CFD Thủy Động Lực Học",
           "path": "courses/hydro-cfd/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Giới Thiệu Cơ Học Chất Lỏng & Tính Chất Nước / Week 1: Introduction to Fluid Mechanics & Water Properties",
           "path": "courses/hydro-cfd/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Phương Trình Navier-Stokes & Phương Trình Liên Tục / Week 2: Navier-Stokes Equations & Continuity",
           "path": "courses/hydro-cfd/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Lực Cản & Lực Nâng Trong Nước / Week 3: Drag & Lift Forces in Water",
           "path": "courses/hydro-cfd/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Lớp Biên & Mô Hình Rối / Week 4: Boundary Layer Theory & Turbulence Models",
           "path": "courses/hydro-cfd/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Lưới Tính & Quy Trình CFD / Week 5: Meshing & CFD Workflow",
           "path": "courses/hydro-cfd/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: OpenFOAM Căn Bản — Dòng Laminaire Trong Ống / Week 6: OpenFOAM Basics — Laminar Pipe Flow",
           "path": "courses/hydro-cfd/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Dòng Xung Quanh Trụ — Xoáy Von Kármán / Week 7: Flow Around Cylinder — Von Kármán Vortex Street",
           "path": "courses/hydro-cfd/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Mô Phỏng Thủy Động Lực Học Cánh Ngầm (Hydrofoil) / Week 8: Hydrofoil Hydrodynamics Simulation",
           "path": "courses/hydro-cfd/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Dòng Hai Pha — Sóng & Phương Pháp VOF / Week 9: Two-Phase Flow — Waves & Volume of Fluid Method",
           "path": "courses/hydro-cfd/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Dự Án Cuối Khoá & Tối Ưu Thiết Kế / Week 10: Capstone Project & Design Optimization",
           "path": "courses/hydro-cfd/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Giới Thiệu Cơ Học Chất Lỏng & Tính Chất Nước / Week 1: Introduction to Fluid Mechanics & Water Properties",
+          "path": "courses/hydro-cfd/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Phương Trình Navier-Stokes & Phương Trình Liên Tục / Week 2: Navier-Stokes Equations & Continuity",
+          "path": "courses/hydro-cfd/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Lực Cản & Lực Nâng Trong Nước / Week 3: Drag & Lift Forces in Water",
+          "path": "courses/hydro-cfd/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Lớp Biên & Mô Hình Rối / Week 4: Boundary Layer Theory & Turbulence Models",
+          "path": "courses/hydro-cfd/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Lưới Tính & Quy Trình CFD / Week 5: Meshing & CFD Workflow",
+          "path": "courses/hydro-cfd/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: OpenFOAM Căn Bản — Dòng Laminaire Trong Ống / Week 6: OpenFOAM Basics — Laminar Pipe Flow",
+          "path": "courses/hydro-cfd/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Dòng Xung Quanh Trụ — Xoáy Von Kármán / Week 7: Flow Around Cylinder — Von Kármán Vortex Street",
+          "path": "courses/hydro-cfd/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Mô Phỏng Thủy Động Lực Học Cánh Ngầm (Hydrofoil) / Week 8: Hydrofoil Hydrodynamics Simulation",
+          "path": "courses/hydro-cfd/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Dòng Hai Pha — Sóng & Phương Pháp VOF / Week 9: Two-Phase Flow — Waves & Volume of Fluid Method",
+          "path": "courses/hydro-cfd/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Dự Án Cuối Khoá & Tối Ưu Thiết Kế / Week 10: Capstone Project & Design Optimization",
+          "path": "courses/hydro-cfd/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Giới Thiệu Cơ Học Chất Lỏng & Tính Chất Nước / Week 1: Introduction to Fluid Mechanics & Water Properties",
+          "path": "courses/hydro-cfd/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Phương Trình Navier-Stokes & Phương Trình Liên Tục / Week 2: Navier-Stokes Equations & Continuity",
+          "path": "courses/hydro-cfd/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Lực Cản & Lực Nâng Trong Nước / Week 3: Drag & Lift Forces in Water",
+          "path": "courses/hydro-cfd/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Lớp Biên & Mô Hình Rối / Week 4: Boundary Layer Theory & Turbulence Models",
+          "path": "courses/hydro-cfd/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Lưới Tính & Quy Trình CFD / Week 5: Meshing & CFD Workflow",
+          "path": "courses/hydro-cfd/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: OpenFOAM Căn Bản — Dòng Laminaire Trong Ống / Week 6: OpenFOAM Basics — Laminar Pipe Flow",
+          "path": "courses/hydro-cfd/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Dòng Xung Quanh Trụ — Xoáy Von Kármán / Week 7: Flow Around Cylinder — Von Kármán Vortex Street",
+          "path": "courses/hydro-cfd/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Mô Phỏng Thủy Động Lực Học Cánh Ngầm (Hydrofoil) / Week 8: Hydrofoil Hydrodynamics Simulation",
+          "path": "courses/hydro-cfd/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Dòng Hai Pha — Sóng & Phương Pháp VOF / Week 9: Two-Phase Flow — Waves & Volume of Fluid Method",
+          "path": "courses/hydro-cfd/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Dự Án Cuối Khoá & Tối Ưu Thiết Kế / Week 10: Capstone Project & Design Optimization",
+          "path": "courses/hydro-cfd/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "cfd_toolkit.py",
+          "path": "courses/hydro-cfd/code/python/cfd_toolkit.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khoá — CFD Thủy Động Lực Học",
           "path": "courses/hydro-cfd/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "⚡ OpenFOAM Quick Reference — Hydro-CFD Course",
-          "path": "courses/hydro-cfd/references/openfoam_quickref.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -171,82 +429,206 @@
         {
           "title": "📖 Ngữ Văn 7 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 10 Bài Học Lớn)",
           "path": "courses/literature-7-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Ngữ Văn 7 KNTT",
           "path": "courses/literature-7-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1 / Week 1",
           "path": "courses/literature-7-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2 / Week 2",
           "path": "courses/literature-7-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3 / Week 3",
           "path": "courses/literature-7-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4 / Week 4",
           "path": "courses/literature-7-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5 / Week 5",
           "path": "courses/literature-7-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Bài 6 — Bài Học Cuộc Sống (Truyện Ngụ Ngôn & Nghị Luận Xã Hội)",
           "path": "courses/literature-7-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Bài 7 — Thế Giới Viễn Tưởng (Truyện Khoa Học Viễn Tưởng & Trí Tưởng Tượng)",
           "path": "courses/literature-7-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Bài 8 — Trải Nghiệm Để Trưởng Thành (Văn Bản Nghị Luận & Trải Nghiệm Cá Nhân)",
           "path": "courses/literature-7-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Bài 9 — Hòa Điệu Với Tự Nhiên (Thiên Nhiên Trong Thơ Ca & Bảo Vệ Môi Trường)",
           "path": "courses/literature-7-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Bài 10 — Trang Sách Và Cuộc Sống & Tổng Kết Ngữ Văn 7",
           "path": "courses/literature-7-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1 / Week 1",
+          "path": "courses/literature-7-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2 / Week 2",
+          "path": "courses/literature-7-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3 / Week 3",
+          "path": "courses/literature-7-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4 / Week 4",
+          "path": "courses/literature-7-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5 / Week 5",
+          "path": "courses/literature-7-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Bài 6 — Bài Học Cuộc Sống (Truyện Ngụ Ngôn & Nghị Luận Xã Hội)",
+          "path": "courses/literature-7-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Bài 7 — Thế Giới Viễn Tưởng (Truyện Khoa Học Viễn Tưởng & Trí Tưởng Tượng)",
+          "path": "courses/literature-7-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Bài 8 — Trải Nghiệm Để Trưởng Thành (Văn Bản Nghị Luận & Trải Nghiệm Cá Nhân)",
+          "path": "courses/literature-7-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Bài 9 — Hòa Điệu Với Tự Nhiên (Thiên Nhiên Trong Thơ Ca & Bảo Vệ Môi Trường)",
+          "path": "courses/literature-7-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Bài 10 — Trang Sách Và Cuộc Sống & Tổng Kết Ngữ Văn 7",
+          "path": "courses/literature-7-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1 / Week 1",
+          "path": "courses/literature-7-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2 / Week 2",
+          "path": "courses/literature-7-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3 / Week 3",
+          "path": "courses/literature-7-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4 / Week 4",
+          "path": "courses/literature-7-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5 / Week 5",
+          "path": "courses/literature-7-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Bài 6 — Bài Học Cuộc Sống (Truyện Ngụ Ngôn & Nghị Luận Xã Hội)",
+          "path": "courses/literature-7-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Bài 7 — Thế Giới Viễn Tưởng (Truyện Khoa Học Viễn Tưởng & Trí Tưởng Tượng)",
+          "path": "courses/literature-7-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Bài 8 — Trải Nghiệm Để Trưởng Thành (Văn Bản Nghị Luận & Trải Nghiệm Cá Nhân)",
+          "path": "courses/literature-7-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Bài 9 — Hòa Điệu Với Tự Nhiên (Thiên Nhiên Trong Thơ Ca & Bảo Vệ Môi Trường)",
+          "path": "courses/literature-7-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Bài 10 — Trang Sách Và Cuộc Sống & Tổng Kết Ngữ Văn 7",
+          "path": "courses/literature-7-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "literature_toolkit_7.py",
+          "path": "courses/literature-7-kntt/code/python/literature_toolkit_7.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM / Nhân Văn Số — Ngữ Văn 7 KNTT",
           "path": "courses/literature-7-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Học Tập & Công Cụ Số (BOM) — Ngữ Văn 7 KNTT",
-          "path": "courses/literature-7-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Tắc Văn Hóa Văn Học & An Toàn Không Gian Số — Ngữ Văn 7 KNTT",
-          "path": "courses/literature-7-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm Canva, Audacity & Python NLP",
-          "path": "courses/literature-7-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -258,82 +640,206 @@
         {
           "title": "📐 Toán 4 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 9 Chủ Đề / 48 Bài Học)",
           "path": "courses/math-4-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Toán 4 KNTT",
           "path": "courses/math-4-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Ôn Tập 100.000 & Số Tự Nhiên Đến Lớp Triệu / Week 1: Revision to 100,000 & Numbers to Millions",
           "path": "courses/math-4-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Phép Cộng, Trừ & Biểu Thức Chứa Chữ / Week 2: Addition, Subtraction & Expressions with Letters",
           "path": "courses/math-4-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Dạng Toán Tìm Hai Số Khi Biết Tổng Và Hiệu / Week 3: Word Problems — Finding Two Numbers Given Sum and Difference",
           "path": "courses/math-4-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Khái Niệm Phân Số, Rút Gọn & So Sánh Phân Số / Week 4: Concept of Fractions, Simplifying & Comparing Fractions",
           "path": "courses/math-4-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Các Phép Tính Với Phân Số & Giải Toán Có Lời Văn / Week 5: Operations with Fractions & Word Problems",
           "path": "courses/math-4-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Đại Lượng & Đo Đại Lượng (Khối Lượng, Diện Tích, Thời Gian, Góc)",
           "path": "courses/math-4-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Các Loại Góc, Đường Thẳng Vuông Góc & Song Song",
           "path": "courses/math-4-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Hình Bình Hành, Hình Thoi & Tính Diện Tích",
           "path": "courses/math-4-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Thống Kê & Xác Suất Đơn Giản",
           "path": "courses/math-4-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Tổng Ôn Tập Toán 4 & Capstone STEM Project",
           "path": "courses/math-4-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Ôn Tập 100.000 & Số Tự Nhiên Đến Lớp Triệu / Week 1: Revision to 100,000 & Numbers to Millions",
+          "path": "courses/math-4-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Phép Cộng, Trừ & Biểu Thức Chứa Chữ / Week 2: Addition, Subtraction & Expressions with Letters",
+          "path": "courses/math-4-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Dạng Toán Tìm Hai Số Khi Biết Tổng Và Hiệu / Week 3: Word Problems — Finding Two Numbers Given Sum and Difference",
+          "path": "courses/math-4-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Khái Niệm Phân Số, Rút Gọn & So Sánh Phân Số / Week 4: Concept of Fractions, Simplifying & Comparing Fractions",
+          "path": "courses/math-4-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Các Phép Tính Với Phân Số & Giải Toán Có Lời Văn / Week 5: Operations with Fractions & Word Problems",
+          "path": "courses/math-4-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Đại Lượng & Đo Đại Lượng (Khối Lượng, Diện Tích, Thời Gian, Góc)",
+          "path": "courses/math-4-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Các Loại Góc, Đường Thẳng Vuông Góc & Song Song",
+          "path": "courses/math-4-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Hình Bình Hành, Hình Thoi & Tính Diện Tích",
+          "path": "courses/math-4-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Thống Kê & Xác Suất Đơn Giản",
+          "path": "courses/math-4-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Tổng Ôn Tập Toán 4 & Capstone STEM Project",
+          "path": "courses/math-4-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Ôn Tập 100.000 & Số Tự Nhiên Đến Lớp Triệu / Week 1: Revision to 100,000 & Numbers to Millions",
+          "path": "courses/math-4-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Phép Cộng, Trừ & Biểu Thức Chứa Chữ / Week 2: Addition, Subtraction & Expressions with Letters",
+          "path": "courses/math-4-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Dạng Toán Tìm Hai Số Khi Biết Tổng Và Hiệu / Week 3: Word Problems — Finding Two Numbers Given Sum and Difference",
+          "path": "courses/math-4-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Khái Niệm Phân Số, Rút Gọn & So Sánh Phân Số / Week 4: Concept of Fractions, Simplifying & Comparing Fractions",
+          "path": "courses/math-4-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Các Phép Tính Với Phân Số & Giải Toán Có Lời Văn / Week 5: Operations with Fractions & Word Problems",
+          "path": "courses/math-4-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Đại Lượng & Đo Đại Lượng (Khối Lượng, Diện Tích, Thời Gian, Góc)",
+          "path": "courses/math-4-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Các Loại Góc, Đường Thẳng Vuông Góc & Song Song",
+          "path": "courses/math-4-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Hình Bình Hành, Hình Thoi & Tính Diện Tích",
+          "path": "courses/math-4-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Thống Kê & Xác Suất Đơn Giản",
+          "path": "courses/math-4-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Tổng Ôn Tập Toán 4 & Capstone STEM Project",
+          "path": "courses/math-4-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "math_toolkit_4.py",
+          "path": "courses/math-4-kntt/code/python/math_toolkit_4.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM — Toán 4 KNTT",
           "path": "courses/math-4-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Học Tập & Bộ Đồ Dùng Toán 4 (BOM) — Toán 4 KNTT",
-          "path": "courses/math-4-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Tắc An Toàn & Chuẩn Mực Học Tập — Toán 4 KNTT",
-          "path": "courses/math-4-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm Scratch 3.0 & Python Math",
-          "path": "courses/math-4-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -345,82 +851,206 @@
         {
           "title": "📐 Toán 7 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 35 Bài Học + 2 Hoạt Động Trải Nghiệm)",
           "path": "courses/math-7-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Toán 7 KNTT",
           "path": "courses/math-7-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Tập Hợp Số Hữu Tỉ $\\mathbb{Q}$ & Các Phép Tính / Week 1: Set of Rational Numbers $\\mathbb{Q}$ & Operations",
           "path": "courses/math-7-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Số Thực $\\mathbb{R}$, Số Vô Tỉ $\\mathbb{I}$ & Căn Bậc Hai Số Học / Week 2: Real Numbers $\\mathbb{R}$, Irrational Numbers $\\mathbb{I}$ & Square Roots",
           "path": "courses/math-7-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Góc ở Vị Trí Đặc Biệt & Đường Thẳng Song Song / Week 3: Special Position Angles & Parallel Lines",
           "path": "courses/math-7-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Tam Giác Bằng Nhau & Tam Giác Cân / Week 4: Congruent Triangles & Isosceles Triangles",
           "path": "courses/math-7-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Thu Thập, Biểu Diễn Dữ Liệu & Thống Kê Dân Số / Week 5: Data Collection, Presentation & Population Statistics",
           "path": "courses/math-7-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Tỉ lệ thức và Đại lượng tỉ lệ (Week 6: Proportions and Proportional Quantities)",
           "path": "courses/math-7-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Week 7: Biểu thức đại số và Đa thức một biến (Algebraic Expressions and Single-variable Polynomials)",
           "path": "courses/math-7-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Biến cố ngẫu nhiên và Xác suất / Week 8: Random Events and Probability",
           "path": "courses/math-7-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Quan hệ giữa các yếu tố trong một tam giác & Sự đồng quy của các đường đặc biệt",
           "path": "courses/math-7-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Tổng Ôn Tập Cuối Năm & Dự Án Capstone STEM (Week 10: Year-End Comprehensive Review & STEM Capstone Project)",
           "path": "courses/math-7-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Tập Hợp Số Hữu Tỉ $\\mathbb{Q}$ & Các Phép Tính / Week 1: Set of Rational Numbers $\\mathbb{Q}$ & Operations",
+          "path": "courses/math-7-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Số Thực $\\mathbb{R}$, Số Vô Tỉ $\\mathbb{I}$ & Căn Bậc Hai Số Học / Week 2: Real Numbers $\\mathbb{R}$, Irrational Numbers $\\mathbb{I}$ & Square Roots",
+          "path": "courses/math-7-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Góc ở Vị Trí Đặc Biệt & Đường Thẳng Song Song / Week 3: Special Position Angles & Parallel Lines",
+          "path": "courses/math-7-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Tam Giác Bằng Nhau & Tam Giác Cân / Week 4: Congruent Triangles & Isosceles Triangles",
+          "path": "courses/math-7-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Thu Thập, Biểu Diễn Dữ Liệu & Thống Kê Dân Số / Week 5: Data Collection, Presentation & Population Statistics",
+          "path": "courses/math-7-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Tỉ lệ thức và Đại lượng tỉ lệ (Week 6: Proportions and Proportional Quantities)",
+          "path": "courses/math-7-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Week 7: Biểu thức đại số và Đa thức một biến (Algebraic Expressions and Single-variable Polynomials)",
+          "path": "courses/math-7-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Biến cố ngẫu nhiên và Xác suất / Week 8: Random Events and Probability",
+          "path": "courses/math-7-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Quan hệ giữa các yếu tố trong một tam giác & Sự đồng quy của các đường đặc biệt",
+          "path": "courses/math-7-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Tổng Ôn Tập Cuối Năm & Dự Án Capstone STEM (Week 10: Year-End Comprehensive Review & STEM Capstone Project)",
+          "path": "courses/math-7-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Tập Hợp Số Hữu Tỉ $\\mathbb{Q}$ & Các Phép Tính / Week 1: Set of Rational Numbers $\\mathbb{Q}$ & Operations",
+          "path": "courses/math-7-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Số Thực $\\mathbb{R}$, Số Vô Tỉ $\\mathbb{I}$ & Căn Bậc Hai Số Học / Week 2: Real Numbers $\\mathbb{R}$, Irrational Numbers $\\mathbb{I}$ & Square Roots",
+          "path": "courses/math-7-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Góc ở Vị Trí Đặc Biệt & Đường Thẳng Song Song / Week 3: Special Position Angles & Parallel Lines",
+          "path": "courses/math-7-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Tam Giác Bằng Nhau & Tam Giác Cân / Week 4: Congruent Triangles & Isosceles Triangles",
+          "path": "courses/math-7-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Thu Thập, Biểu Diễn Dữ Liệu & Thống Kê Dân Số / Week 5: Data Collection, Presentation & Population Statistics",
+          "path": "courses/math-7-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Tỉ lệ thức và Đại lượng tỉ lệ (Week 6: Proportions and Proportional Quantities)",
+          "path": "courses/math-7-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Week 7: Biểu thức đại số và Đa thức một biến (Algebraic Expressions and Single-variable Polynomials)",
+          "path": "courses/math-7-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Biến cố ngẫu nhiên và Xác suất / Week 8: Random Events and Probability",
+          "path": "courses/math-7-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Quan hệ giữa các yếu tố trong một tam giác & Sự đồng quy của các đường đặc biệt",
+          "path": "courses/math-7-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Tổng Ôn Tập Cuối Năm & Dự Án Capstone STEM (Week 10: Year-End Comprehensive Review & STEM Capstone Project)",
+          "path": "courses/math-7-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "math_toolkit_7.py",
+          "path": "courses/math-7-kntt/code/python/math_toolkit_7.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM — Toán 7 KNTT",
           "path": "courses/math-7-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Học Tập & Phần Mềm (BOM) — Toán 7 KNTT",
-          "path": "courses/math-7-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Tắc An Toàn & Chuẩn Mực Học Tập — Toán 7 KNTT",
-          "path": "courses/math-7-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm GeoGebra & Python SymPy",
-          "path": "courses/math-7-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -432,82 +1062,206 @@
         {
           "title": "🔭 Vật Lí 10 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 35 Bài Học)",
           "path": "courses/physics-10-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Vật Lí 10 KNTT",
           "path": "courses/physics-10-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Nhập Môn Vật Lí và Sai Số Đo Lường | Week 1: Introduction to Physics and Measurement Errors",
           "path": "courses/physics-10-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Động học Chất điểm - Độ dịch chuyển, Vận tốc và Đồ thị (Week 2: Particle Kinematics - Displacement, Velocity, and Graphs)",
           "path": "courses/physics-10-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Chuyển Động Biến Đổi, Gia Tốc và Sự Rơi Tự Do / Week 3: Accelerated Motion, Acceleration and Free Fall",
           "path": "courses/physics-10-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Chuyển Động Ném & Ba Định Luật Newton (Week 4: Projectile Motion & Newton's Three Laws)",
           "path": "courses/physics-10-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Các Lực Cơ Học và Phương Pháp Động Lực Học (Week 5: Mechanical Forces and Dynamics Methodology)",
           "path": "courses/physics-10-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Năng Lượng, Công, Công Suất & Định Luật Bảo Toàn Cơ Năng / Week 6: Energy, Work, Power & Conservation of Mechanical Energy",
           "path": "courses/physics-10-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Động Lượng & Định Luật Bảo Toàn Động Lượng / Week 7: Momentum & Law of Conservation of Momentum",
           "path": "courses/physics-10-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Chuyển Động Tròn & Lực Hướng Tâm / Week 8: Circular Motion & Centripetal Force",
           "path": "courses/physics-10-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Khối Lượng Riêng, Áp Suất Chất Lưu & Chất Khí / Week 9: Density, Fluid Pressure & Ideal Gas",
           "path": "courses/physics-10-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project / Week 10: Comprehensive Review, Synthesis & Capstone STEM Project",
           "path": "courses/physics-10-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Nhập Môn Vật Lí và Sai Số Đo Lường | Week 1: Introduction to Physics and Measurement Errors",
+          "path": "courses/physics-10-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Động học Chất điểm - Độ dịch chuyển, Vận tốc và Đồ thị (Week 2: Particle Kinematics - Displacement, Velocity, and Graphs)",
+          "path": "courses/physics-10-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Chuyển Động Biến Đổi, Gia Tốc và Sự Rơi Tự Do / Week 3: Accelerated Motion, Acceleration and Free Fall",
+          "path": "courses/physics-10-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Chuyển Động Ném & Ba Định Luật Newton (Week 4: Projectile Motion & Newton's Three Laws)",
+          "path": "courses/physics-10-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Các Lực Cơ Học và Phương Pháp Động Lực Học (Week 5: Mechanical Forces and Dynamics Methodology)",
+          "path": "courses/physics-10-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Năng Lượng, Công, Công Suất & Định Luật Bảo Toàn Cơ Năng / Week 6: Energy, Work, Power & Conservation of Mechanical Energy",
+          "path": "courses/physics-10-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Động Lượng & Định Luật Bảo Toàn Động Lượng / Week 7: Momentum & Law of Conservation of Momentum",
+          "path": "courses/physics-10-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Chuyển Động Tròn & Lực Hướng Tâm / Week 8: Circular Motion & Centripetal Force",
+          "path": "courses/physics-10-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Khối Lượng Riêng, Áp Suất Chất Lưu & Chất Khí / Week 9: Density, Fluid Pressure & Ideal Gas",
+          "path": "courses/physics-10-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project / Week 10: Comprehensive Review, Synthesis & Capstone STEM Project",
+          "path": "courses/physics-10-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Nhập Môn Vật Lí và Sai Số Đo Lường | Week 1: Introduction to Physics and Measurement Errors",
+          "path": "courses/physics-10-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Động học Chất điểm - Độ dịch chuyển, Vận tốc và Đồ thị (Week 2: Particle Kinematics - Displacement, Velocity, and Graphs)",
+          "path": "courses/physics-10-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Chuyển Động Biến Đổi, Gia Tốc và Sự Rơi Tự Do / Week 3: Accelerated Motion, Acceleration and Free Fall",
+          "path": "courses/physics-10-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Chuyển Động Ném & Ba Định Luật Newton (Week 4: Projectile Motion & Newton's Three Laws)",
+          "path": "courses/physics-10-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Các Lực Cơ Học và Phương Pháp Động Lực Học (Week 5: Mechanical Forces and Dynamics Methodology)",
+          "path": "courses/physics-10-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Năng Lượng, Công, Công Suất & Định Luật Bảo Toàn Cơ Năng / Week 6: Energy, Work, Power & Conservation of Mechanical Energy",
+          "path": "courses/physics-10-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Động Lượng & Định Luật Bảo Toàn Động Lượng / Week 7: Momentum & Law of Conservation of Momentum",
+          "path": "courses/physics-10-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Chuyển Động Tròn & Lực Hướng Tâm / Week 8: Circular Motion & Centripetal Force",
+          "path": "courses/physics-10-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Khối Lượng Riêng, Áp Suất Chất Lưu & Chất Khí / Week 9: Density, Fluid Pressure & Ideal Gas",
+          "path": "courses/physics-10-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project / Week 10: Comprehensive Review, Synthesis & Capstone STEM Project",
+          "path": "courses/physics-10-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "physics_toolkit.py",
+          "path": "courses/physics-10-kntt/code/python/physics_toolkit.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM — Vật Lí 10 KNTT",
           "path": "courses/physics-10-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Thí Nghiệm & Nguồn Mua (BOM) — Vật Lí 10 KNTT",
-          "path": "courses/physics-10-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Định An Toàn Phòng Thí Nghiệm Vật Lí 10",
-          "path": "courses/physics-10-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm Python Mô Phỏng Vật Lí",
-          "path": "courses/physics-10-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -519,82 +1273,206 @@
         {
           "title": "🌊 Vật Lí 11 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 26 Bài Học)",
           "path": "courses/physics-11-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Vật Lí 11 KNTT",
           "path": "courses/physics-11-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Dao Động Điều Hòa & Mô Tả Dao Động / Week 1: Simple Harmonic Motion (SHM) & Motion Description",
           "path": "courses/physics-11-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Dao Động Tắt Dần, Cưỡng Bức & Hiện Tượng Cộng Hưởng / Week 2: Damped, Forced Oscillations & Resonance",
           "path": "courses/physics-11-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Sóng Cơ, Sự Truyền Sóng & Các Đặc Trưng Của Sóng / Week 3: Mechanical Waves, Wave Propagation & Wave Characteristics",
           "path": "courses/physics-11-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Giao Thoa Sóng & Sóng Dừng / Week 4: Wave Interference & Standing Waves",
           "path": "courses/physics-11-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Sóng Âm & Thực Hành Xác Định Tần Số Của Âm / Week 5: Sound Waves & Sound Frequency Measurement Lab",
           "path": "courses/physics-11-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Điện Tích, Định Luật Coulomb & Cường Độ Điện Trường / Week 6: Electric Charge, Coulomb's Law & Electric Field Strength",
           "path": "courses/physics-11-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Điện Thế, Hiệu Điện Thế, Tụ Điện & Năng Lượng Điện Trường / Week 7: Electric Potential, Voltage, Capacitors & Electric Field Energy",
           "path": "courses/physics-11-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Dòng Điện, Cường Độ Dòng Điện & Định Luật Ohm cho Đoạn Mạch / Week 8: Electric Current, Current Intensity & Ohm's Law",
           "path": "courses/physics-11-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Nguồn Điện, Mạch Điện Đơn Giản & Thực Hành Đo Suất Điện Động / Week 9: Power Sources, Simple Circuits & EMF Measurement Lab",
           "path": "courses/physics-11-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project / Week 10: Comprehensive Review, Synthesis & Capstone STEM Project",
           "path": "courses/physics-11-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Dao Động Điều Hòa & Mô Tả Dao Động / Week 1: Simple Harmonic Motion (SHM) & Motion Description",
+          "path": "courses/physics-11-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Dao Động Tắt Dần, Cưỡng Bức & Hiện Tượng Cộng Hưởng / Week 2: Damped, Forced Oscillations & Resonance",
+          "path": "courses/physics-11-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Sóng Cơ, Sự Truyền Sóng & Các Đặc Trưng Của Sóng / Week 3: Mechanical Waves, Wave Propagation & Wave Characteristics",
+          "path": "courses/physics-11-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Giao Thoa Sóng & Sóng Dừng / Week 4: Wave Interference & Standing Waves",
+          "path": "courses/physics-11-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Sóng Âm & Thực Hành Xác Định Tần Số Của Âm / Week 5: Sound Waves & Sound Frequency Measurement Lab",
+          "path": "courses/physics-11-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Điện Tích, Định Luật Coulomb & Cường Độ Điện Trường / Week 6: Electric Charge, Coulomb's Law & Electric Field Strength",
+          "path": "courses/physics-11-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Điện Thế, Hiệu Điện Thế, Tụ Điện & Năng Lượng Điện Trường / Week 7: Electric Potential, Voltage, Capacitors & Electric Field Energy",
+          "path": "courses/physics-11-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Dòng Điện, Cường Độ Dòng Điện & Định Luật Ohm cho Đoạn Mạch / Week 8: Electric Current, Current Intensity & Ohm's Law",
+          "path": "courses/physics-11-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Nguồn Điện, Mạch Điện Đơn Giản & Thực Hành Đo Suất Điện Động / Week 9: Power Sources, Simple Circuits & EMF Measurement Lab",
+          "path": "courses/physics-11-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project / Week 10: Comprehensive Review, Synthesis & Capstone STEM Project",
+          "path": "courses/physics-11-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Dao Động Điều Hòa & Mô Tả Dao Động / Week 1: Simple Harmonic Motion (SHM) & Motion Description",
+          "path": "courses/physics-11-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Dao Động Tắt Dần, Cưỡng Bức & Hiện Tượng Cộng Hưởng / Week 2: Damped, Forced Oscillations & Resonance",
+          "path": "courses/physics-11-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Sóng Cơ, Sự Truyền Sóng & Các Đặc Trưng Của Sóng / Week 3: Mechanical Waves, Wave Propagation & Wave Characteristics",
+          "path": "courses/physics-11-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Giao Thoa Sóng & Sóng Dừng / Week 4: Wave Interference & Standing Waves",
+          "path": "courses/physics-11-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Sóng Âm & Thực Hành Xác Định Tần Số Của Âm / Week 5: Sound Waves & Sound Frequency Measurement Lab",
+          "path": "courses/physics-11-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Điện Tích, Định Luật Coulomb & Cường Độ Điện Trường / Week 6: Electric Charge, Coulomb's Law & Electric Field Strength",
+          "path": "courses/physics-11-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Điện Thế, Hiệu Điện Thế, Tụ Điện & Năng Lượng Điện Trường / Week 7: Electric Potential, Voltage, Capacitors & Electric Field Energy",
+          "path": "courses/physics-11-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Dòng Điện, Cường Độ Dòng Điện & Định Luật Ohm cho Đoạn Mạch / Week 8: Electric Current, Current Intensity & Ohm's Law",
+          "path": "courses/physics-11-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Nguồn Điện, Mạch Điện Đơn Giản & Thực Hành Đo Suất Điện Động / Week 9: Power Sources, Simple Circuits & EMF Measurement Lab",
+          "path": "courses/physics-11-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Tổng Ôn Tập, Hệ Thống Hóa & Capstone Project / Week 10: Comprehensive Review, Synthesis & Capstone STEM Project",
+          "path": "courses/physics-11-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "physics_toolkit_11.py",
+          "path": "courses/physics-11-kntt/code/python/physics_toolkit_11.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM — Vật Lí 11 KNTT",
           "path": "courses/physics-11-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Thí Nghiệm & Nguồn Mua (BOM) — Vật Lí 11 KNTT",
-          "path": "courses/physics-11-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Định An Toàn Phòng Thí Nghiệm Vật Lí 11",
-          "path": "courses/physics-11-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm Python Mô Phỏng Vật Lí 11",
-          "path": "courses/physics-11-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -606,82 +1484,206 @@
         {
           "title": "⚛️ Vật Lí 12 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 25 Bài Học + 3 Chuyên Đề)",
           "path": "courses/physics-12-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Vật Lí 12 KNTT",
           "path": "courses/physics-12-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Cấu trúc chất, Nội năng và Nhiệt độ (Week 01: Structure of Matter, Internal Energy and Temperature)",
           "path": "courses/physics-12-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Nhiệt Dung Riêng và Nhiệt Ẩn Chuyển Thể (Week 2: Specific Heat Capacity and Latent Heat of Phase Transition)",
           "path": "courses/physics-12-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Động Học Phân Tử Chất Khí & Khí Lí Tưởng (Week 3: Kinetic Theory of Gases & Ideal Gas)",
           "path": "courses/physics-12-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 04: Áp suất khí, Từ trường và Lực từ | Week 04: Gas Pressure, Magnetic Fields and Magnetic Force",
           "path": "courses/physics-12-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Hiện tượng cảm ứng điện từ và Dòng điện xoay chiều",
           "path": "courses/physics-12-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Cấu Trúc Hạt Nhân, Năng Lượng Liên Kết & Phản Ứng Hạt Nhân / Week 6: Nuclear Structure, Binding Energy & Nuclear Reactions",
           "path": "courses/physics-12-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Hiện Tượng Phóng Xạ, Tia Phóng Xạ & Công Nghiệp Hạt Nhân / Week 7: Radioactive Decay, Radiation & Nuclear Industry",
           "path": "courses/physics-12-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Ứng Dụng Vật Lý Trong Chẩn Đoán Y Học / Week 8: Physics Applications in Medical Diagnostics",
           "path": "courses/physics-12-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Vật Lý Lượng Tử, Hiệu Ứng Quang Điện & Quang Phổ / Week 9: Quantum Physics, Photoelectric Effect & Atomic Spectra",
           "path": "courses/physics-12-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Tổng Ôn Tập THPT, Hệ Thống Hóa & Capstone Project / Week 10: High School Physics Synthesis & Capstone STEM Project",
           "path": "courses/physics-12-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Cấu trúc chất, Nội năng và Nhiệt độ (Week 01: Structure of Matter, Internal Energy and Temperature)",
+          "path": "courses/physics-12-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Nhiệt Dung Riêng và Nhiệt Ẩn Chuyển Thể (Week 2: Specific Heat Capacity and Latent Heat of Phase Transition)",
+          "path": "courses/physics-12-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Động Học Phân Tử Chất Khí & Khí Lí Tưởng (Week 3: Kinetic Theory of Gases & Ideal Gas)",
+          "path": "courses/physics-12-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 04: Áp suất khí, Từ trường và Lực từ | Week 04: Gas Pressure, Magnetic Fields and Magnetic Force",
+          "path": "courses/physics-12-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Hiện tượng cảm ứng điện từ và Dòng điện xoay chiều",
+          "path": "courses/physics-12-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Cấu Trúc Hạt Nhân, Năng Lượng Liên Kết & Phản Ứng Hạt Nhân / Week 6: Nuclear Structure, Binding Energy & Nuclear Reactions",
+          "path": "courses/physics-12-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Hiện Tượng Phóng Xạ, Tia Phóng Xạ & Công Nghiệp Hạt Nhân / Week 7: Radioactive Decay, Radiation & Nuclear Industry",
+          "path": "courses/physics-12-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Ứng Dụng Vật Lý Trong Chẩn Đoán Y Học / Week 8: Physics Applications in Medical Diagnostics",
+          "path": "courses/physics-12-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Vật Lý Lượng Tử, Hiệu Ứng Quang Điện & Quang Phổ / Week 9: Quantum Physics, Photoelectric Effect & Atomic Spectra",
+          "path": "courses/physics-12-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Tổng Ôn Tập THPT, Hệ Thống Hóa & Capstone Project / Week 10: High School Physics Synthesis & Capstone STEM Project",
+          "path": "courses/physics-12-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Cấu trúc chất, Nội năng và Nhiệt độ (Week 01: Structure of Matter, Internal Energy and Temperature)",
+          "path": "courses/physics-12-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Nhiệt Dung Riêng và Nhiệt Ẩn Chuyển Thể (Week 2: Specific Heat Capacity and Latent Heat of Phase Transition)",
+          "path": "courses/physics-12-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Động Học Phân Tử Chất Khí & Khí Lí Tưởng (Week 3: Kinetic Theory of Gases & Ideal Gas)",
+          "path": "courses/physics-12-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 04: Áp suất khí, Từ trường và Lực từ | Week 04: Gas Pressure, Magnetic Fields and Magnetic Force",
+          "path": "courses/physics-12-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Hiện tượng cảm ứng điện từ và Dòng điện xoay chiều",
+          "path": "courses/physics-12-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Cấu Trúc Hạt Nhân, Năng Lượng Liên Kết & Phản Ứng Hạt Nhân / Week 6: Nuclear Structure, Binding Energy & Nuclear Reactions",
+          "path": "courses/physics-12-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Hiện Tượng Phóng Xạ, Tia Phóng Xạ & Công Nghiệp Hạt Nhân / Week 7: Radioactive Decay, Radiation & Nuclear Industry",
+          "path": "courses/physics-12-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Ứng Dụng Vật Lý Trong Chẩn Đoán Y Học / Week 8: Physics Applications in Medical Diagnostics",
+          "path": "courses/physics-12-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Vật Lý Lượng Tử, Hiệu Ứng Quang Điện & Quang Phổ / Week 9: Quantum Physics, Photoelectric Effect & Atomic Spectra",
+          "path": "courses/physics-12-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Tổng Ôn Tập THPT, Hệ Thống Hóa & Capstone Project / Week 10: High School Physics Synthesis & Capstone STEM Project",
+          "path": "courses/physics-12-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "physics_toolkit_12.py",
+          "path": "courses/physics-12-kntt/code/python/physics_toolkit_12.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM — Vật Lí 12 KNTT",
           "path": "courses/physics-12-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Thí Nghiệm & Nguồn Mua (BOM) — Vật Lí 12 KNTT",
-          "path": "courses/physics-12-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Định An Toàn Phòng Thí Nghiệm Vật Lí 12",
-          "path": "courses/physics-12-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm Python Mô Phỏng Vật Lí 12",
-          "path": "courses/physics-12-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -693,72 +1695,206 @@
         {
           "title": "⚛️ Khoá Học Vật Lý Lượng Tử & Máy Tính Lượng Tử — 10 Tuần",
           "path": "courses/quantum-physics/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học 10 Tuần — Lượng Tử & Máy Tính Lượng Tử",
           "path": "courses/quantum-physics/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Sự Sụp Đổ Của Vật Lý Cổ Điển & Lưỡng Tính Sóng-Hạt",
           "path": "courses/quantum-physics/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Cơ Học Sóng & Phương Trình Schrödinger",
           "path": "courses/quantum-physics/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Thế 1 Chiều & Hiệu Ứng Đường Hầm",
           "path": "courses/quantum-physics/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Dao Động Tử Điều Hòa Lượng Tử",
           "path": "courses/quantum-physics/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Mômen Động Lượng & Spin",
           "path": "courses/quantum-physics/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Nguyên Tử Hydro & Hệ Nhiều Hạt | Week 6: The Hydrogen Atom & Many-Particle Systems",
           "path": "courses/quantum-physics/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Rối Lượng Tử & Bất Đẳng Thức Bell | Week 7: Quantum Entanglement & Bell's Theorem",
           "path": "courses/quantum-physics/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Nhập Môn Máy Tính Lượng Tử & Qubits | Week 8: Intro to Quantum Computing & Qubits",
           "path": "courses/quantum-physics/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Các Thuật Toán Lượng Tử Cơ Bản | Week 9: Basic Quantum Algorithms",
           "path": "courses/quantum-physics/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Thuật Toán Grover, Shor & Tương Lai | Week 10: Grover's, Shor's Algorithms & The Future",
           "path": "courses/quantum-physics/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Sự Sụp Đổ Của Vật Lý Cổ Điển & Lưỡng Tính Sóng-Hạt",
+          "path": "courses/quantum-physics/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Cơ Học Sóng & Phương Trình Schrödinger",
+          "path": "courses/quantum-physics/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Thế 1 Chiều & Hiệu Ứng Đường Hầm",
+          "path": "courses/quantum-physics/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Dao Động Tử Điều Hòa Lượng Tử",
+          "path": "courses/quantum-physics/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Mômen Động Lượng & Spin",
+          "path": "courses/quantum-physics/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Nguyên Tử Hydro & Hệ Nhiều Hạt | Week 6: The Hydrogen Atom & Many-Particle Systems",
+          "path": "courses/quantum-physics/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Rối Lượng Tử & Bất Đẳng Thức Bell | Week 7: Quantum Entanglement & Bell's Theorem",
+          "path": "courses/quantum-physics/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Nhập Môn Máy Tính Lượng Tử & Qubits | Week 8: Intro to Quantum Computing & Qubits",
+          "path": "courses/quantum-physics/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Các Thuật Toán Lượng Tử Cơ Bản | Week 9: Basic Quantum Algorithms",
+          "path": "courses/quantum-physics/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Thuật Toán Grover, Shor & Tương Lai | Week 10: Grover's, Shor's Algorithms & The Future",
+          "path": "courses/quantum-physics/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Sự Sụp Đổ Của Vật Lý Cổ Điển & Lưỡng Tính Sóng-Hạt",
+          "path": "courses/quantum-physics/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Cơ Học Sóng & Phương Trình Schrödinger",
+          "path": "courses/quantum-physics/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Thế 1 Chiều & Hiệu Ứng Đường Hầm",
+          "path": "courses/quantum-physics/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Dao Động Tử Điều Hòa Lượng Tử",
+          "path": "courses/quantum-physics/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Mômen Động Lượng & Spin",
+          "path": "courses/quantum-physics/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Nguyên Tử Hydro & Hệ Nhiều Hạt | Week 6: The Hydrogen Atom & Many-Particle Systems",
+          "path": "courses/quantum-physics/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Rối Lượng Tử & Bất Đẳng Thức Bell | Week 7: Quantum Entanglement & Bell's Theorem",
+          "path": "courses/quantum-physics/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Nhập Môn Máy Tính Lượng Tử & Qubits | Week 8: Intro to Quantum Computing & Qubits",
+          "path": "courses/quantum-physics/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Các Thuật Toán Lượng Tử Cơ Bản | Week 9: Basic Quantum Algorithms",
+          "path": "courses/quantum-physics/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Thuật Toán Grover, Shor & Tương Lai | Week 10: Grover's, Shor's Algorithms & The Future",
+          "path": "courses/quantum-physics/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "quantum_toolkit.py",
+          "path": "courses/quantum-physics/code/python/quantum_toolkit.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khoá — Vật Lý Lượng Tử & Máy Tính Lượng Tử",
           "path": "courses/quantum-physics/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "📝 Bảng Công Thức Vật Lý Lượng Tử & Toán Học",
-          "path": "courses/quantum-physics/references/formulas.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -770,77 +1906,206 @@
         {
           "title": "🚀 Khoá Học Động Cơ Tên Lửa DIY — 10 Tuần",
           "path": "courses/rocket-engine/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học 10 Tuần — Động Cơ Tên Lửa DIY",
           "path": "courses/rocket-engine/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Lịch Sử Tên Lửa & Nguyên Lý Đẩy / Week 1: Rocket History & Propulsion Principles",
           "path": "courses/rocket-engine/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Nhiên Liệu & Hóa Học Đẩy / Week 2: Propellants & Combustion Chemistry",
           "path": "courses/rocket-engine/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Khí Động Học & Thiết Kế Tên Lửa / Week 3: Aerodynamics & Rocket Design",
           "path": "courses/rocket-engine/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Buồng Đốt, Vòi Phun & Vật Liệu / Week 4: Combustion Chamber, Nozzle & Materials",
           "path": "courses/rocket-engine/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Hệ Thống Phục Hồi, An Toàn & Lắp Ráp Tên Lửa Mô Hình / Week 5: Recovery Systems, Safety & Model Rocket Assembly",
           "path": "courses/rocket-engine/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Mô Phỏng Quỹ Đạo với Python / Week 6: Trajectory Simulation with Python",
           "path": "courses/rocket-engine/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: OpenRocket — Thiết Kế & Mô Phỏng / Week 7: OpenRocket — Design & Simulation",
           "path": "courses/rocket-engine/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Điều Khiển Vectơ Lực Đẩy & Avionics / Week 8: Thrust Vector Control & Avionics",
           "path": "courses/rocket-engine/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Phân Tích Dữ Liệu Chuyến Bay & Cải Tiến / Week 9: Flight Data Analysis & Iteration",
           "path": "courses/rocket-engine/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Dự Án Cuối Khoá & Phóng Tên Lửa / Week 10: Capstone Project & Launch Day",
           "path": "courses/rocket-engine/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Lịch Sử Tên Lửa & Nguyên Lý Đẩy / Week 1: Rocket History & Propulsion Principles",
+          "path": "courses/rocket-engine/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Nhiên Liệu & Hóa Học Đẩy / Week 2: Propellants & Combustion Chemistry",
+          "path": "courses/rocket-engine/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Khí Động Học & Thiết Kế Tên Lửa / Week 3: Aerodynamics & Rocket Design",
+          "path": "courses/rocket-engine/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Buồng Đốt, Vòi Phun & Vật Liệu / Week 4: Combustion Chamber, Nozzle & Materials",
+          "path": "courses/rocket-engine/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Hệ Thống Phục Hồi, An Toàn & Lắp Ráp Tên Lửa Mô Hình / Week 5: Recovery Systems, Safety & Model Rocket Assembly",
+          "path": "courses/rocket-engine/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Mô Phỏng Quỹ Đạo với Python / Week 6: Trajectory Simulation with Python",
+          "path": "courses/rocket-engine/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: OpenRocket — Thiết Kế & Mô Phỏng / Week 7: OpenRocket — Design & Simulation",
+          "path": "courses/rocket-engine/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Điều Khiển Vectơ Lực Đẩy & Avionics / Week 8: Thrust Vector Control & Avionics",
+          "path": "courses/rocket-engine/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Phân Tích Dữ Liệu Chuyến Bay & Cải Tiến / Week 9: Flight Data Analysis & Iteration",
+          "path": "courses/rocket-engine/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Dự Án Cuối Khoá & Phóng Tên Lửa / Week 10: Capstone Project & Launch Day",
+          "path": "courses/rocket-engine/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Lịch Sử Tên Lửa & Nguyên Lý Đẩy / Week 1: Rocket History & Propulsion Principles",
+          "path": "courses/rocket-engine/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Nhiên Liệu & Hóa Học Đẩy / Week 2: Propellants & Combustion Chemistry",
+          "path": "courses/rocket-engine/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Khí Động Học & Thiết Kế Tên Lửa / Week 3: Aerodynamics & Rocket Design",
+          "path": "courses/rocket-engine/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Buồng Đốt, Vòi Phun & Vật Liệu / Week 4: Combustion Chamber, Nozzle & Materials",
+          "path": "courses/rocket-engine/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Hệ Thống Phục Hồi, An Toàn & Lắp Ráp Tên Lửa Mô Hình / Week 5: Recovery Systems, Safety & Model Rocket Assembly",
+          "path": "courses/rocket-engine/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Mô Phỏng Quỹ Đạo với Python / Week 6: Trajectory Simulation with Python",
+          "path": "courses/rocket-engine/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: OpenRocket — Thiết Kế & Mô Phỏng / Week 7: OpenRocket — Design & Simulation",
+          "path": "courses/rocket-engine/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Điều Khiển Vectơ Lực Đẩy & Avionics / Week 8: Thrust Vector Control & Avionics",
+          "path": "courses/rocket-engine/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Phân Tích Dữ Liệu Chuyến Bay & Cải Tiến / Week 9: Flight Data Analysis & Iteration",
+          "path": "courses/rocket-engine/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Dự Án Cuối Khoá & Phóng Tên Lửa / Week 10: Capstone Project & Launch Day",
+          "path": "courses/rocket-engine/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "simulator.py",
+          "path": "courses/rocket-engine/code/python/simulator.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khoá — Động Cơ Tên Lửa DIY",
           "path": "courses/rocket-engine/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "📐 Công Thức Tổng Hợp — Động Cơ Tên Lửa",
-          "path": "courses/rocket-engine/references/formulas.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "⚠️ Quy Định An Toàn Tên Lửa Mô Hình",
-          "path": "courses/rocket-engine/references/safety.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10
@@ -852,82 +2117,206 @@
         {
           "title": "📖 Tiếng Việt 4 — Bộ Sách Kết Nối Tri Thức Với Cuộc Sống (10 Tuần / 18 Bài Học / 18 Chủ Điểm)",
           "path": "courses/vietnamese-4-kntt/INDEX.md",
-          "kind": "Tổng quan"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "📅 Lịch Học Chi Tiết 10 Tuần (20 Buổi) — Tiếng Việt 4 KNTT",
           "path": "courses/vietnamese-4-kntt/schedule.md",
-          "kind": "Tài liệu"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 1: Bài 1 (Chân dung của em) & Bài 2 (Mỗi người một vẻ)",
           "path": "courses/vietnamese-4-kntt/lessons/week01.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 2: Bài 3 (Trải nghiệm và khám phá) & Bài 4 (Quê hương trong tôi)",
           "path": "courses/vietnamese-4-kntt/lessons/week02.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 3: Bài 5 (Những người sống quanh em) & Bài 6 (Ước mơ của em)",
           "path": "courses/vietnamese-4-kntt/lessons/week03.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 4: Bài 7 (Khám phá thế giới) & Bài 8 (Vì một thế giới bình yên)",
           "path": "courses/vietnamese-4-kntt/lessons/week04.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 5: Bài 9 (Tài năng của em) & Ôn Tập Tổng Kết Học Kỳ I",
           "path": "courses/vietnamese-4-kntt/lessons/week05.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 6: Bài 10 (Cuộc sống mến yêu) & Bài 11 (Thế giới quanh ta)",
           "path": "courses/vietnamese-4-kntt/lessons/week06.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 7: Bài 12 (Những người quả cảm) & Bài 13 (Chung tay xây dựng cộng đồng)",
           "path": "courses/vietnamese-4-kntt/lessons/week07.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 8: Bài 14 (Ngôi nhà chung) & Bài 15 (Hành trình tri thức)",
           "path": "courses/vietnamese-4-kntt/lessons/week08.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 9: Bài 16 (Vẻ đẹp muôn màu) & Bài 17 (Những phát minh thú vị)",
           "path": "courses/vietnamese-4-kntt/lessons/week09.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
         },
         {
           "title": "Tuần 10: Bài 18 (Em lớn lên từng ngày) & Tổng Kết Tiếng Việt 4 Capstone Project",
           "path": "courses/vietnamese-4-kntt/lessons/week10.md",
-          "kind": "Bài học"
+          "kind": "1. Lesson",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 1: Bài 1 (Chân dung của em) & Bài 2 (Mỗi người một vẻ)",
+          "path": "courses/vietnamese-4-kntt/presentations/week01.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 2: Bài 3 (Trải nghiệm và khám phá) & Bài 4 (Quê hương trong tôi)",
+          "path": "courses/vietnamese-4-kntt/presentations/week02.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 3: Bài 5 (Những người sống quanh em) & Bài 6 (Ước mơ của em)",
+          "path": "courses/vietnamese-4-kntt/presentations/week03.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 4: Bài 7 (Khám phá thế giới) & Bài 8 (Vì một thế giới bình yên)",
+          "path": "courses/vietnamese-4-kntt/presentations/week04.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 5: Bài 9 (Tài năng của em) & Ôn Tập Tổng Kết Học Kỳ I",
+          "path": "courses/vietnamese-4-kntt/presentations/week05.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 6: Bài 10 (Cuộc sống mến yêu) & Bài 11 (Thế giới quanh ta)",
+          "path": "courses/vietnamese-4-kntt/presentations/week06.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 7: Bài 12 (Những người quả cảm) & Bài 13 (Chung tay xây dựng cộng đồng)",
+          "path": "courses/vietnamese-4-kntt/presentations/week07.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 8: Bài 14 (Ngôi nhà chung) & Bài 15 (Hành trình tri thức)",
+          "path": "courses/vietnamese-4-kntt/presentations/week08.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 9: Bài 16 (Vẻ đẹp muôn màu) & Bài 17 (Những phát minh thú vị)",
+          "path": "courses/vietnamese-4-kntt/presentations/week09.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Presentation — Tuần 10: Bài 18 (Em lớn lên từng ngày) & Tổng Kết Tiếng Việt 4 Capstone Project",
+          "path": "courses/vietnamese-4-kntt/presentations/week10.md",
+          "kind": "2. Presentation",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 1: Bài 1 (Chân dung của em) & Bài 2 (Mỗi người một vẻ)",
+          "path": "courses/vietnamese-4-kntt/exercises/week01.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 2: Bài 3 (Trải nghiệm và khám phá) & Bài 4 (Quê hương trong tôi)",
+          "path": "courses/vietnamese-4-kntt/exercises/week02.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 3: Bài 5 (Những người sống quanh em) & Bài 6 (Ước mơ của em)",
+          "path": "courses/vietnamese-4-kntt/exercises/week03.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 4: Bài 7 (Khám phá thế giới) & Bài 8 (Vì một thế giới bình yên)",
+          "path": "courses/vietnamese-4-kntt/exercises/week04.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 5: Bài 9 (Tài năng của em) & Ôn Tập Tổng Kết Học Kỳ I",
+          "path": "courses/vietnamese-4-kntt/exercises/week05.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 6: Bài 10 (Cuộc sống mến yêu) & Bài 11 (Thế giới quanh ta)",
+          "path": "courses/vietnamese-4-kntt/exercises/week06.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 7: Bài 12 (Những người quả cảm) & Bài 13 (Chung tay xây dựng cộng đồng)",
+          "path": "courses/vietnamese-4-kntt/exercises/week07.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 8: Bài 14 (Ngôi nhà chung) & Bài 15 (Hành trình tri thức)",
+          "path": "courses/vietnamese-4-kntt/exercises/week08.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 9: Bài 16 (Vẻ đẹp muôn màu) & Bài 17 (Những phát minh thú vị)",
+          "path": "courses/vietnamese-4-kntt/exercises/week09.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "Exercise — Tuần 10: Bài 18 (Em lớn lên từng ngày) & Tổng Kết Tiếng Việt 4 Capstone Project",
+          "path": "courses/vietnamese-4-kntt/exercises/week10.md",
+          "kind": "3. Exercise",
+          "format": "md"
+        },
+        {
+          "title": "vietnamese_toolkit_4.py",
+          "path": "courses/vietnamese-4-kntt/code/python/vietnamese_toolkit_4.py",
+          "kind": "4. Code",
+          "format": "py"
         },
         {
           "title": "🏆 Dự Án Cuối Khóa Capstone STEM / Nhân Văn Số — Tiếng Việt 4 KNTT",
           "path": "courses/vietnamese-4-kntt/projects/final_project.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛒 Hướng Dẫn Dụng Cụ Học Tập & Công Cụ Số (BOM) — Tiếng Việt 4 KNTT",
-          "path": "courses/vietnamese-4-kntt/references/components.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "🛡️ Quy Tắc Văn Hóa Tiếng Việt & An Toàn Không Gian Số — Tiếng Việt 4 KNTT",
-          "path": "courses/vietnamese-4-kntt/references/safety.md",
-          "kind": "Tài liệu"
-        },
-        {
-          "title": "💻 Hướng Dẫn Cài Đặt & Sử Dụng Phần Mềm Canva, Audacity & Python Language Tools",
-          "path": "courses/vietnamese-4-kntt/references/software.md",
-          "kind": "Tài liệu"
+          "kind": "5. Project",
+          "format": "md"
         }
       ],
       "lessonCount": 10

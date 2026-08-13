@@ -231,6 +231,7 @@
     footer a{color:var(--p);text-decoration:none}
     @media(max-width:540px){.step-label{display:none}.nav-row{flex-direction:column}}
   </style>
+  <link rel="stylesheet" href="theme.css?v=2"/>
 </head>
 <body>
 
@@ -575,14 +576,14 @@ function napTuSheets(){
 /* ── CLASSES ── */
 /* level groups */
 const LEVELS = [
-  { label:'🏫 Tiểu học (Lớp 3–5)', ids:['3A','3B','4A','4B','5A','5B'], color:'#0ea5e9' },
-  { label:'🏫 THCS (Lớp 6–9)',     ids:['6A','6B','7A','7B','8A','8B','9A','9B'], color:'#10b981' },
-  { label:'🏫 THPT (Lớp 10–12)',   ids:['10A','10B','11A','11B','12A','12B'], color:'#f59e0b' },
+  { label:'🏫 Tiểu học (Lớp 3–5)', ids:['3A','3B','4A','4B','5A','5B'], color:'#5f8b72' },
+  { label:'🏫 THCS (Lớp 6–9)',     ids:['6A','6B','7A','7B','8A','8B','9A','9B'], color:'#2f7258' },
+  { label:'🏫 THPT (Lớp 10–12)',   ids:['10A','10B','11A','11B','12A','12B'], color:'#245c46' },
 ];
 
 function getLevelColor(classId){
   const level = LEVELS.find(l=>l.ids.includes(classId));
-  return level ? level.color : '#7c3aed';
+  return level ? level.color : '#245c46';
 }
 
 function renderClasses(){
@@ -670,9 +671,9 @@ function renderCourses(){
   const list = DB.courses || [];
   if(!list.length){ grid.innerHTML = '<p style="color:var(--muted);font-size:.85rem">Đang tải danh sách khoá học…</p>'; return; }
   if(!selectedCourse) selectedCourse = list[0];
-  const mau = { stem:'#7c3aed', khtn:'#0ea5e9', ngonngu:'#f59e0b' };
+  const mau = { stem:'#245c46', khtn:'#2f7258', ngonngu:'#5f8b72' };
   grid.innerHTML = list.map(c=>{
-    const m = mau[c.group] || '#7c3aed';
+    const m = mau[c.group] || '#245c46';
     const on = selectedCourse && selectedCourse.id===c.id;
     return `<div class="class-card${on?' selected':''}" data-id="${c.id}" onclick="pickCourse('${c.id}')"
               style="border-color:${on?m:'rgba(255,255,255,.1)'}">
