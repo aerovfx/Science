@@ -26,4 +26,6 @@ dist/
 __pycache__/
 *.pyc
 .venv/
-
+# Generated course materials (created during the Pages build)
+courses/*/presentations/
+courses/*/exercises/

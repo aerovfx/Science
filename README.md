@@ -54,7 +54,15 @@ Nội dung bài học được viết bằng Markdown. Website tự động tạ
 | Chuyên sâu | ⚛️ Vật lí lượng tử | 10 tuần | Lý thuyết, mô phỏng Python |
 | Chuyên sâu | 🚀 Động cơ tên lửa | 10 tuần | Thiết kế và mô phỏng |
 
-Mỗi khóa học có trang tổng quan, lịch học, 10 bài theo tuần, dự án cuối khóa và tài liệu tham khảo. Danh mục được sinh từ [`courses/catalog.json`](courses/catalog.json) mỗi lần GitHub Pages triển khai.
+Mỗi khóa học được trình bày theo cùng một lộ trình 5 phần:
+
+1. **Lesson** — nội dung bài học và lịch học.
+2. **Presentation** — dàn ý slide được sinh từ từng Lesson.
+3. **Exercise** — bài tập, câu hỏi thảo luận và phiếu tự đánh giá.
+4. **Code** — công cụ hoặc mô phỏng Python của khóa học.
+5. **Project** — dự án tổng kết và tiêu chí sản phẩm.
+
+Presentation và Exercise được tái tạo tự động từ 110 Lesson khi GitHub Pages triển khai, vì vậy luôn đồng bộ với nội dung gốc. Danh mục website được lưu tại [`courses/catalog.json`](courses/catalog.json).
 
 ## Khảo sát và chấm điểm
 
@@ -86,6 +94,7 @@ Yêu cầu Python 3:
 ```bash
 git clone https://github.com/aerovfx/Science.git
 cd Science
+python3 scripts/build_course_materials.py
 python3 scripts/build_course_catalog.py
 python3 -m http.server 4173
 ```
@@ -100,11 +109,12 @@ Không nên mở trực tiếp file HTML bằng `file://`, vì trình duyệt c�
 
 ## Cập nhật nội dung khóa học
 
-1. Thêm hoặc chỉnh sửa file Markdown trong `courses/<ten-khoa-hoc>/`.
+1. Thêm hoặc chỉnh sửa file Markdown trong `courses/<ten-khoa-hoc>/lessons/`.
 2. Mỗi khóa học cần có file `INDEX.md`.
 3. Chạy lại trình tạo danh mục:
 
    ```bash
+   python3 scripts/build_course_materials.py
    python3 scripts/build_course_catalog.py
    ```
 
@@ -124,6 +134,9 @@ Science/
 │       ├── INDEX.md            # Tổng quan khóa học
 │       ├── schedule.md         # Lịch học
 │       ├── lessons/            # Bài học theo tuần
+│       ├── presentations/      # Dàn ý trình chiếu tự động
+│       ├── exercises/          # Phiếu bài tập tự động
+│       ├── code/               # Code và mô phỏng
 │       ├── projects/           # Dự án cuối khóa
 │       └── references/         # Tài liệu tham khảo
 ├── curriculum/                 # Học liệu và chương trình GDPT 2018
@@ -132,7 +145,8 @@ Science/
 │   ├── ai-workflow/            # Quy trình làm việc với AI
 │   └── dataset/                # Công cụ chuẩn bị dữ liệu
 ├── scripts/
-│   └── build_course_catalog.py # Tạo danh mục Markdown cho website
+│   ├── build_course_materials.py # Sinh Presentation và Exercise
+│   └── build_course_catalog.py   # Tạo danh mục tài liệu cho website
 └── .github/workflows/          # Tự động deploy GitHub Pages
 ```
 

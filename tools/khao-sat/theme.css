@@ -1,0 +1,105 @@
+/* Science Workspace — shared color system for every classroom page. */
+:root {
+  --science-900:#173f31;
+  --science-800:#245c46;
+  --science-700:#2f7258;
+  --science-100:#e5efe8;
+  --science-50:#f4f7f3;
+  --science-lime:#dff36f;
+  --science-ink:#18251f;
+  --science-muted:#68766f;
+  --science-line:#d9e4dc;
+  --science-white:#fff;
+  --science-amber:#b7791f;
+  --science-red:#b33b3b;
+
+  /* Normalize legacy variable names used across the survey pages. */
+  --p:var(--science-800);
+  --p2:var(--science-900);
+  --pd:var(--science-900);
+  --s:var(--science-700);
+  --a:var(--science-amber);
+  --g:var(--science-700);
+  --r:var(--science-red);
+  --bg:var(--science-50);
+  --sf:var(--science-white);
+  --sf2:#edf3ee;
+  --sf3:#e2ece5;
+  --bd:var(--science-line);
+  --txt:var(--science-ink);
+  --muted:var(--science-muted);
+  --card:var(--science-white);
+  --ink:var(--science-ink);
+  --green:var(--science-800);
+  --lime:var(--science-lime);
+  --line:var(--science-line);
+  --red:var(--science-red);
+  --amber:var(--science-amber);
+  --blue:var(--science-700);
+  --shad:0 16px 45px rgba(23,63,49,.10);
+}
+
+html {accent-color:var(--science-800)}
+body {background:var(--science-50);color:var(--science-ink)}
+body::before {
+  background:radial-gradient(ellipse 70% 50% at 5% 0%,rgba(223,243,111,.18),transparent 60%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(36,92,70,.10),transparent 60%)!important;
+}
+.topbar {background:rgba(244,247,243,.92)!important;border-color:var(--science-line)!important}
+header:not(.site-header) {background:transparent}
+.card,.panel,.result-card,.stat-card,.sess-item,.peer-card,.modal-box,.confirm-card,.step-card,.connect-card {
+  background:var(--science-white)!important;border-color:var(--science-line)!important;box-shadow:var(--shad)!important;
+}
+.back-btn,.user-chip,.session-chip,.copy-btn,.btn-outline,.tab,.student-card,.class-card,.info-box,.result-item {
+  background:#edf3ee!important;border-color:var(--science-line)!important;color:var(--science-ink)!important;
+}
+.back-btn:hover,.student-card:hover,.class-card:hover,.tab:hover {border-color:var(--science-800)!important;color:var(--science-800)!important}
+h1,.page-title h1 {background:none!important;-webkit-text-fill-color:initial!important;color:var(--science-900)!important}
+.badge,.section-label,.step-num,.stat-val,.score,.sess-score,.bar-val,.crit-score {color:var(--science-800)!important}
+.badge,.logo {background:var(--science-100)!important;border-color:var(--science-line)!important;color:var(--science-800)!important}
+input[type=text],input[type=email],input[type=url],input[type=search],select,textarea {
+  background:#f8faf8!important;border-color:var(--science-line)!important;color:var(--science-ink)!important;
+}
+input:focus,select:focus,textarea:focus {border-color:var(--science-800)!important;box-shadow:0 0 0 3px rgba(36,92,70,.14)!important}
+.btn-primary,.btn-submit,.ab-primary,.modal-btn-save,button.primary {
+  background:var(--science-800)!important;border-color:var(--science-800)!important;color:#fff!important;box-shadow:0 7px 20px rgba(36,92,70,.20)!important;
+}
+.btn-success,.ab-success {background:var(--science-700)!important;color:#fff!important}
+.seg-in:checked+.seg-lbl,.grade-badge.active,.tab.active {background:var(--science-800)!important;color:#fff!important}
+.chip-cb:checked+.chip-lb {background:var(--science-100)!important;border-color:var(--science-800)!important;color:var(--science-900)!important}
+.prog-mini-fill,.bar-fill,input[type=range] {background-color:var(--science-800)}
+.step.active .step-dot,.step.done .step-dot,.check-mark,.sc-check {background:var(--science-800)!important}
+.md-block,.md-pre {background:#173f31!important;border-color:#2f7258!important;color:#f4f7f3!important}
+footer {border-color:var(--science-line)!important;color:var(--science-muted)!important}
+footer a,a {color:var(--science-700)}
+.toast {background:var(--science-900)!important;border-color:var(--science-700)!important;color:#fff!important}
+.status.ok,.status-done {background:#dff2e5!important;color:#1d6545!important}
+.status.wait,.status-partial,.privacy,.warn {background:#fff8df!important;color:#725816!important}
+.status.err {background:#fce7e7!important;color:#912f2f!important}
+::selection {background:var(--science-lime);color:var(--science-900)}
+
+/* Portal identity and course selection use the same visual language as home. */
+.logo {
+  padding:.42rem 1rem!important;
+  border:1px solid var(--science-line)!important;
+  border-radius:999px!important;
+  letter-spacing:.04em!important;
+  box-shadow:none!important;
+}
+.course-card,.class-card {
+  background:linear-gradient(145deg,#fff,#edf4ef)!important;
+  border-color:var(--science-line)!important;
+}
+.course-card.selected,.class-card.selected,.student-card.selected {
+  background:linear-gradient(145deg,#edf5ef,#e1eee5)!important;
+  border-color:var(--science-800)!important;
+  box-shadow:0 8px 24px rgba(36,92,70,.14)!important;
+}
+.course-badge,.class-badge,.class-badge-cnt {
+  background:var(--science-100)!important;
+  color:var(--science-800)!important;
+}
+#toStep2Btn:disabled,#toStep3Btn:disabled {
+  background:#aec4b7!important;
+  border-color:#aec4b7!important;
+  color:#fff!important;
+}

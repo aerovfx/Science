@@ -7,7 +7,7 @@
   function init(data){ document.getElementById('course-grid')?catalog(data.courses):reader(data.courses); }
   function catalog(courses){
     const grid=document.getElementById('course-grid'), input=document.getElementById('search');
-    const render=()=>{const q=input.value.toLocaleLowerCase('vi');const rows=courses.filter(c=>c.title.toLocaleLowerCase('vi').includes(q));grid.innerHTML=rows.map((c,i)=>`<article class="course-card"><span class="num">KHÓA ${(i+1).toString().padStart(2,'0')}</span><h3>${esc(c.title)}</h3><p>${c.lessonCount} bài theo tuần · ${c.documents.length} tài liệu Markdown</p><a href="course.html?course=${encodeURIComponent(c.id)}">Xem nội dung →</a></article>`).join('')||'<p>Không tìm thấy khóa học phù hợp.</p>'};
+    const render=()=>{const q=input.value.toLocaleLowerCase('vi');const rows=courses.filter(c=>c.title.toLocaleLowerCase('vi').includes(q));grid.innerHTML=rows.map((c,i)=>`<article class="course-card"><span class="num">KHÓA ${(i+1).toString().padStart(2,'0')}</span><h3>${esc(c.title)}</h3><p>${c.lessonCount} bài · Lesson → Presentation → Exercise → Code → Project</p><a href="course.html?course=${encodeURIComponent(c.id)}">Xem nội dung →</a></article>`).join('')||'<p>Không tìm thấy khóa học phù hợp.</p>'};
     input.addEventListener('input',render);render();
   }
   function reader(courses){
@@ -17,9 +17,10 @@
     const requested=params.get('doc'), selected=course.documents.find(d=>d.path===requested)||course.documents[0];
     const list=document.getElementById('doc-list'), search=document.getElementById('doc-search');
     const render=()=>{const q=search.value.toLocaleLowerCase('vi');let kind='';list.innerHTML=course.documents.filter(d=>d.title.toLocaleLowerCase('vi').includes(q)).map(d=>{const heading=d.kind!==kind?`<span class="doc-kind">${esc(kind=d.kind)}</span>`:'';return heading+`<a class="doc-link ${d.path===selected.path?'active':''}" href="?course=${encodeURIComponent(course.id)}&doc=${encodeURIComponent(d.path)}">${esc(d.title)}</a>`}).join('')};
-    search.addEventListener('input',render);render();loadMarkdown(selected.path);
+    search.addEventListener('input',render);render();loadDocument(selected);
   }
-  function loadMarkdown(path){fetch(base+path).then(r=>{if(!r.ok)throw Error('Không tải được tài liệu');return r.text()}).then(md=>{document.getElementById('markdown').innerHTML=markdown(md,path)}).catch(e=>document.getElementById('markdown').innerHTML=`<p>${esc(e.message)}</p>`)}
+  function loadDocument(doc){fetch(base+doc.path).then(r=>{if(!r.ok)throw Error('Không tải được tài liệu');return r.text()}).then(text=>{document.getElementById('markdown').innerHTML=doc.format==='md'?markdown(text,doc.path):codeDocument(text,doc)}).catch(e=>document.getElementById('markdown').innerHTML=`<p>${esc(e.message)}</p>`)}
+  function codeDocument(source,doc){return `<h1>${esc(doc.title)}</h1><p><strong>4. Code</strong> · ${esc((doc.format||'text').toUpperCase())}</p><pre><code class="language-${esc(doc.format||'text')}">${esc(source)}</code></pre>`}
   function markdown(md,path){
     const dir=path.slice(0,path.lastIndexOf('/')+1);let code=[];
     md=md.replace(/```([\w+-]*)\n([\s\S]*?)```/g,(_,lang,src)=>`@@CODE${code.push(`<pre><code class="language-${esc(lang)}">${esc(src)}</code></pre>`)-1}@@`);
