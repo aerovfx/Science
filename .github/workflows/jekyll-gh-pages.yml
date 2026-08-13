@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy static Science Workspace to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,13 +31,16 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build course catalog
         run: python3 scripts/build_course_catalog.py
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp index.html course.html README.md LICENSE _site/
+          cp -R assets courses tools _site/
+          touch _site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   # Deployment job
   deploy:
