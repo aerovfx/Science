@@ -103,7 +103,10 @@
       function finish(err, data) {
         if (done) return; done = true;
         clearTimeout(timer);
-        try { delete global[cb]; } catch (e) { global[cb] = undefined; }
+        // giữ callback dạng no-op thay vì xoá hẳn — nếu Apps Script trả lời muộn (sau khi
+        // đã hết giờ), script <script src> vẫn gọi được tên hàm này mà không văng lỗi console
+        global[cb] = function () {};
+        setTimeout(function () { try { delete global[cb]; } catch (e) {} }, 60000);
         if (s.parentNode) s.parentNode.removeChild(s);
         err ? reject(err) : resolve(data);
       }
@@ -161,7 +164,7 @@
 
   /* ── kiểm tra kết nối ── */
   function ping() {
-    return get('ping', {}, 15000).then(function (r) {
+    return get('ping', {}, 45000).then(function (r) {
       touchMeta({ lastPingAt: new Date().toISOString(), config: r.config || null });
       paint();
       return r;
